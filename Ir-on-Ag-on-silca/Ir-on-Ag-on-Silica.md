@@ -22,7 +22,25 @@ interest because he described the system like this:
 > silver.
 
 Iridium (Z=77, density=22.56 g/cm3) is a heavy metal and can absorb X-rays.
-John Armstrong has demonstrated that a 5 nm film is conductive and so thin
+[Armstrong and Crispin](https://www.cambridge.org/core/journals/microscopy-and-microanalysis/article/ultrathin-iridium-as-a-replacement-coating-for-carbon-in-high-resolution-quantitative-analyses-of-insulating-specimens/E112CCE091EA0D98244C5670186CB24F)
+have demonstrated that a 5 nm film is conductive and so thin
 coatings are useful where one wants to measure C. This alerted me to the need
 to do some modeling.
+
+## Materials
+
+The parameter needed to generate the material files for penepma are:
+
+```
+Ir: (Z=77) density = 22.56 g/cm3
+Ag: (Z=47) density = 10.5 g/cm3
+SiO2: Si (Z-14) and O (Z=8) density = 2.65 g/cm3
+```
+
+**Note:** One needs to generate material files using the `material.exe`
+program from the version of penelope/penepma that you are using. I have
+included my exemplar `.geo` files. 
+
+Note that the `pen-2016` has the files I used with `penepma16`.
+
 
