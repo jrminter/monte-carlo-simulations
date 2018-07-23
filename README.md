@@ -24,7 +24,9 @@ More to be added. Check back later...
 1. The **Ir-on-Ag-on-silica** folder has the files I generated modeling a
 trilayer film prompted by a discussion on the
 [Probe Software Forum](http://probesoftware.com/smf/index.php?topic=1104.0).
-I was also experimenting with different versions of `penepma`.
+I was also experimenting with different versions of `penepma`. I also added
+the DTSA simulations at two thickness values, including the python 
+(actually jython) script to run the simulation.
 
 
 ## Useful resources
