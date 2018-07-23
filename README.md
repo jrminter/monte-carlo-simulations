@@ -15,5 +15,10 @@ Processing of the output from penepma simulations may be aided by my
 
 ## Systems modeled
 
+1. The **Ir-on-Ag-on-silica** folder has the files I generated modeling a
+trilayer film prompted by a discussion on the
+[Probe Software Forum](http://probesoftware.com/smf/index.php?topic=1104.0).
+I was also experimentig with different versions of `penepma`.
+
 
 ## Useful resources
