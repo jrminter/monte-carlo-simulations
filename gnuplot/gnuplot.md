@@ -1,0 +1,21 @@
+---
+title: "Gnuplot helper scripts"
+author: "John Minter"
+date: "Started: 2018-07-23, Last Modified: 2018-07-23"
+output:
+  html_document:
+    keep_md: true
+---
+
+
+
+## Current gnuplot helper scripts
+
+This directory contains modified gnuplot scripts. I have designed the to
+work with `wgnuplot`.
+
+1. `pe-intens-01.plt` - plots the intensity of the transitions from `detector 1`.
+
+2. `pe-spect-01.plt` - plots the spectrum from `detector 1`.
+
+
