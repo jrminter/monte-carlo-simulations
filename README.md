@@ -8,6 +8,10 @@ are complementary and are often used together to model a particular
 multi-layered structure. Because of the complementary nature of these
 programs, I have organized this repository by the **system of interest**.
 
+**Note:** When you view this on **github**, look at the `.md` files in the
+directories. Github renders them on the fly when they present them to
+your browser.
+
 Processing of the output from penepma simulations may be aided by my
 [rpenepma](https://github.com/jrminter/rpemepma) package.
 
