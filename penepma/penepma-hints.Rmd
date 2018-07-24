@@ -1,0 +1,24 @@
+---
+title: "penepma hints"
+author: "John Minter"
+date: "Started: 2018-07-23, Last Modified: 2018-07-23"
+output:
+  html_document:
+    keep_md: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Some key items to remember
+
+1. There are subtle changes between versions. Be sure to to create
+material files with `material.exe` and `penepma.exe` from the same
+release.
+
+2. The limit to the number of channels you can compute is `1000`.
+
+
+
+
