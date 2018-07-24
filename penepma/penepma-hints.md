@@ -15,9 +15,23 @@ output:
 material files with `material.exe` and `penepma.exe` from the same
 release.
 
-2. The limit to the number of channels you can compute is `1000`.
+2. Old `*.dat` files remaining in the folder where penepma is run
+can cause unpredictable side effects. I found that starting the simulation
+with a batch file like shown below helps.
 
-3. In the `.geo` files, layer thickness values are typically specified
+```
+C:
+cd "C:/Apps/penepma16/penepma"
+del /f *.dat
+Penepma < "Ir-500-on-Ag-250-on-Silica.in"
+
+pause
+```
+
+
+3. The limit to the number of channels you can compute is `1000`.
+
+4. In the `.geo` files, layer thickness values are typically specified
 in `microns` or `nm`. These are conveniences for the writer. The real
 values are cumulative sums in `cm`. The helper function,
 `calculate_penepma_z_shifts()` helps the user get these right.
