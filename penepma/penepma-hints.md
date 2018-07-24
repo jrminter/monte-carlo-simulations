@@ -7,9 +7,7 @@ output:
     keep_md: true
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+
 
 ## Some key items to remember
 
@@ -27,13 +25,18 @@ values are cumulative sums in `cm`. The helper function,
 An example for a typical layer structure is given below. Note that
 cumulative shifts are negative!
 
-```{r computeLayerThick, message=FALSE, comment=NA}
+
+```r
 library(rpenepma)
 # data
 l_nm_shifts <- c(500, 250, 1.0e+07)
 l_cum_shifts_cm <- calculate_penepma_z_shifts(l_nm_shifts)
 print(l_cum_shifts_cm)
+```
 
+```
+[1] "-5.000000000000000e-05" "-7.499999999999999e-05"
+[3] "-1.000075000000000e+00"
 ```
 
 
