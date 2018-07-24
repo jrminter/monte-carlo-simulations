@@ -44,3 +44,11 @@ included my exemplar `.geo` files.
 Note that the `pen-2016` has the files I used with `penepma16`.
 
 
+## Results
+
+Note that DTSA-II and penepma-16 simulations run using the initial
+description of a 500 nm Ir layer on a 250 nm layer of Ag on SiO_2
+at **30 kV** did not detect significant Ag! 500 nm of Ir is
+**not thin**!
+
+![DTSA-II and penepma-16 simulations of a 500 nm Ir layer on 250 nm of Ag on Si. Note that the Ag transitions are barely visible!](./pen-2016/Ir-500nm-on-Ag-250nm-on-SiO2-30kV.png)
