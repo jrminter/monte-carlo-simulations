@@ -3,7 +3,7 @@
 # By jrminter
 
 # set terminal postscript enhanced color "Arial" 12
-# set output "DTSA2-penepma-16-500nm-Ir-250nm-Ag-on-SiO2-30kV.ps"
+# set output "DTSA2-penepma-16-500nm-Ir-250nm-on-Silica-30kV.ps"
 # proc-gnuplot2.sh DTSA2-penepma-16-500nm-Ir-250nm-Ag-on-SiO2-30kV
 # set terminal png
 # set terminal window
