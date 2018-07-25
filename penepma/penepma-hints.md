@@ -39,7 +39,7 @@ For our Ir on Ag on silica example, I chose to set the `SENERG` value as:
 SENERG 3.0E+04                   [Energy of the electron beam, in eV]
 ```
 
-and the nergy and angular distributions of emerging particles as:
+and the energy and angular distributions of emerging particles as:
 
 ```
        >>>>>>>> Emerging particles. Energy and angular distributions.
@@ -57,8 +57,7 @@ PDANGL 50.0 60.0 0.0 360.0 0             [Angular window, in deg, IPSF]
 PDENER 1e1 1.5E+04 1000                [Energy window, no. of channels]
 ```
 
-I'm checking the perfomance now...
-
+I'm checking the performance now...
 
 
 

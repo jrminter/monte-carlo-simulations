@@ -63,7 +63,6 @@ I'm checking the performance now...
 
 
 
-
 4. In the `.geo` files, layer thickness values are typically specified
 in `microns` or `nm`. These are conveniences for the writer. The real
 values are cumulative sums in `cm`. The helper function,
