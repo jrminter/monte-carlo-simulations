@@ -1,0 +1,26 @@
+---
+title: "DTSA-II hints"
+author: "John Minter"
+date: "Started: 2018-07-23, Last Modified: 2018-07-25"
+output:
+  html_document:
+    keep_md: true
+---
+
+
+
+## Some key items to remember
+
+1. **Simulating both detected and emitted spectra** - Recently Nicholas
+Ritchie updated DTSA-II Kelvin to compute both the detected and emitted
+spectra. This is a really nice feature. The best way I could conceive
+to do this in Python was to return a list. The major concern was that
+returning a list would break existing scripts. I created as second
+version of `mcSimulate3.py`, named `jmcSimulate3.py` where all the
+simulation functions return a list of two spectra.
+
+To install this functionality, add the `jmcSimulate3.py` function to
+the lib directory with all the other python scripts.
+
+For a simple example, checkout the `test-jmc3-simulate-bulk.py` script
+in the `work-in-progress` folder. 

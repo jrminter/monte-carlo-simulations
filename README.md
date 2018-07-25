@@ -28,6 +28,10 @@ I was also experimenting with different versions of `penepma`. I also added
 the DTSA simulations at two thickness values, including the python 
 (actually jython) script to run the simulation.
 
+2. Developing python scripts for DTSA-II analyses  makes them more
+reproducible.  There information in the [dtsa2](./dtsa2/dtsa2.md)
+folder.
+
 
 ## Useful resources
 
