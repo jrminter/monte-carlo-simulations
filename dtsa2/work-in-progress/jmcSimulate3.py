@@ -518,7 +518,8 @@ def coatedBlock(mat, height, width, coating, thickness, substrate, det, e0=20.0,
     The block and subtrate is coated in a material 'coating' of the specified thickness which fully encapsulates the particle and covers the substrate too."""
     tmp = u"MC simulation of a [%0.2f,%0.2f,%0.2f] micron block of %s%s coated with %s at %0.1f keV%s%s" % (width * 1.0e6, width * 1.0e6, height * 1.0e6, mat, (" on %s" % substrate if substrate else ""), coating, e0, (" + CSF" if sf else ""), (" + BSF" if bf else ""))
     params = {"Substrate": substrate, "Width" : width, "Height" : height, "Material" : mat, "Coating" : coating, "Thickness" : thickness}
-    return base(det, e0, withPoisson, nTraj, dose, sf, bf, tmp, buildCoatedBlock, params, xtraParams)
+    res = base(det, e0, withPoisson, nTraj, dose, sf, bf, tmp, buildCoatedBlock, params, xtraParams)
+    return res
 
 def buildBlock(monte, chamber, origin, buildParams):
     height = buildParams["Height"]
@@ -536,7 +537,8 @@ def block(mat, height, width, det, e0=20.0, withPoisson=True, nTraj=defaultNumTr
     If substrate != None then substrate specifies the Material for an infinitely thick substrate immediately \
     below the particle."""
     tmp = u"MC simulation of a [%0.2f,%0.2f,%0.2f] micron block of %s%s at %0.1f keV%s%s" % (width * 1.0e6, width * 1.0e6, height * 1.0e6, mat, (" on %s" % substrate if substrate else ""), e0, (" + CSF" if sf else ""), (" + BSF" if bf else ""))
-    return base(det, e0, withPoisson, nTraj, dose, sf, bf, tmp, buildBlock, {"Substrate": substrate, "Width" : width, "Height" : height, "Material" : mat}, xtraParams)
+    res = base(det, e0, withPoisson, nTraj, dose, sf, bf, tmp, buildBlock, {"Substrate": substrate, "Width" : width, "Height" : height, "Material" : mat}, xtraParams)
+    return res
 
 def buildSlab(monte, chamber, origin, buildParams):
     thick = buildParams["Thick"]
@@ -571,8 +573,8 @@ def slab(mat, thick, width, length, det, e0=20.0, withPoisson=True,
     infinitely thick substrate immediately below the slab.
     """
     tmp = u"MC simulation of a [%0.2f,%0.2f,%0.2f] micron slab of %s%s at %0.1f keV%s%s" % (width * 1.0e6, length * 1.0e6, thick * 1.0e6, mat, (" on %s" % substrate if substrate else ""), e0, (" + CSF" if sf else ""), (" + BSF" if bf else ""))
-    return base(det, e0, withPoisson, nTraj, dose, sf, bf, tmp, buildSlab, {"Substrate": substrate, "Width" : width, "Length" : length, "Thick" : thick, "Material" : mat}, xtraParams)
-
+    res = base(det, e0, withPoisson, nTraj, dose, sf, bf, tmp, buildSlab, {"Substrate": substrate, "Width" : width, "Length" : length, "Thick" : thick, "Material" : mat}, xtraParams)
+    return res
 
 def buildCoatedSubstrate(monte, chamber, origin, buildParams):
     sc = 1.0e-6
@@ -607,7 +609,8 @@ def coatedSubstrate(coating, thickness, substrate, det, e0=20.0,
     params = {"Substrate" : substrate,
               "Coating"   : coating,
               "Thickness" : thickness }
-    return base(det, e0, withPoisson, nTraj, dose, sf, bf, tmp, buildCoatedSubstrate, params, xtraParams)
+    res = base(det, e0, withPoisson, nTraj, dose, sf, bf, tmp, buildCoatedSubstrate, params, xtraParams)
+    return res
 
 def buildMultiBlocks(monte, chamber, origin, buildParams):
     blocks = buildParams["Blocks"]
@@ -621,7 +624,8 @@ def multiblock(blocks, det, e0=20.0, withPoisson=True, nTraj=defaultNumTraj, dos
     Monte Carlo simulate a spectrum from a collection of blocks.  Each block is defined by a triplet = ( dims[3], offset[3], mat ) where \
     dims is the block dimension as three lengths in meters, offset is the center of the block as a position in meters and mat is the material."""
     tmp = u"MC simulation of %d blocks at %0.1f keV%s%s" % (len(blocks), e0, (" + CSF" if sf else ""), (" + BSF" if bf else ""))
-    return base(det, e0, withPoisson, nTraj, dose, sf, bf, tmp, buildMultiBlocks, {"Blocks": blocks }, xtraParams)
+    res = base(det, e0, withPoisson, nTraj, dose, sf, bf, tmp, buildMultiBlocks, {"Blocks": blocks }, xtraParams)
+    return res
 
 def buildSphere(monte, chamber, origin, buildParams):
     radius = buildParams["Radius"]
@@ -641,7 +645,8 @@ def sphere(mat, radius, det, e0=20.0, withPoisson=True, nTraj=defaultNumTraj, do
     if radius < 0.0:
         raise "The sphere radius must be larger than zero."
     tmp = u"MC simulation of a %0.2f micron radius sphere of %s%s at %0.1f keV%s%s" % (radius * 1.0e6, mat, (" on %s" % substrate if substrate else ""), e0, (" + CSF" if sf else ""), (" + BSF" if bf else ""))
-    return base(det, e0, withPoisson, nTraj, dose, sf, bf, tmp, buildSphere, {"Substrate": substrate, "Radius" : radius, "Material" : mat}, xtraParams)
+    res = base(det, e0, withPoisson, nTraj, dose, sf, bf, tmp, buildSphere, {"Substrate": substrate, "Radius" : radius, "Material" : mat}, xtraParams)
+    return res
 
 def buildCoatedSphere(monte, chamber, origin, buildParams):
     radius = buildParams["Radius"]
@@ -667,7 +672,8 @@ def coatedSphere(mat, radius, coating, thickness, det, e0=20.0, withPoisson=True
     if thickness < 0.0:
         raise "The coating thickness must be larger than zero."
     tmp = u"MC simulation of a %0.2f micron sphere of %s coated with %0.2f microns of %s%s at %0.1f keV%s%s" % (radius * 1.0e6, mat, thickness * 1.0e6, coating, (" on %s" % substrate if substrate else ""), e0, (" + CSF" if sf else ""), (" + BSF" if bf else ""))
-    return base(det, e0, withPoisson, nTraj, dose, sf, bf, tmp, buildCoatedSphere, {"Substrate": substrate, "Radius" : radius, "Material" : mat, "Coating" : coating, "Thickness" : thickness}, xtraParams)
+    res = base(det, e0, withPoisson, nTraj, dose, sf, bf, tmp, buildCoatedSphere, {"Substrate": substrate, "Radius" : radius, "Material" : mat, "Coating" : coating, "Thickness" : thickness}, xtraParams)
+    return res
 
 def buildFilm(monte, chamber, origin, buildParams):
     sr = chamber
@@ -703,8 +709,8 @@ def embeddedSphere(mat, radius, substrate, depth, det, e0=20.0, withPoisson=True
     if radius < 0.0:
         raise "The sphere radius must be larger than zero."
     tmp = u"MC simulation of a %0.2f micron sphere of %s embedded %0.2f microns in %s at %0.1f keV%s%s" % (radius * 1.0e6, mat, depth * 1.0e6, substrate, e0, (" + CSF" if sf else ""), (" + BSF" if bf else ""))
-    return base(det, e0, withPoisson, nTraj, dose, sf, bf, tmp, buildEmbeddedSphere, {"Substrate": substrate, "Radius" : radius, "Depth" : depth, "Material" : mat}, xtraParams)
-
+    res = base(det, e0, withPoisson, nTraj, dose, sf, bf, tmp, buildEmbeddedSphere, {"Substrate": substrate, "Radius" : radius, "Depth" : depth, "Material" : mat}, xtraParams)
+    return res
 
 def buildEmbeddedRectange(monte, chamber, origin, buildParams):
     mat = buildParams["Material"]
@@ -720,8 +726,8 @@ def embeddedRectangle(mat, dims, substrate, depth, det, e0=20.0, withPoisson=Tru
     if isinstance(dims, float):
         dims = [dims, dims, dims]
     tmp = u"MC simulation of a [%0.2f microns,%0.2f microns,%0.2f microns] block of %s embedded %0.2f microns in %s at %0.1f keV%s%s" % (dims[0] * 1.0e6, dims[1] * 1.0e6, dims[2] * 1.0e6, mat, depth * 1.0e6, substrate, e0, (" + CSF" if sf else ""), (" + BSF" if bf else ""))
-    return base(det, e0, withPoisson, nTraj, dose, sf, bf, tmp, buildEmbeddedRectange, {"Substrate": substrate, "Dimension" : dims, "Depth" : depth, "Material" : mat}, xtraParams)
-
+    res = base(det, e0, withPoisson, nTraj, dose, sf, bf, tmp, buildEmbeddedRectange, {"Substrate": substrate, "Dimension" : dims, "Depth" : depth, "Material" : mat}, xtraParams)
+    return res
 
 def buildEmbeddedCylinder(monte, chamber, origin, buildParams):
     mat = buildParams["Material"]
@@ -740,8 +746,8 @@ def buildEmbeddedCylinder(monte, chamber, origin, buildParams):
 def embeddedCylinder(mat, radius, substrate, depth, det, e0=20.0, withPoisson=True, nTraj=defaultNumTraj, dose=defaultDose, sf=defaultCharFluor, bf=defaultBremFluor, xtraParams=defaultXtraParams):
     """embeddedCylinder(mat, radius, substrate, depth, det, [e0=20.0], [withPoisson=True], [nTraj=defaultNumTraj], [dose = 120.0], [sf=defaultCharFluor], [bf=defaultBremFluor])"""
     tmp = u"MC simulation of a %0.2f micron vertical cylinder of %s embedded in %s at %0.1f keV%s%s" % (1.0e6 * radius, mat, substrate, e0, (" + CSF" if sf else ""), (" + BSF" if bf else ""))
-    return base(det, e0, withPoisson, nTraj, dose, sf, bf, tmp, buildEmbeddedCylinder, {"Substrate": substrate, "Radius" : radius, "Depth" : depth, "Material" : mat}, xtraParams)
-
+    res = base(det, e0, withPoisson, nTraj, dose, sf, bf, tmp, buildEmbeddedCylinder, {"Substrate": substrate, "Radius" : radius, "Depth" : depth, "Material" : mat}, xtraParams)
+    return res
 
 def buildInterface(monte, chamber, origin, buildParams):
     mat = buildParams["Material"]
@@ -763,7 +769,8 @@ def interface(primary, offset, secondary, det, e0=20.0, withPoisson=True, nTraj=
     + offset - Offset from interface in meters
     + secondary - Material on the other side of the interface"""
     tmp = u"MC simulation of a probe placed in %s %0.2f microns from %s at %0.1f keV%s%s" % (primary, offset * 1.0e6, secondary, e0, (" + CSF" if sf else ""), (" + BSF" if bf else ""))
-    return base(det, e0, withPoisson, nTraj, dose, sf, bf, tmp, buildInterface, {"Secondary" : secondary, "Offset" : offset, "Material" : primary}, xtraParams)
+    res = base(det, e0, withPoisson, nTraj, dose, sf, bf, tmp, buildInterface, {"Secondary" : secondary, "Offset" : offset, "Material" : primary}, xtraParams)
+    return res
 
 def buildCrenellated(monte, chamber, origin, buildParams):
     width = buildParams["Width"]
@@ -780,7 +787,8 @@ def crenellated(width, depth, material, det, e0=20.0, withPoisson=True, nTraj=de
     """crenellated(width, depth, material, det, e0=20.0, withPoisson=True, nTraj=defaultNumTraj, dose=defaultDose, sf=defaultCharFluor, bf=defaultBremFluor, substrate=None, xtraParams={})
     Monte Carlo simulate a spectrum from a crenellated (think top of castle battlements) array of blocks.  This model is intended to model surface roughness.  With the width and depth of the features specified."""
     tmp = u"MC simulation of crenellated[W=%g, D=%g, %s] at %0.1f keV%s%s" % (width, depth, material, e0, (" + CSF" if sf else ""), (" + BSF" if bf else ""))
-    return base(det, e0, withPoisson, nTraj, dose, sf, bf, tmp, buildCrenellated, {"Width":width, "Depth":depth, "Material":material }, xtraParams)
+    res =  base(det, e0, withPoisson, nTraj, dose, sf, bf, tmp, buildCrenellated, {"Width":width, "Depth":depth, "Material":material }, xtraParams)
+    return res
 
 def buildVerticalLayers(monte, chamber, origin, buildParams):
     width = buildParams["Width"]
@@ -798,7 +806,8 @@ def verticalLayers(width, materials, det, e0=20.0, withPoisson=True, nTraj=defau
     """verticalLayers(width, materials, det, e0=20.0, withPoisson=True, nTraj=defaultNumTraj, dose=defaultDose, sf=defaultCharFluor, bf=defaultBremFluor, substrate=None, xtraParams={})
     Simulates an alternating stack of vertical layers of 'width'.  The layers rotate through the 'materials' which is a list of epq.Material-objects. The layers are in the y-z-plane and are spaced along the x-axis."""
     tmp = "MC simulation of vertical layers[W=%g, %s] at %0.1f keV%s%s" % (width, materials, e0, (" + CSF" if sf else ""), (" + BSF" if bf else ""))
-    return base(det, e0, withPoisson, nTraj, dose, sf, bf, tmp, buildVerticalLayers, {"Width":width, "Materials":materials }, xtraParams)
+    res = base(det, e0, withPoisson, nTraj, dose, sf, bf, tmp, buildVerticalLayers, {"Width":width, "Materials":materials }, xtraParams)
+    return res
 
 def buildHorizontalLayers(monte, chamber, origin, buildParams):
     depth = buildParams["Depth"]
@@ -816,7 +825,8 @@ def horizontalLayers(depth, materials, det, e0=20.0, withPoisson=True, nTraj=def
     """horizontalLayers(depth, materials, det, e0=20.0, withPoisson=True, nTraj=defaultNumTraj, dose=defaultDose, sf=defaultCharFluor, bf=defaultBremFluor, substrate=None, xtraParams={})
     Simulates an alternating stack of horizontal layers of 'depth'.  The layers rotate through the 'materials' which is a list of epq.Material-objects. The layers are in the x-y-plane and are spaced along the z-axis."""
     tmp = "MC simulation of horizontal layers[D=%g, %s] at %0.1f keV%s%s" % (depth, materials, e0, (" + CSF" if sf else ""), (" + BSF" if bf else ""))
-    return base(det, e0, withPoisson, nTraj, dose, sf, bf, tmp, buildHorizontalLayers, {"Depth":depth, "Materials":materials }, xtraParams)
+    res = base(det, e0, withPoisson, nTraj, dose, sf, bf, tmp, buildHorizontalLayers, {"Depth":depth, "Materials":materials }, xtraParams)
+    return res
 
 def buildTwoParticles(monte, chamber, origin, buildParams):
     p1Mat, p1Radius = buildParams["P1"]
@@ -840,7 +850,8 @@ def twoParticles(p1Mat, p1Radius, p2Mat, p2Radius, separation, substrate, det, e
         print "Warning: The particle centers are separated by less than the sum of the radii."
     params = { "P1" : (p1Mat, p1Radius,), "P2" : (p2Mat, p2Radius,), "Separation": separation, "Substrate" : substrate }
     tmp = "MC simulation of two particles separated by %g microns at %0.1f keV%s%s" % (separation * 1.0e6, e0, (" + CSF" if sf else ""), (" + BSF" if bf else ""))
-    return base(det, e0, withPoisson, nTraj, dose, sf, bf, tmp, buildTwoParticles, params, xtraParams)
+    res = base(det, e0, withPoisson, nTraj, dose, sf, bf, tmp, buildTwoParticles, params, xtraParams)
+    return res
 
 def buildRipples(monte, chamber, origin, buildParams):
     mat = buildParams["Material"]
@@ -866,8 +877,8 @@ def ripples(material, spacing, depth, det, e0=20.0, withPoisson=True, nTraj=defa
     + spacing - spacing between peak and trough
     + depth - Depth of trough"""
     tmp = u"MC simulation of a rippled surface (%0.2f, %0.2f) of %s at %0.1f keV%s%s" % (1.0e6 * spacing, 1.0e6 * depth, material, e0, (" + CSF" if sf else ""), (" + BSF" if bf else ""))
-    return base(det, e0, withPoisson, nTraj, dose, sf, bf, tmp, buildRipples, { "Spacing" : spacing, "Depth" : depth, "Material" : material }, xtraParams)
-
+    res =  base(det, e0, withPoisson, nTraj, dose, sf, bf, tmp, buildRipples, { "Spacing" : spacing, "Depth" : depth, "Material" : material }, xtraParams)
+    return res
 
 def buildScratched(monte, chamber, origin, buildParams):
     mat = buildParams["Material"]
@@ -901,8 +912,8 @@ def scratched(material, spacing, depth, det, e0=20.0, withPoisson=True, nTraj=de
     + spacing - spacing between peak and trough
     + depth - Depth of trough"""
     tmp = u"MC simulation of a scratched surface (%0.2f, %0.2f) of %s at %0.1f keV%s%s" % (1.0e6 * spacing, 1.0e6 * depth, material, e0, (" + CSF" if sf else ""), (" + BSF" if bf else ""))
-    return base(det, e0, withPoisson, nTraj, dose, sf, bf, tmp, buildScratched, { "Spacing" : spacing, "Depth" : depth, "Material" : material }, xtraParams)
-
+    res =  base(det, e0, withPoisson, nTraj, dose, sf, bf, tmp, buildScratched, { "Spacing" : spacing, "Depth" : depth, "Material" : material }, xtraParams)
+    return res
 
 def buildRough(monte, chamber, origin, buildParams):
     mat = buildParams["Material"]
@@ -931,8 +942,8 @@ def rough(material, coverage, scale, det, e0=20.0, withPoisson=True, nTraj=defau
     + scale - height and width of pillars
     + depth - Depth of trough"""
     tmp = u"MC simulation of a %0.2lg um %d%% coverage rough surface of %s at %0.1f keV%s%s" % (1.0e6 * scale, int(100.0 * coverage), material, e0, (" + CSF" if sf else ""), (" + BSF" if bf else ""))
-    return base(det, e0, withPoisson, nTraj, dose, sf, bf, tmp, buildRough, { "Scale" : scale, "Coverage" : coverage, "Size" : 1.0e-5, "Material" : material }, xtraParams)
-
+    res =  base(det, e0, withPoisson, nTraj, dose, sf, bf, tmp, buildRough, { "Scale" : scale, "Coverage" : coverage, "Size" : 1.0e-5, "Material" : material }, xtraParams)
+    return res
 
 def buildPartialSphere(monte, chamber, origin, buildParams):
     mat = buildParams["Material"]
@@ -957,8 +968,8 @@ def partialSphere(material, radius, top, bottom, substrate, det, e0=20.0, withPo
     + top, bottom - distance up or down to trim top/bottom of sphere (in range -radius, radius)
     + substrate - substrate material or None"""
     tmp = u"MC simulation of a %0.2lg um truncated sphere of %s at %0.1f keV%s%s" % (1.0e6 * radius, material, e0, (" + CSF" if sf else ""), (" + BSF" if bf else ""))
-    return base(det, e0, withPoisson, nTraj, dose, sf, bf, tmp, buildPartialSphere, { "Radius" : radius, "Top" : top, "Bottom" : bottom, "Substrate":substrate, "Material" : material }, xtraParams)
-
+    res =  base(det, e0, withPoisson, nTraj, dose, sf, bf, tmp, buildPartialSphere, { "Radius" : radius, "Top" : top, "Bottom" : bottom, "Substrate":substrate, "Material" : material }, xtraParams)
+    return res
 
 def buildSphereBed(monte, chamber, origin, buildParams):
     mat = buildParams["Material"]
@@ -991,8 +1002,8 @@ def sphereBed(material, radius, substrate, randomize, det, e0=20.0, withPoisson=
     + radius - sphere radius
     + substrate - Substrate material below a single plane of spheres"""
     tmp = u"MC simulation of a %0.2lg um%ssphere bed of %s at %0.1f keV%s%s" % (1.0e6 * radius, (" rand " if randomize else " "), material, e0, (" + CSF" if sf else ""), (" + BSF" if bf else ""))
-    return base(det, e0, withPoisson, nTraj, dose, sf, bf, tmp, buildSphereBed, { "Radius" : radius, "Substrate":substrate, "Material" : material, "Randomize" : randomize }, xtraParams)
-
+    res = base(det, e0, withPoisson, nTraj, dose, sf, bf, tmp, buildSphereBed, { "Radius" : radius, "Substrate":substrate, "Material" : material, "Randomize" : randomize }, xtraParams)
+    return res
 
 def buildSphereMatrix(monte, chamber, origin, buildParams):
     mat = buildParams["Material"]
@@ -1023,7 +1034,8 @@ def sphereMatrix(material, radius, randomize, det, e0=20.0, withPoisson=True, nT
     + radius - sphere radius
     + substrate - Substrate material below a single plane of spheres"""
     tmp = u"MC simulation of a %0.2lg um%ssphere matrix of %s at %0.1f keV%s%s" % (1.0e6 * radius, (" rand " if randomize else " "), material, e0, (" + CSF" if sf else ""), (" + BSF" if bf else ""))
-    return base(det, e0, withPoisson, nTraj, dose, sf, bf, tmp, buildSphereMatrix, { "Radius" : radius, "Material" : material, "Randomize" : randomize }, xtraParams)
+    res = base(det, e0, withPoisson, nTraj, dose, sf, bf, tmp, buildSphereMatrix, { "Radius" : radius, "Material" : material, "Randomize" : randomize }, xtraParams)
+    return res
 
 
 def buildMoguls(monte, chamber, origin, buildParams):
@@ -1066,7 +1078,8 @@ def moguls(material, height, randomize, coverage, det, e0=20.0, withPoisson=True
     + randomize - randomize the beam start position?
     + coverage - fractional likelihood of each bump existing (0.0 to 1.0)"""
     tmp = u"MC simulation of a %0.2lg um %d%% %smogul bed of %s at %0.1f keV%s%s" % (1.0e6 * height, int(100.0*coverage), (" rand " if randomize else " "), material, e0, (" + CSF" if sf else ""), (" + BSF" if bf else ""))
-    return base(det, e0, withPoisson, nTraj, dose, sf, bf, tmp, buildMoguls, { "Coverage" : coverage, "Optimize": optimize, "Height" : height, "Material" : material, "Randomize" : randomize }, xtraParams)
+    res = base(det, e0, withPoisson, nTraj, dose, sf, bf, tmp, buildMoguls, { "Coverage" : coverage, "Optimize": optimize, "Height" : height, "Material" : material, "Randomize" : randomize }, xtraParams)
+    return res
 
 def zaf(comp, det, e0, nTraj=defaultNumTraj, dose=defaultDose, stds={}):
     """zaf(comp, det, e0, nTraj=defaultNumTraj, dose=defaultDose, stds={})
