@@ -1,7 +1,7 @@
 ---
 title: "penepma hints"
 author: "John Minter"
-date: "Started: 2018-07-23, Last Modified: 2018-07-23"
+date: "Started: 2018-07-23, Last Modified: 2018-07-25"
 output:
   html_document:
     keep_md: true
@@ -29,7 +29,38 @@ pause
 ```
 
 
-3. The limit to the number of channels you can compute is `1000`.
+3. The limit to the number of channels you can compute is `1000`. To get the
+best energy resolution when using a high accelerating voltage, for example
+30 kV to get good beam penetration, consider detecting a smaller energy range.
+For our Ir on Ag on silica example, I chose to set the `SENERG` value as:
+
+```
+>>>>>>>> Electron beam definition.
+SENERG 3.0E+04                   [Energy of the electron beam, in eV]
+```
+
+and the nergy and angular distributions of emerging particles as:
+
+```
+       >>>>>>>> Emerging particles. Energy and angular distributions.
+NBE    1e1 1.5e4 1000     [E-interval and no. of energy bins 1e3 max]
+```
+
+and to make the photon detectors consistent:
+
+```
+       >>>>>>>> Photon detectors (up to 25 different detectors).
+                IPSF=0, do not create a phase-space file.
+                IPSF=1, creates a phase-space file.
+       .
+PDANGL 50.0 60.0 0.0 360.0 0             [Angular window, in deg, IPSF]
+PDENER 1e1 1.5E+04 1000                [Energy window, no. of channels]
+```
+
+I'm checking the perfomance now...
+
+
+
 
 4. In the `.geo` files, layer thickness values are typically specified
 in `microns` or `nm`. These are conveniences for the writer. The real
