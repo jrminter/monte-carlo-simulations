@@ -32,7 +32,7 @@ IFORCE 2 2 2 -10   1e-4 1.0           [KB,KPAR,ICOL,FORCER,WLOW,WHIG]
 IFORCE 2 2 3 -10   1e-4 1.0           [KB,KPAR,ICOL,FORCER,WLOW,WHIG]
        .
        >>>>>>>> Emerging particles. Energy and angular distributions.
-NBE    1e1 3e4 1000       [E-interval and no. of energy bins 1e3 max]
+NBE    1e1 1.5e4 1000     [E-interval and no. of energy bins 1e3 max]
 NBANGL 45 30              [Nos. of bins for the angles THETA and PHI]
        .
        >>>>>>>> Photon detectors (up to 25 different detectors).
@@ -40,7 +40,7 @@ NBANGL 45 30              [Nos. of bins for the angles THETA and PHI]
                 IPSF=1, creates a phase-space file.
        .
 PDANGL 50.0 60.0 0.0 360.0 0             [Angular window, in deg, IPSF]
-PDENER 10. 3.0E+04 1000                [Energy window, no. of channels]
+PDENER 1e1 1.5E+04 1000                [Energy window, no. of channels]
        .
        >>>>>>>> Job properties
 RESUME dump1.dat                 [Resume from this dump file, 20 chars]
@@ -49,4 +49,4 @@ DUMPP  120                                     [Dumping period, in sec]
        .
 RSEED  -10   1                   [Seeds of the random-number generator]
 NSIMSH 2.0e+09                    [Desired number of simulated showers]
-TIME   36000                  [10 hrs allotted simulation time, in sec]
+TIME   18000                   [5 hrs allotted simulation time, in sec]
