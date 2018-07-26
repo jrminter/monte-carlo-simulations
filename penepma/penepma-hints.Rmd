@@ -30,7 +30,6 @@ Penepma < "Ir-500-on-Ag-250-on-Silica.in"
 pause
 ```
 
-
 3. The limit to the number of channels you can compute is `1000`. To get the
 best energy resolution when using a high accelerating voltage, for example
 30 kV to get good beam penetration, consider detecting a smaller energy range.
@@ -61,8 +60,6 @@ PDENER 1e1 1.5E+04 1000                [Energy window, no. of channels]
 
 I'm checking the performance now...
 
-
-
 4. In the `.geo` files, layer thickness values are typically specified
 in `microns` or `nm`. These are conveniences for the writer. The real
 values are cumulative sums in `cm`. The helper function,
@@ -77,8 +74,28 @@ library(rpenepma)
 l_nm_shifts <- c(500, 250, 1.0e+07)
 l_cum_shifts_cm <- calculate_penepma_z_shifts(l_nm_shifts)
 print(l_cum_shifts_cm)
-
 ```
+
+5. **A working setup on MacOS**: One issue with `penepma` is that some
+programs (`material` and `tables`) need access to the directory of
+material parameters (`pdfiles`). I tried putting the three key
+executables in (`penepma`, `material`, and `tables`) in a `bin`
+directory in my user account and adding that to the `$PATH`. That
+worked fine for `penepma` but not `material`, and `tables` when
+I tried to run them from my simulation folder. As a workaround,
+I created a folder for all my simulations 
+(`$HOME/Documents/work/penepma16sims`). I created a folder (`shared`)
+inside the `penepma16sims` folder adding the executables  `material`
+and `tables` as well as the folder `pdfiles`. Copy the output from
+`material` to the appropriate simulation folder inside the main
+`penepma16sims` directory. These simulations may be run from
+shell scripts inside the directory running `penepma` from the shared
+folder. I have thus far been unable to successfully compile the
+source from `PenGeomJar` on MacOS with either the current 
+`homebrew` gcc compiler (`gcc-8.1.0` and includes `gfortran`) or
+the combination of the `gfortran-6.1.pkg` and `clang-6.0.0.pkg` 
+currently used by R. These fail with an error message:
+`library not found for -lgfortran`.
 
 
 
