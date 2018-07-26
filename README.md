@@ -26,7 +26,8 @@ trilayer film prompted by a discussion on the
 [Probe Software Forum](http://probesoftware.com/smf/index.php?topic=1104.0).
 I was also experimenting with different versions of `penepma`. I also added
 the DTSA simulations at two thickness values, including the python 
-(actually jython) script to run the simulation.
+(actually jython) script to run the simulation. The results to date are reported
+[here](Ir-on-Ag-on-silca/Ir-on-Ag-on-Silica.md).
 
 2. Developing python scripts for DTSA-II analyses  makes them more
 reproducible.  There information in the [dtsa2](./dtsa2/dtsa2.md)
