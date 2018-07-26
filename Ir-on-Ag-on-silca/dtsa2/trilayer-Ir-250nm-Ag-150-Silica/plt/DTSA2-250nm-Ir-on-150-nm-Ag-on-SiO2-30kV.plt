@@ -5,8 +5,8 @@
 #     COMMENT OUT THE "TERMINAL WINDOW" SECTION, SET THE TERMINAL AS
 #     THE CHOSEN TYPE, AND SET THE OUTPUT.
 
-set terminal postscript enhanced color "Arial" 12
-set output "DTSA2-250nm-Ir-on-150-nm-Ag-on-SiO2-30kV.ps"
+# set terminal postscript enhanced color "Arial" 12
+# set output "DTSA2-250nm-Ir-on-150-nm-Ag-on-SiO2-30kV.ps"
 # proc-gnuplot2.sh DTSA2-250nm-Ir-on-150-nm-Ag-on-SiO2-30kV
 # set terminal png
 # set terminal window
