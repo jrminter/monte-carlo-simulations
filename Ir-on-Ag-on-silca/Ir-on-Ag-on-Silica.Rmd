@@ -1,7 +1,7 @@
 ---
 title: "Ir on Ag on Silica"
 author: "John Minter"
-date: "Started: 2018-07-23, Last Modified: 2018-07-23"
+date: "Started: 2018-07-23, Last Modified: 2018-07-25"
 output:
   html_document:
     keep_md: true
@@ -27,7 +27,9 @@ Iridium (Z=77, density=22.56 g/cm3) is a heavy metal and can absorb X-rays.
 [Armstrong and Crispin](https://www.cambridge.org/core/journals/microscopy-and-microanalysis/article/ultrathin-iridium-as-a-replacement-coating-for-carbon-in-high-resolution-quantitative-analyses-of-insulating-specimens/E112CCE091EA0D98244C5670186CB24F)
 have demonstrated that a 5 nm film is conductive and so thin
 coatings are useful where one wants to measure C. This alerted me to the need
-to do some modeling.
+to do some modeling. I also used the opportunity to script some of the analysis
+in DTSA-II and to get get penepma-16 running and get some confidence using it.
+I'm retired. This is fun and intellectually stimulating,
 
 ## Materials
 
@@ -48,9 +50,48 @@ Note that the `pen-2016` has the files I used with `penepma16`.
 
 ## Results
 
+### 500 nm Ir on 250 nm Ag on Silica at 30 kV 
+
 Note that DTSA-II and penepma-16 simulations run using the initial
 description of a 500 nm Ir layer on a 250 nm layer of Ag on SiO_2
 at **30 kV** did not detect significant Ag! 500 nm of Ir is
-**not thin**!
+**not thin**! These were 5 hour simulations.
 
-![DTSA-II and penepma-16 simulations of a 500 nm Ir layer on 250 nm of Ag on Si. Note that the Ag transitions are barely visible!](./pen-2016/Ir-500nm-on-Ag-250nm-on-SiO2-30kV.png)
+![](./pen-2016/Ir-500nm-on-Ag-250nm-on-SiO2-30kV.png)
+
+DTSA-II can also simulate the "emitted" and "detected" spectra. This simulation
+is shown below:
+
+![](./dtsa2/trilayer-Ir-500nm-Ag-250-Silica/plt/DTSA2-500nm-Ir-on-250-nm-Ag-on-SiO2-30kV.png)
+
+### 250 nm Ir on 150 nm Ag on Silica at 30 kV 
+
+Now let's reduce the layer thickness and run the penepma-16 simulation
+again with penepma-16 and DTSA-II. Now we finally start to detect Ag.
+
+
+![](./dtsa2/trilayer-Ir-250nm-Ag-150-Silica/plt/DTSA2-penepma-16-250nm-Ir-150nm-Ag-on-SiO2-30kV.png)
+
+### What to do?
+
+One could measure an unknown from the top down by measuring elemental standards
+and determining the K-ratios for transitions of interest from the unknowns at
+multiple (at least 3 voltages) and compute the K-ratios. One could then use
+a program like GMRFilm or Stratagem (commercial) and compute the layer
+thickness values. This **only** works when the system is over-determined.
+To measure the thickness of Ir and Ag you would need k-ratios for at least 3
+and preferably 5 voltages. Having done this, I can report that it is
+**a lot of work**. It would make sense if you had a lot of specimens to run 
+and you collect the data from many samples at the same sitting. One still
+needs a way to validate the results.
+
+IMHO, a great approach would be to take a specimen with layer thickness
+estimates in the middle of the range and cut a trench in a Focused Ion 
+Beam instrument and directly measure the layer thickness values. One really
+need to do this to validate the other approach. Yes, it is expensive.
+
+Ask yourself: **What is the cost of being wrong?** There is a time to
+pinch the pennies. If the results count, management needs to find the
+money...
+ 
+
