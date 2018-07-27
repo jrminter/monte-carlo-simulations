@@ -33,6 +33,13 @@ the DTSA simulations at two thickness values, including the python
 reproducible.  There information in the [dtsa2](./dtsa2/dtsa2.md)
 folder.
 
+3. Analysis of C-coated ZnO on Corning Eagle-XG glass provides a good
+opportunity to use some new features of DTSA-II. In this case we can see
+the effect of the ZnO layer thickness on the absorption of of X-rays
+generated in the substrate.  There information in the
+[C-ctd-ZnO-on-EagleXG-glass](./C-ctd-ZnO-on-EagleXG-glass/C-on-ZnO-on-EagleXG-glass.md)
+folder.
+
 
 ## Useful resources
 
