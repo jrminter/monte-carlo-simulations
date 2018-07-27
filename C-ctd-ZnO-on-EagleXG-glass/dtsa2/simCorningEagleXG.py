@@ -4,8 +4,9 @@
    Date     Who  Comment
 ----------  ---  -----------------------------------------------
 
-2018-01-13  JRM  Move to proj directory. Do path right...
+2018-07-26  JRM  Move to proj directory. Do path right...
                  Elapse: 0:07:51.2 for 10,000 traj on crunch.
+                 Elapse: 0:19:40.1 for 50,000 traj on crunch.
 
 Densities from Corning data sheet
 and Wikipedia
@@ -47,17 +48,17 @@ rptDir   = gitDir + rPrjDir + '/simCorningEagleXG Results/'
 outDir   = gitDir + rPrjDir
 bVerbose = False
 det      = findDetector("Oxford p4 05eV 2K")
-e0       =     7.0   # kV
-nTraj    = 20000     # trajectories
-lt       =    60     # sec
-pc       =     1.0   # nA
-vmrlEl   =    40     # number of el for VMRL
-tCNm     =    20.0   # thickness of C on EagleXG in nm
-tZnONm   =    20.0   # thickness of ZnO on EagleXG in nm
-rhoC     =     1.35  # C density per ProbeSoftware Forum
-rhoZnO   =     5.61  # ZnO density
-rhoEXG   =     2.36  # Eagle XG density 
-bVerbose =    False  # print directories
+e0       =     7.0    # kV
+nTraj    = 50000      # trajectories
+lt       =    60      # sec
+pc       =     1.0    # nA
+vmrlEl   =    40      # number of el for VMRL
+tCNm     =    20.0    # thickness of C on EagleXG in nm
+tZnONm   =    20.0    # thickness of ZnO on EagleXG in nm
+rhoC     =     1.35   # C density per ProbeSoftware Forum
+rhoZnO   =     5.61   # ZnO density
+rhoEXG   =     2.36   # Eagle XG density
+bVerbose =    False   # print directories
 
 dose = pc * lt  # na-sec
 
@@ -70,10 +71,10 @@ ensureDir(spcDir)
 
 DataManager.clearSpectrumList()
 
-#       O      Si      Ca      Al      Mg       B      Na 
-# 0.47638 0.25709 0.15009 0.05504 0.03377 0.02174 0.00590 
+#       O      Si      Ca      Al      Mg       B      Na
+# 0.47638 0.25709 0.15009 0.05504 0.03377 0.02174 0.00590
 # rhoEXG
-# 
+#
 c       = material("C", density=rhoC)
 zno     = material("ZnO", density=rhoZnO)
 eagleXG = epq.Material(epq.Composition([epq.Element.O,
