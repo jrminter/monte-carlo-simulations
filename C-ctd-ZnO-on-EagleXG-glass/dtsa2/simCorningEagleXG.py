@@ -5,8 +5,15 @@
 ----------  ---  -----------------------------------------------
 
 2018-07-26  JRM  Move to proj directory. Do path right...
-                 Elapse: 0:07:51.2 for 10,000 traj on crunch.
-                 Elapse: 0:19:40.1 for 50,000 traj on crunch.
+                 Elapse: 0:07:51.2 for 10,000 traj on crunch   20 nm ZnO.
+                 Elapse: 0:19:40.1 for 50,000 traj on crunch   20 nm ZnO.
+                 Elapse: 0:14:21.0 for 50,000 traj on crunch  100 nm ZnO.
+                 Elapse: 0:10:30.6 for 50,000 traj on crunch  250 nm ZnO.
+                 Elapse: 0:10:12.6 for 50,000 traj on crunch  500 nm ZnO.
+                 Elapse: 0:10:11.7 for 50,000 traj on crunch 1000 nm ZnO.
+                 Elapse: 0:10:09.7 for 50,000 traj on crunch 2000 nm ZnO.
+
+20nm-C-2000nm-ZnO-CorningEagleXG-7kV.plt
 
 Densities from Corning data sheet
 and Wikipedia
@@ -39,6 +46,7 @@ def ensureDir(d):
 
 
 start   = time.time()
+print("Date & time started: " + time.strftime("%c"))
 
 gitDir   = os.environ['GIT_HOME']
 gitDir   = gitDir.replace('\\','/')
@@ -54,7 +62,7 @@ lt       =    60      # sec
 pc       =     1.0    # nA
 vmrlEl   =    40      # number of el for VMRL
 tCNm     =    20.0    # thickness of C on EagleXG in nm
-tZnONm   =    20.0    # thickness of ZnO on EagleXG in nm
+tZnONm   =  2000.0    # thickness of ZnO on EagleXG in nm
 rhoC     =     1.35   # C density per ProbeSoftware Forum
 rhoZnO   =     5.61   # ZnO density
 rhoEXG   =     2.36   # Eagle XG density
@@ -117,6 +125,10 @@ for tr in trs:
 xtraParams={}
 xtraParams.update(jmc3.configureXRayAccumulators(xrts,True, True, True))
 
+fmtS = "running-%g-nm-C-%g-nm-ZnO-on-EagleXG-at-%g-kV"
+sMsg = fmtS % (tCNm, tZnONm, e0)
+print(sMsg)
+print("MC sim xtraParams:")
 print(xtraParams)
 
 multiLaySim = jmc3.multiFilm(layers, det, e0, True, nTraj, dose, True, True, xtraParams)
@@ -153,4 +165,4 @@ if(delta > 60):
     delta = delta/60
     msg = "...or %.3f hr" % delta
     print msg
-
+print("Date & time finished: " + time.strftime("%c"))

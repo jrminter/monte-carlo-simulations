@@ -2,17 +2,17 @@
 # On Jul 27, 2018
 # By jrminter
 
-# set terminal postscript enhanced color "Arial" 12
-# set output "20nm-C-20nm-ZnO-CorningEagleXG-7kV.ps"
-# proc-gnuplot.sh 20nm-C-20nm-ZnO-CorningEagleXG-7kV
+set terminal postscript enhanced color "Arial" 12
+set output "20nm-C-20nm-ZnO-on-EagleXG-7kV.ps"
+# proc-gnuplot.sh 20nm-C-20nm-ZnO-on-EagleXG-7kV
 # set terminal png
 # set terminal window
 # set terminal qt
 
-lablFont = "Arial,10"
+lablFont = "Arial,12"
 titlFont = "Arial,14"
-keyFont  = "Arial,11"
-ticFont  = "Arial,11"
+keyFont  = "Arial,12"
+ticFont  = "Arial,12"
 
 set key font keyFont
 
