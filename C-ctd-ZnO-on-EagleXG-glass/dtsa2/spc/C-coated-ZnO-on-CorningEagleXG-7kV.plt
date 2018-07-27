@@ -2,8 +2,8 @@
 # On Jul 27, 2018
 # By jrminter
 
-set terminal postscript enhanced color "Arial" 12
-set output "C-coated-ZnO-on-CorningEagleXG-7kV.ps"
+# set terminal postscript enhanced color "Arial" 12
+# set output "C-coated-ZnO-on-CorningEagleXG-7kV.ps"
 # proc-gnuplot.sh C-coated-ZnO-on-CorningEagleXG-7kV
 # set terminal png
 # set terminal window

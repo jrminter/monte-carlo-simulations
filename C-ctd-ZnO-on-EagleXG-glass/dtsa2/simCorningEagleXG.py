@@ -5,15 +5,17 @@
 ----------  ---  -----------------------------------------------
 
 2018-07-26  JRM  Move to proj directory. Do path right...
-                 Elapse: 0:07:51.2 for 10,000 traj on crunch   20 nm ZnO.
-                 Elapse: 0:19:40.1 for 50,000 traj on crunch   20 nm ZnO.
-                 Elapse: 0:14:21.0 for 50,000 traj on crunch  100 nm ZnO.
-                 Elapse: 0:10:30.6 for 50,000 traj on crunch  250 nm ZnO.
-                 Elapse: 0:10:12.6 for 50,000 traj on crunch  500 nm ZnO.
-                 Elapse: 0:10:11.7 for 50,000 traj on crunch 1000 nm ZnO.
-                 Elapse: 0:10:09.7 for 50,000 traj on crunch 2000 nm ZnO.
+                 Elapse: 0:07:51.2 for 10,000  traj on crunch   20 nm ZnO.
+                 Elapse: 0:19:40.1 for 50,000  traj on crunch   20 nm ZnO.
+                 Elapse: 0:14:21.0 for 50,000  traj on crunch  100 nm ZnO.
+                 Elapse: 0:10:30.6 for 50,000  traj on crunch  250 nm ZnO.
+                 Elapse: 0:10:12.6 for 50,000  traj on crunch  500 nm ZnO.
+                 Elapse: 0:10:11.7 for 50,000  traj on crunch 1000 nm ZnO.
+                 Elapse: 0:10:09.7 for 50,000  traj on crunch 2000 nm ZnO.
+                 Elapse: 1:49:28.3 for 500,000 traj on crunch  250 nm ZnO.
+                 Elapse: 2:29:35.0 for 500,000 traj on crunch  100 nm ZnO.
 
-20nm-C-2000nm-ZnO-CorningEagleXG-7kV.plt
+20nm-C-250nm-ZnO-on-EagleXG-7kV-50K-traj.plt
 
 Densities from Corning data sheet
 and Wikipedia
@@ -56,17 +58,17 @@ rptDir   = gitDir + rPrjDir + '/simCorningEagleXG Results/'
 outDir   = gitDir + rPrjDir
 bVerbose = False
 det      = findDetector("Oxford p4 05eV 2K")
-e0       =     7.0    # kV
-nTraj    = 50000      # trajectories
-lt       =    60      # sec
-pc       =     1.0    # nA
-vmrlEl   =    40      # number of el for VMRL
-tCNm     =    20.0    # thickness of C on EagleXG in nm
-tZnONm   =  2000.0    # thickness of ZnO on EagleXG in nm
-rhoC     =     1.35   # C density per ProbeSoftware Forum
-rhoZnO   =     5.61   # ZnO density
-rhoEXG   =     2.36   # Eagle XG density
-bVerbose =    False   # print directories
+e0       =      7.0    # kV
+nTraj    = 500000      # trajectories
+lt       =     60      # sec
+pc       =      1.0    # nA
+vmrlEl   =     40      # number of el for VMRL
+tCNm     =     20.0    # thickness of C on EagleXG in nm
+tZnONm   =    100.0    # thickness of ZnO on EagleXG in nm
+rhoC     =      1.35   # C density per ProbeSoftware Forum
+rhoZnO   =      5.61   # ZnO density
+rhoEXG   =      2.36   # Eagle XG density
+bVerbose =     False   # print directories
 
 dose = pc * lt  # na-sec
 
@@ -125,8 +127,8 @@ for tr in trs:
 xtraParams={}
 xtraParams.update(jmc3.configureXRayAccumulators(xrts,True, True, True))
 
-fmtS = "running-%g-nm-C-%g-nm-ZnO-on-EagleXG-at-%g-kV"
-sMsg = fmtS % (tCNm, tZnONm, e0)
+fmtS = "Starting simulation of %g nm C on %g nm ZnO on EagleXG glass at %g kV with %g trajectories"
+sMsg = fmtS % (tCNm, tZnONm, e0, nTraj)
 print(sMsg)
 print("MC sim xtraParams:")
 print(xtraParams)
