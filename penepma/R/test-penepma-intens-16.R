@@ -29,6 +29,7 @@ C <- df %>%
 print(C)
 
 # Get the Si intensities
+print("Si")
 Si <- df %>%
   filter(IZ==14)%>%
   filter(P.mu == max(P.mu)) %>%
@@ -37,6 +38,7 @@ Si <- df %>%
 print(Si)
 
 # Get the O intensities
+print("O")
 O <- df %>%
   filter(IZ==8)%>%
   filter(P.mu == max(P.mu)) %>%
@@ -44,6 +46,7 @@ O <- df %>%
 
 print(O)
 
+print("Ca")
 Ca <- df %>%
   filter(IZ==20)%>%
   filter(P.mu == max(P.mu)) %>%
