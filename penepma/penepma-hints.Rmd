@@ -18,22 +18,34 @@ material files with `material.exe` and `penepma.exe` from the same
 release.
 
 2. Old `*.dat` files remaining in the folder where penepma is run
-can cause unpredictable side effects. I found that starting the simulation
-with a batch file like shown below helps.
+can cause unpredictable side effects. I found that on Windows that
+batch files had problems with finding `penepma16.exe` in the path,
+even though the directory was in the path. It turns out that using
+the `bash` shell on Windows (supplied by `git` for Windows) solves
+the problem. Now I can use similar shell scripts on both Windows
+and MacOS! Below is an example from my Win 7 box:
 
 ```
-C:
-cd "C:/Apps/penepma16/penepma"
-del /f *.dat
-Penepma < "Ir-500-on-Ag-250-on-Silica.in"
+#!/bin/bash
+# If you need to kill a simulation and restart, closing the window
+# does NOT kill the penepma16 process. Start a task manager and kill
+# the penepma16 process BEFORE restarting!
+rm -rf *.dat
+sleep 1
+Penepma < "20-nm-C-coated-EagleXG.in"
 
-pause
+sleep 2
 ```
 
-3. The limit to the number of channels you can compute is `1000`. To get the
-best energy resolution when using a high accelerating voltage, for example
-30 kV to get good beam penetration, consider detecting a smaller energy range.
-For our Ir on Ag on silica example, I chose to set the `SENERG` value as:
+3. The limit to the number of channels you can compute is with
+the default penepma16 is`1000`. I modified the code to permit a
+maximum of 4096 channels. If you use the standard version, to get the
+best energy resolution when using a high accelerating voltage, for
+example 30 kV to get good beam penetration, consider detecting a
+smaller energy range.
+
+For our Ir on Ag on silica example, when using the standard version,
+I chose to set the `SENERG` value as:
 
 ```
 >>>>>>>> Electron beam definition.
@@ -58,7 +70,7 @@ PDANGL 50.0 60.0 0.0 360.0 0             [Angular window, in deg, IPSF]
 PDENER 1e1 1.5E+04 1000                [Energy window, no. of channels]
 ```
 
-I'm checking the performance now...
+The performance was OK, but I prefer the modified code...
 
 4. In the `.geo` files, layer thickness values are typically specified
 in `microns` or `nm`. These are conveniences for the writer. The real
