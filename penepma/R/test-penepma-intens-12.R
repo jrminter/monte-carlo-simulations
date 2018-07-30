@@ -2,10 +2,10 @@
 # A helper function to analyze penepma runs on-the-fly
 # and plot the final spectrum when finished
 #
-# 2018-07-22 requires the rpenepma package from github and dplyr
+# 2018-07-29 requires the rpenepma package from github and dplyr
 #
 relPrj <- "20-nm-C-coated-EagleXG"
-e0     <-  30  # kV
+e0     <-  15  # kV
 
 # should not need to change below here...
 homDir <- Sys.getenv('HOME')
@@ -17,36 +17,27 @@ library(dplyr)
 
 inFil <- sprintf("%s/%s/%s/%s", homDir, relWrk, relPrj,"pe-intens-01.dat" )
 
-df <- penepma_get_intensities(inFil)
+tib <- penepma_get_intensities(inFil)
 
-print(summary(df))
+# print(summary(df))
 
-# Get the C intensities
 print("C")
-C <- df %>%
-  filter(IZ==6)
+
+C <- penepma_get_max_primary_intensity_z(tib, 6)
 print(C)
-
-
-# Get the Si intensities
-print("Si")
-Si <- df %>%
-  filter(IZ==14)
-
-print(Si)
 
 # Get the O intensities
 print("O")
-O <- df %>%
-  filter(IZ==8)
-
+O <- penepma_get_max_primary_intensity_z(tib, 8)
 print(O)
+
+# Get the Si intensities
+print("Si")
+Si <- penepma_get_max_primary_intensity_z(tib, 14)
+print(Si)
+
 
 # Get the Ca intensities
 print("Ca")
-Ca <- df %>%
-  filter(IZ==20)
+Ca <- penepma_get_max_primary_intensity_z(tib, 20)
 print(Ca)
-
-
-
