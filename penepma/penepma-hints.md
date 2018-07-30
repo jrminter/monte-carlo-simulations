@@ -13,7 +13,10 @@ output:
 
 1. There are subtle changes between versions. Be sure to to create
 material files with `material.exe` and `penepma.exe` from the same
-release.
+release. The good news is that you can use material input files in
+a shell script. Examples are in the `material-input` folder. One
+can use a batch/cmd or shell script to generate the files you need
+with the appropriate version of `material`.
 
 2. Old `*.dat` files remaining in the folder where penepma is run
 can cause unpredictable side effects. I found that on Windows that
