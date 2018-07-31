@@ -1,7 +1,7 @@
 ---
 title: "penepma hints"
 author: "John Minter"
-date: "Started: 2018-07-23, Last Modified: 2018-07-25"
+date: "Started: 2018-07-23, Last Modified: 2018-07-31"
 output:
   html_document:
     keep_md: true
@@ -73,7 +73,43 @@ PDENER 1e1 1.5E+04 1000                [Energy window, no. of channels]
 
 The performance was OK, but I prefer the modified code...
 
-4. In the `.geo` files, layer thickness values are typically specified
+4. Compilation options for penepma
+
+- **penepma16 MacOS** (High Sierra): I followed the instructions from
+[Stackoverflow](https://stackoverflow.com/questions/44308577/ieee-underflow-flag-ieee-denormal-in-fortran-77) to fix some overflow messages. First I removed the `STOP` command just prior to `END`. It is redundant. I ended up modifying `penelope.f`, and `penepma.f`. I had previously set the energy limit from 1000 channels to 4096 channels. I then used the following compile script.
+
+
+```
+#!/bin/bash
+# Note the -fdefault-real-8 flag comes from stackoverflow
+# 
+rm -rf *.mod
+rm -rf *.exe
+gfortran -Os -Wall material.f -fdefault-real-8 -o material.exe
+gfortran -Os -Wall tables.f -fdefault-real-8 -o tables.exe
+gfortran -Os -Wall pencyl.f -fdefault-real-8 -o pencyl.exe
+gfortran -Os -Wall penmain.f -fdefault-real-8 -o penmain.exe
+gfortran -Os -Wall penepma.f -fdefault-real-8 -o penepma.exe
+
+sleep 2
+```
+
+- **penepma16 Win7:** I used the Fortran compiler currently used by R.
+This comes packaged as [RTools-3.5](http://cran.revolutionanalytics.com/bin/windows/Rtools/Rtools35.exe) it is described as `i686-w64-mingw32` and is built on `gcc version 4.9.3`. This is a slightly older version and the compile script (compile16.cmd) is a bit different:
+
+```
+rm -rf *.mod
+C:\Apps\R\Rtools\mingw_64\bin\gfortran -Os -Wall material.f -freal-4-real-8 -o material16.exe
+C:\Apps\R\Rtools\mingw_64\bin\gfortran -Os -Wall tables.f -freal-4-real-8 -o tables16.exe
+C:\Apps\R\Rtools\mingw_64\bin\gfortran -Os -Wall pencyl.f -freal-4-real-8 -o pencyl16.exe
+C:\Apps\R\Rtools\mingw_64\bin\gfortran -Os penmain.f -freal-4-real-8 -o penmain16.exe
+C:\Apps\R\Rtools\mingw_64\bin\gfortran -Os penepma.f -freal-4-real-8 -o penepma16.exe
+pause
+```
+
+
+
+5. In the `.geo` files, layer thickness values are typically specified
 in `microns` or `nm`. These are conveniences for the writer. The real
 values are cumulative sums in `cm`. The helper function,
 `calculate_penepma_z_shifts()` helps the user get these right.
@@ -95,12 +131,12 @@ print(l_cum_shifts_cm)
 [3] "-1.000075000000000e+00"
 ```
 
-5. There are some helpful R scripts in the `penepma/R` folder.
+6. There are some helpful R scripts in the `penepma/R` folder.
 The `test-penepma-spec.R` script is helpful for plotting spectra
 using `ggplot2`. The script generates a plot with a linear intensity
 scale and a plot with a log intensity scale.
 
-6. **A working setup on MacOS**: One issue with `penepma` is that some
+7. **A working setup on MacOS**: One issue with `penepma` is that some
 programs (`material` and `tables`) need access to the directory of
 material parameters (`pdfiles`). I tried putting the three key
 executables in (`penepma`, `material`, and `tables`) in a `bin`
@@ -108,7 +144,7 @@ directory in my user account and adding that to the `$PATH`. That
 worked fine for `penepma` but not `material`, and `tables` when
 I tried to run them from my simulation folder. As a workaround,
 I created a folder for all my simulations 
-(`$HOME/Documents/work/penepma16sims`). I created a folder (`shared`)
+(`$HOME/Documents/work/penepma16sims`). I created a folder (`penbase`)
 inside the `penepma16sims` folder adding the executables  `material`
 and `tables` as well as the folder `pdfiles`. Copy the output from
 `material` to the appropriate simulation folder inside the main
