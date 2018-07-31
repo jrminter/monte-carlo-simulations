@@ -77,9 +77,7 @@ The performance was OK, but I prefer the modified code...
 
 4. Compilation options for penepma
 
-- **penepma16 MacOS** (High Sierra): I followed the instructions from
-[Stackoverflow](https://stackoverflow.com/questions/44308577/ieee-underflow-flag-ieee-denormal-in-fortran-77) to fix some overflow messages. First I removed the `STOP` command just prior to `END`. It is redundant. I ended up modifying `penelope.f`, and `penepma.f`. I had previously set the energy limit from 1000 channels to 4096 channels. I then used the following compile script.
-
+- **penepma16 MacOS** (High Sierra): I used the compiler chain recommended for [building packages with R](http://cran.revolutionanalytics.com/bin/macosx/tools/). I used the `clang-6.0.0.pkg` and the `gfortran-6.1.pkg`. I followed the instructions from [Stackoverflow](https://stackoverflow.com/questions/44308577/ieee-underflow-flag-ieee-denormal-in-fortran-77) to fix some overflow messages. First I removed the `STOP` command just prior to `END`. It is redundant. I ended up modifying `penelope.f`, and `penepma.f`. I had previously set the energy limit from 1000 channels to 4096 channels. I then used the following compile script.
 
 ```
 #!/bin/bash
@@ -87,11 +85,11 @@ The performance was OK, but I prefer the modified code...
 # 
 rm -rf *.mod
 rm -rf *.exe
-gfortran -Os -Wall material.f -fdefault-real-8 -o material.exe
-gfortran -Os -Wall tables.f -fdefault-real-8 -o tables.exe
-gfortran -Os -Wall pencyl.f -fdefault-real-8 -o pencyl.exe
-gfortran -Os -Wall penmain.f -fdefault-real-8 -o penmain.exe
-gfortran -Os -Wall penepma.f -fdefault-real-8 -o penepma.exe
+gfortran -Os -Wall material.f -fdefault-real-8 -o material16
+gfortran -Os -Wall tables.f -fdefault-real-8 -o tables16
+gfortran -Os -Wall pencyl.f -fdefault-real-8 -o pencyl16
+gfortran -Os -Wall penmain.f -fdefault-real-8 -o penmain16
+gfortran -Os -Wall penepma.f -fdefault-real-8 -o penepma16
 
 sleep 2
 ```
@@ -134,19 +132,22 @@ scale and a plot with a log intensity scale.
 
 7. **A working setup on MacOS**: One issue with `penepma` is that some
 programs (`material` and `tables`) need access to the directory of
-material parameters (`pdfiles`). I tried putting the three key
-executables in (`penepma`, `material`, and `tables`) in a `bin`
-directory in my user account and adding that to the `$PATH`. That
-worked fine for `penepma` but not `material`, and `tables` when
-I tried to run them from my simulation folder. As a workaround,
-I created a folder for all my simulations 
+material parameters (`pdfiles`). I also wanted to build `penepma12` and `penepma16`.
+
+I tried putting the three key executables (`penepma16`, `material16`, and `tables16`) in a `bin` directory in my user account and adding that to the `$PATH`. That worked fine for `penepma16` but not `material16`, and `tables16` when I tried to run them from my simulation folder. The latter two programs need to be in a folder with the `pdfiles` folder for that version.
+
+As a workaround, I created a folder for all my simulations 
 (`$HOME/Documents/work/penepma16sims`). I created a folder (`penbase`)
-inside the `penepma16sims` folder adding the executables  `material`
-and `tables` as well as the folder `pdfiles`. Copy the output from
-`material` to the appropriate simulation folder inside the main
-`penepma16sims` directory. These simulations may be run from
-shell scripts inside the directory running `penepma` from the shared
-folder. I have thus far been unable to successfully compile the
+inside the `penepma16sims` folder adding the executables  `material16`
+and `tables16` as well as the folder `pdfiles`.
+
+I copy the output from `material16` to the appropriate simulation folder inside the main `penepma16sims` directory. These simulations may be run from shell scripts inside the directory running `penepma16` from the shared
+folder. This works well.
+
+I repeated the process with `penepma12` and created a separate directory
+for those simulations.
+
+I have thus far been unable to successfully compile the
 source from `PenGeomJar` on MacOS with either the current 
 `homebrew` gcc compiler (`gcc-8.1.0` and includes `gfortran`) or
 the combination of the `gfortran-6.1.pkg` and `clang-6.0.0.pkg` 
