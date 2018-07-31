@@ -105,6 +105,12 @@ C:\Apps\R\Rtools\mingw_64\bin\gfortran -Os penepma.f -freal-4-real-8 -o penepma1
 pause
 ```
 
+Had some problems with this so I downloaded the latest  [mingw-w64](https://sourceforge.net/projects/mingw-w64/) compiler (mingw-w64-install.exe) and installed it into my `C:/Apps` directory. The `gfortran --version` reported:
+
+```
+GNU Fortran (x86_64-win32-seh-rev0, Built by MinGW-W64 project) 8.1.0
+```
+I was able to compile penepma16 with the  `-fdefault-real-8` flag. testing now...
 
 
 5. In the `.geo` files, layer thickness values are typically specified
