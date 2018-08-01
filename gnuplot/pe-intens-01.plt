@@ -7,12 +7,15 @@ set zero 1.0e-60
 #set format z "%.1te%+-3T"
 #set format cb "%.1te%+-3T"
 
+stats "pe-intens-01.dat" u ($4/1000.):14 nooutput
+
 set zero 1.0e-60
 set xzeroaxis
 set xrange [*:*]
-set yrange [1e-11:*]
+set yrange [1e-11:25*STATS_max_y]
+# set yrange [1e-11:*]
 
-set title 'Intensities of the characteristic lines of detector #01'
+set title 'Intensities of the characteristic lines of detector 1'
 set key top left
 set xlabel "energy [keV]"
 set ylabel "PDF [1/(sr*electron)]" 
