@@ -9,7 +9,7 @@ output:
 
 
 
-> Your closest colaborator is you, six months from now. And you
+> Your closest collaborator is you, six months from now. And you
 > don't respond to email.    
 > - Karl Broman
 
