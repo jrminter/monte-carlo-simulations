@@ -40,6 +40,9 @@ generated in the substrate.  There information in the
 [C-ctd-ZnO-on-EagleXG-glass](./C-ctd-ZnO-on-EagleXG-glass/C-on-ZnO-on-EagleXG-glass.md)
 folder.
 
+4. There are questions regarding the value of the density to use for
+C coatings on samples. A summary is [here](issues/carbon_coating_density.md).
+
 
 ## Useful resources
 
