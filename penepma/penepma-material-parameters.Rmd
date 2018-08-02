@@ -51,7 +51,8 @@ line (81) `PENEPMA_Path="C:\Userdata\Penepma12\Penepma"`.
 
 
 These were generated as described above. These can be re-used for
-similar simulations.
+similar simulations. Note: `amC.mat` is amorphous C with the density
+set to 1.35 g/cm3.
 
 
 ```
