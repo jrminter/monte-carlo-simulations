@@ -47,6 +47,15 @@ line (81) `PENEPMA_Path="C:\Userdata\Penepma12\Penepma"`.
 
 ## Example values
 
+Note: Llovet and Salvat (2008) decribe the `MSIMPA` parameter like this:
+
+> Values of the simulation parameters for this material: absorption
+> energies, EABS(1:3,M), elastic scattering parameters, C1(M) and C2(M),
+> and cutoff energy losses for inelastic collisions and bremsstrahlung
+> emission, WCC(M) and WCR(M)    
+> - From  Llovet and Salvat (2008) PENEPMA, a Monte Carlo code for the
+> simulation of x-ray emission spectra using PENELOPE. p. 13.
+
 
 These were generated as described above. These can be re-used for
 similar simulations. Note: `amC.mat` is amorphous C with the density

@@ -49,6 +49,9 @@ folder.
 
 4. There are questions regarding the value of the density to use for
 C coatings on samples. A summary is [here](issues/carbon_coating_density.md).
+There is also a summary of how to use CalZAF to
+[estimate values](,/penepma/penepma-material-parameters.md) for the `penepma`
+parameter `MSIMPA`.
 
 
 ## Useful resources
