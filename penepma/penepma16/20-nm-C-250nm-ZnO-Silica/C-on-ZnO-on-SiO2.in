@@ -49,4 +49,4 @@ DUMPP  300                                   [Dumping period, in sec]
        .
 RSEED  -10   1                 [Seeds of the random-number generator]
 NSIMSH 2.0e+09                  [Desired number of simulated showers]
-TIME   36000                [10 hrs allotted simulation time, in sec]
+TIME   36000                 [10 hr allotted simulation time, in sec]
