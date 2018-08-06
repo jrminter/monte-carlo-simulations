@@ -27,7 +27,7 @@ writing data-analysis software. This version of EMSAMASFF contains two
 subroutines which read and write spectral data files  Version 1.0 data format.
 The data are stored as simple ASCII characters at a user defined number of
 columns per line for the  length of the data file. The spectral data is
-preceeded by a series of header lines, which tell the user about the
+preceded by a series of header lines, which tell the user about the
 parameters of the spectrum. The header lines are identified by the first
 character in the line being the symbol (#) followed by a descriptor  and if
 appropriate its units. An example of a data file format can be found in the
