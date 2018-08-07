@@ -10,6 +10,10 @@ gnuplot/*.html
 
 penepma/*.html
 
+penepma/penepma16/20-nm-C-on-ZnO-15kV/*.html
+penepma/penepma16/20-nm-C-on-ZnO-15kV/*.msa
+penepma/penepma16/20-nm-C-on-ZnO-15kV/*.rda
+
 penepma/penepma16/20-nm-C-250-nm-ZnO-Silica-15kV/*.html
 penepma/penepma16/20-nm-C-250-nm-ZnO-Silica-15kV/*.msa
 penepma/penepma16/20-nm-C-250-nm-ZnO-Silica-15kV/*.rda
