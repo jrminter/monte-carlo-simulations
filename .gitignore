@@ -10,6 +10,11 @@ gnuplot/*.html
 
 penepma/*.html
 
+penepma/penepma16/20-nm-C-250-nm-ZnO-Silica-15kV/*.html
+penepma/penepma16/20-nm-C-250-nm-ZnO-Silica-15kV/*.msa
+penepma/penepma16/20-nm-C-250-nm-ZnO-Silica-15kV/*.rda
+
+
 dtsa2/*.html
 
 C-ctd-ZnO-on-EagleXG-glass/dtsa2/spc/*.ps
