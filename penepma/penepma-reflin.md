@@ -55,7 +55,7 @@ Ir L2-M4  0.4168  10.708  1.15787
 ```
 
 
-I a assume Jon Wade choose the lower weighted `M4-N6` because
+I assume Jon Wade choose the lower weighted `M4-N6` because
 **if those statistics were good, the higher weighted** `L3-M5`
 **would be better**.
 
