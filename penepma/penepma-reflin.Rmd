@@ -62,5 +62,49 @@ I assume Jon Wade choose the lower weighted `M4-N6` because
 **would be better**.
 
 
+## What about the detector?
+
+The comments tell us:
+
+> Each detector collects photons that leave the sample with directions
+> within a 'rectangle' on the unit sphere, limited by the 'parallels'
+> `THETA1` and `THETA2` and the 'meridians' `PHI1` and `PHI2`. 
+> The output spectrum is the energy distribution of photons that emerge within
+> the acceptance solid angle of the detector with energies in the interval
+> from `EDEL` to `EDEU`, recorded using `NCHE` channels. **Notice that the**
+> **spectrum is given in absolute units** (per incident particle, per eV
+> and per unit solid angle).
+
+In the cases below the `IPSF` parameter is 0. The description tells us:
+
+> IPSF=0, the psf is not created.    
+> IPSF=1, a psf is created.    
+> IPSF>1, a psf is created, but contains only state variables
+> of detected photons that have ILB(4)=IPSF (used for studying angular
+> distributions of x rays).
+
+
+
+I wanted to see what an annular detector entry would look like, so I created one
+using the GUI in the `penepma12` implementation that comes with the `Standard`
+program with `CalcZAF`. I used this detector in my simulation of 
+`20-nm-C-250-nm-ZnO-Silica-reflin`. 
+
+```
+PDANGL 50.0 60.0 0.0 360.0 0           [Angular window, in deg, IPSF]
+```
+
+The description of this field is
+
+```
+PDANGL THETA1,THETA2,PHI1,PHI2,IPSF    [Angular window, in deg, IPSF]
+```
+
+so the detector described would be an annular detector that collected X-rays
+with a takeoff angle between 50 and 60 degrees.
+This is still a long simulation... After just under 16 hrs, we are at
+`4.9e+05` trajectories... It will be interesting to see when it shuts down...
+
+
 
 
