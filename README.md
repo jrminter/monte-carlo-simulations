@@ -53,6 +53,12 @@ There is also a summary of how to use CalZAF to
 [estimate values](penepma/penepma-material-parameters.md) for the `penepma`
 parameter `MSIMPA`.
 
+5. There are two ways to limit the duration of a `penepma` simulation.
+First, one can run for a given amount of time not to exceed a specified
+number of showers (trajectories). The second way is to use the
+`REFLIN` command to run to a given precision. The syntax is complicated.
+I put together a guide [here](./penepma/penepma-reflin.md).
+
 
 ## Useful resources
 
