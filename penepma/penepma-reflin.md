@@ -1,7 +1,7 @@
 ---
 title: "Running simulations to a desired precision: REFLIN"
 author: "John Minter"
-date: "Started: 2018-08-07, Last Modified: 2018-08-07"
+date: "Started: 2018-08-07, Last Modified: 2018-08-09"
 output:
   html_document:
     keep_md: true
@@ -28,6 +28,15 @@ line in the simulation file:
 
 ```
 [IZ*1e6+S1*1e4+S2*1e2,detector,tol.]
+```
+
+and adds
+
+```
+REFLIN : The simulation will be discontinued when the relative
+         statistical uncertainty (3*sigma) of the intensity of line
+         IZS1S200 [note the final double zero] in detector IDET is
+         less than the tolerance TOL.
 ```
 
 Consider the case of Ir (Z=77). Jon Wade provided this example:
