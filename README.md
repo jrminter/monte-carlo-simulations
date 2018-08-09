@@ -57,7 +57,8 @@ parameter `MSIMPA`.
 First, one can run for a given amount of time not to exceed a specified
 number of showers (trajectories). The second way is to use the
 `REFLIN` command to run to a given precision. The syntax is complicated.
-I put together a guide [here](./penepma/penepma-reflin.md).
+I put together a guide [here](./penepma/penepma-reflin.md). There are
+other penepma hints [here](./penepma/penepma-hints.md).
 
 
 ## Useful resources
@@ -67,7 +68,9 @@ a very helpful place. **Note:** you need to sign up as a "member" to be
 able to download attachments. This is also a great place to download
 a free version of
 [`CalcZAF`](http://probesoftware.com/download/CalcZAF.msi)
-which contains `penepma12`.
+which contains `penepma12`. I have summarized some useful penepma
+hints from the forum [here](./penepma/penepma-probe-software-hints.md).
+
 
 2. The
 [DTSA-II](https://www.cstl.nist.gov/div837/837.02/epq/dtsa2/index.html)
