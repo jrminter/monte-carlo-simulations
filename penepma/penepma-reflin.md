@@ -39,6 +39,9 @@ REFLIN : The simulation will be discontinued when the relative
          less than the tolerance TOL.
 ```
 
+Note that the `pe-intens-01.dat` file reports that the uncertainty
+values reported are at the `3*sigma` level.
+
 Consider the case of Ir (Z=77). Jon Wade provided this example:
 
 ```
