@@ -15,6 +15,11 @@ knitr::opts_chunk$set(echo = TRUE)
 > don't respond to email.    
 > - Karl Broman
 
+## Hints from the Probe Software forum
+
+I have adapted some discussions I found useful
+[here](./penepma-probe-software-hints.md).
+
 ## Some key items to remember
 
 1. Hunting down changes between versions of `.in` files can be daunting.
