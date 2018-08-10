@@ -81,9 +81,9 @@ SiO~2~ at 15 kV.
 
 | uncertainty | simulation hrs | trajectories |
 |------------:|---------------:|--------------|
-| 1.0e-2 | est 383 | est. 1.18e6 
 | 5.0e-1 | 1.4112 |  |
 | 1.0e-1 | est 15.7  |   |
+| 1.0e-2 | est 383 | est. 1.18e6 |
 
 
 ## What about the detector?
