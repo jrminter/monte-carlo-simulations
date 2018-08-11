@@ -71,6 +71,18 @@ I assume Jon Wade choose the lower weighted `M4-N6` because
 **if those statistics were good, the higher weighted** `L3-M5`
 **would be better**.
 
+## Measurements as a function of uncertainty level
+
+I made some measurements with the Zn `L3-M4` (L$\alpha_2$)
+line for a trilayer simulation of 20 nm C on 250 nm ZnO on
+SiO~2~ at 15 kV.
+
+| uncertainty | simulation hrs | trajectories |
+|------------:|---------------:|--------------|
+| 5.0e-1 | 1.4112 |  |
+| 1.0e-1 | est 15.7  |   |
+| 1.0e-2 | est 383 | est. 1.18e6 |
+
 
 ## What about the detector?
 

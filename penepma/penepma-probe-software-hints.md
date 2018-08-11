@@ -10,7 +10,7 @@ output:
 
 
 
-# [Jon Wade](https://probesoftware.com/smf/index.php?topic=202.msg7487#msg7487)
+## [Jon Wade](https://probesoftware.com/smf/index.php?topic=202.msg7487#msg7487)
 
 2018-08-07
 
@@ -41,7 +41,7 @@ applauded and supported.
 
 
 
-# [Jon Wade](https://probesoftware.com/smf/index.php?topic=637.msg3764#msg3764)
+## [Jon Wade](https://probesoftware.com/smf/index.php?topic=637.msg3764#msg3764)
 
 2015-12-03
 
@@ -63,7 +63,7 @@ result is not entirely unexpected.
 
 
  
-# [John Donovan](https://probesoftware.com/smf/index.php?topic=57.msg208#msg208)
+## [John Donovan](https://probesoftware.com/smf/index.php?topic=57.msg208#msg208)
 
 2014-01-22
 
