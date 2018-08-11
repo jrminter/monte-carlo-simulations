@@ -3,16 +3,16 @@ title: "20-nm-C-250-nm-ZnO-Silica-15kV-reflin-4e-1"
 author: "John Minter"
 date: 'Started 2018-08-07, Last modified: 2018-08-11'
 output:
+  pdf_document:
+    toc: yes
   html_document:
     css: ./jm.css
     number_sections: yes
     toc: yes
-  pdf_document:
-    toc: yes
 abstract: |
   The objective was to measure the time required for this simulation using the
   `Zn L3-M4` transition to reach the `REFLIN` criterion of an uncertainty of
-  $4.0e^{-1}$.  This was a fairly weak transition (0.1140) compared to the
+  $5.0e^{-1}$.  This was a fairly weak transition (0.1140) compared to the
   stronger `Zn L3-M5` transition (1.0). Still, I want to see how the simulation
   scales with the value of the uncertainty criterion.
 ---
@@ -30,7 +30,7 @@ knitr::opts_chunk$set(echo=TRUE,
 # Set up for the analysis
 
 **Note**: This simulation used the same `MSIMPA` parameters for all layers
-and a `REFLIN` parameter (`5.E-1`) to finish.
+and a `REFLIN` parameter (`4.E-1`) to finish.
 
 ```
 RSEED  -10   1                 [Seeds of the random-number generator]
@@ -52,14 +52,14 @@ library(ggplot2)
 Next, set the paths and constants that we need...
 
 ```{r setPaths}
-moved_data  <- FALSE  # set to TRUE when simu is done and .rda with data is moved...
+moved_data  <- TRUE  # set to TRUE when simu is done and .rda with data is moved...
 e0          <- 15 # kV
 int_lo_lim  <- 1.0e-1
 int_hi_lim  <- 1.0e4
 reflin_crit <- 4e-1
 ori_sim_dir <- "C:/Users/jrminter/Documents/work/penepma16/20-nm-C-250-nm-ZnO-Silica-reflin2"
 sim_dir     <- "/Users/jrminter/Desktop/test-plt"
-sim_nam     <- "20-nm-C-250-nm-ZnO-Silica-reflin-5e-1"
+sim_nam     <- "20-nm-C-250-nm-ZnO-Silica-reflin-4e-1"
 res_fi      <- "./penepma-res.dat"
 int_fi      <- "./pe-intens-01.dat"
 spc_fi      <- "./pe-spect-01.dat"
@@ -166,14 +166,14 @@ names(tmp_v) <- c("name", "reflin", "time", "showers",
 
 tmp_v <- as_tibble(tmp_v)
 tmp_v$name <- as.character(tmp_v$name)
-C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_5e_m1_ro <- tmp_v
+C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_4e_m1_ro <- tmp_v
 rm(tmp_v)
 
-save(C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_5e_m1_ro,
-     file="./C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_5e_m1_ro.rda")
-rm(C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_5e_m1_ro)
-load("./C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_5e_m1_ro.rda")
-pander(C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_5e_m1_ro)
+save(C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_4e_m1_ro,
+     file="./C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_4e_m1_ro.rda")
+rm(C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_4e_m1_ro)
+load("./C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_4e_m1_ro.rda")
+pander(C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_4e_m1_ro)
 ```
 
 
@@ -194,15 +194,15 @@ Si_t  <- penepma_get_max_total_intensity_z(tib, 14)
 # 2
 tot_int <- dplyr::bind_rows(C_t, O_t, Zn_t, Si_t)
 #3 
-C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_5e_m1 <- prepend_sample_id_max_int_tib(tot_int, out_ti)
+C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_4e_m1 <- prepend_sample_id_max_int_tib(tot_int, out_ti)
 # 4
-pander(C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_5e_m1)
+pander(C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_4e_m1)
 # 5
-save(C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_5e_m1,
-     file="C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_5e_m1.rda")
+save(C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_4e_m1,
+     file="C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_4e_m1.rda")
 # delete and reload be sure it worked...
 rm(C_20_nm_ZnO_250_nm_SiO2_15kV_refli2n)
-load("./C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_5e_m1.rda")
+load("./C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_4e_m1.rda")
 ```
 
 # Process the spectra data
