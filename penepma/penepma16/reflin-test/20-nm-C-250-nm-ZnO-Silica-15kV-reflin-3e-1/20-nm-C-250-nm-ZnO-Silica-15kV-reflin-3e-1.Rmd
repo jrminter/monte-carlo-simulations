@@ -30,11 +30,11 @@ knitr::opts_chunk$set(echo=TRUE,
 # Set up for the analysis
 
 **Note**: This simulation used the same `MSIMPA` parameters for all layers
-and a `REFLIN` parameter (`4.E-1`) to finish.
+and a `REFLIN` parameter (`3.E-1`) to finish.
 
 ```
 RSEED  -10   1                 [Seeds of the random-number generator]
-REFLIN 30040800 1 4.E-1     [Zn L3-M4 IZ*1e6+S1*1e4+S2*1e2,dete,tol.]
+REFLIN 30040800 1 3.E-1     [Zn L3-M4 IZ*1e6+S1*1e4+S2*1e2,dete,tol.]
 NSIMSH 1.0e8                    [Desired number of simulated showers]
 TIME   1.0e6                       [Allotted simulation time, in sec]
 ```
@@ -166,14 +166,14 @@ names(tmp_v) <- c("name", "reflin", "time", "showers",
 
 tmp_v <- as_tibble(tmp_v)
 tmp_v$name <- as.character(tmp_v$name)
-C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_4e_m1_ro <- tmp_v
+C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_3e_m1_ro <- tmp_v
 rm(tmp_v)
 
-save(C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_4e_m1_ro,
-     file="./C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_4e_m1_ro.rda")
-rm(C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_4e_m1_ro)
-load("./C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_4e_m1_ro.rda")
-pander(C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_4e_m1_ro)
+save(C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_3e_m1_ro,
+     file="./C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_3e_m1_ro.rda")
+rm(C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_3e_m1_ro)
+load("./C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_3e_m1_ro.rda")
+pander(C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_3e_m1_ro)
 ```
 
 
@@ -194,15 +194,15 @@ Si_t  <- penepma_get_max_total_intensity_z(tib, 14)
 # 2
 tot_int <- dplyr::bind_rows(C_t, O_t, Zn_t, Si_t)
 #3 
-C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_4e_m1 <- prepend_sample_id_max_int_tib(tot_int, out_ti)
+C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_3e_m1 <- prepend_sample_id_max_int_tib(tot_int, out_ti)
 # 4
-pander(C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_4e_m1)
+pander(C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_3e_m1)
 # 5
-save(C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_4e_m1,
-     file="C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_4e_m1.rda")
+save(C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_3e_m1,
+     file="C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_3e_m1.rda")
 # delete and reload be sure it worked...
 rm(C_20_nm_ZnO_250_nm_SiO2_15kV_refli2n)
-load("./C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_4e_m1.rda")
+load("./C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_3e_m1.rda")
 ```
 
 # Process the spectra data
