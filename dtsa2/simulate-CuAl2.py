@@ -6,7 +6,7 @@ J. R. Minter 2018-08-11
 Simulate Bulk CuAl2, Cu, and Al using dtsa2.jmcSimulate3 that returns
 both the emitted and detected spectra. For comparison with PENEPMA
 
-Elapse: 0:14:06.9 for 10,000 trajecories
+Elapse: 0:14:06.9 for 10,000 trajectories
 """
 
 import os, shutil
