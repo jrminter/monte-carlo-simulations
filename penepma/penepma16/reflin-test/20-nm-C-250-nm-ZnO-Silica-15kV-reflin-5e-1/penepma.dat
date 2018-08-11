@@ -1,0 +1,99 @@
+
+   *************************************************************
+   **   Program PENEPMA.  Input data and run-time messages.   **
+   *************************************************************
+
+   Date and time: 11th Aug 2018. 10:15:36
+
+   Trilayer. Same MSIMPA. 5e-1 RFLIN on Zn L3-M4 La2                                                                       
+
+   ------------------------------------------------------------------------
+   >>>>>>  Incident beam.
+
+   Primary particles: electrons
+   Initial energy =  1.500000E+04 eV
+   Coordinates of source:     SX0 =  0.000000E+00 cm
+                              SY0 =  0.000000E+00 cm
+                              SZ0 =  1.000000E+00 cm
+   Beam redius:              SRAD =  0.000000E+00 cm
+   Beam direction angles:   THETA =  1.800000E+02 deg
+                              PHI =  0.000000E+00 deg
+   Beam aperture:           ALPHA =  0.000000E+00 deg
+
+   ------------------------------------------------------------------------
+   >>>>>>  Material data and simulation parameters.
+
+   ****  1st material
+   Material data file: amC.mat             
+   Electron absorption energy =  2.700000E+02 eV
+     Photon absorption energy =  2.700000E+02 eV
+   Positron absorption energy =  2.700000E+02 eV
+   Electron-positron simulation parameters:
+    C1 = 0.000000E+00,      C2 = 0.000000E+00
+   Wcc = 0.000000E+00 eV,  Wcr =-1.000000E+02 eV
+
+   ****  2nd material
+   Material data file: ZnO.mat             
+   Electron absorption energy =  2.700000E+02 eV
+     Photon absorption energy =  2.700000E+02 eV
+   Positron absorption energy =  2.700000E+02 eV
+   Electron-positron simulation parameters:
+    C1 = 0.000000E+00,      C2 = 0.000000E+00
+   Wcc = 0.000000E+00 eV,  Wcr =-1.000000E+02 eV
+
+   ****  3rd material
+   Material data file: SiO2.mat            
+   Electron absorption energy =  2.700000E+02 eV
+     Photon absorption energy =  2.700000E+02 eV
+   Positron absorption energy =  2.700000E+02 eV
+   Electron-positron simulation parameters:
+    C1 = 0.000000E+00,      C2 = 0.000000E+00
+   Wcc = 0.000000E+00 eV,  Wcr =-1.000000E+02 eV
+
+   PENGEOM's geometry definition file: tl_20_250nm.geo     
+
+   ------------------------------------------------------------------------
+   >>>>>>  Maximum allowed step lengths of electrons and positrons.
+   * Body =   1,   DSMAX =  1.000000E-07 cm
+   * Body =   2,   DSMAX =  1.500000E-07 cm
+   * Body =   3,   DSMAX =  1.000000E+20 cm
+   * Body =   4,   DSMAX =  1.000000E+20 cm
+
+   ------------------------------------------------------------------------
+   >>>>>>  Interaction forcing: FORCE(IBODY,KPAR,ICOL)
+   FORCE(   1,1,4) = 5.095932E+03,  weight window = ( 1.00E-01, 1.00E+00)
+   FORCE(   1,1,5) = 4.846030E+01,  weight window = ( 1.00E-01, 1.00E+00)
+   FORCE(   1,2,2) = 1.000000E+01,  weight window = ( 1.00E-04, 1.00E+00)
+   FORCE(   1,2,3) = 1.000000E+01,  weight window = ( 1.00E-04, 1.00E+00)
+   FORCE(   2,1,4) = 1.407621E+03,  weight window = ( 1.00E-01, 1.00E+00)
+   FORCE(   2,1,5) = 2.207573E+02,  weight window = ( 1.00E-01, 1.00E+00)
+   FORCE(   2,2,2) = 1.000000E+01,  weight window = ( 1.00E-04, 1.00E+00)
+   FORCE(   2,2,3) = 1.000000E+01,  weight window = ( 1.00E-04, 1.00E+00)
+
+   ------------------------------------------------------------------------
+   >>>>>>  Energy and angular distributions of emerging particles.
+   E:       NBE = ***,  EMIN = 1.000000E+01 eV,  EMAX = 1.500000E+04 eV
+   Theta:  NBTH =  45 (linear scale)
+   Phi:    NBPH =  30
+
+   ------------------------------------------------------------------------
+   >>>>>>  Photon detector # 1
+   Angular intervals : theta_1 = 5.0000E+01 deg,  theta_2 = 6.0000E+01 deg
+                         phi_1 = 0.0000E+00 deg,    phi_2 = 3.6000E+02 deg
+   Energy window = ( 1.00000E+01, 1.50000E+04) eV, no. of channels = 4096
+   Channel width = 3.659668E+00 eV
+
+   ------------------------------------------------------------------------
+   >>>>>>  Job characteristics.
+   Resume simulation from previous dump file: dump1.dat           
+   Write final counter values on the dump file: dump1.dat           
+   Dumping period: DUMPP = 2.400000E+02
+   Random-number generator seeds =  327796803,  915478773
+
+   Reference line: 30040800,  detector =  1,  tolerance = 5.00E-01
+
+   Number of showers to be simulated = 1.000000E+08
+   Computation time available =  1.000000E+06 sec
+
+   ------------------------------------------------------------------------
+   WARNING: Could not resume from dump file...

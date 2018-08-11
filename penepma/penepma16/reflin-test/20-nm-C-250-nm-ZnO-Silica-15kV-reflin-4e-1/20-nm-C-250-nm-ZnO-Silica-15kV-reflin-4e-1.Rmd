@@ -1,0 +1,284 @@
+---
+title: "20-nm-C-250-nm-ZnO-Silica-15kV-reflin-4e-1"
+author: "John Minter"
+date: 'Started 2018-08-07, Last modified: 2018-08-11'
+output:
+  html_document:
+    css: ./jm.css
+    number_sections: yes
+    toc: yes
+  pdf_document:
+    toc: yes
+abstract: |
+  The objective was to measure the time required for this simulation using the
+  `Zn L3-M4` transition to reach the `REFLIN` criterion of an uncertainty of
+  $4.0e^{-1}$.  This was a fairly weak transition (0.1140) compared to the
+  stronger `Zn L3-M5` transition (1.0). Still, I want to see how the simulation
+  scales with the value of the uncertainty criterion.
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=TRUE,
+  comment = NA,
+  fig.align = "centre",
+  fig.height = 4,
+  message = FALSE,
+  warning = FALSE,
+  error = FALSE)
+```
+
+# Set up for the analysis
+
+**Note**: This simulation used the same `MSIMPA` parameters for all layers
+and a `REFLIN` parameter (`5.E-1`) to finish.
+
+```
+RSEED  -10   1                 [Seeds of the random-number generator]
+REFLIN 30040800 1 4.E-1     [Zn L3-M4 IZ*1e6+S1*1e4+S2*1e2,dete,tol.]
+NSIMSH 1.0e8                    [Desired number of simulated showers]
+TIME   1.0e6                       [Allotted simulation time, in sec]
+```
+
+First load the libraries we need...
+
+```{r loadPackages}
+library(rpenepma)
+library(dplyr)
+library(pander)
+panderOptions('table.split.table', Inf)
+library(ggplot2)
+```
+
+Next, set the paths and constants that we need...
+
+```{r setPaths}
+moved_data  <- FALSE  # set to TRUE when simu is done and .rda with data is moved...
+e0          <- 15 # kV
+int_lo_lim  <- 1.0e-1
+int_hi_lim  <- 1.0e4
+reflin_crit <- 4e-1
+ori_sim_dir <- "C:/Users/jrminter/Documents/work/penepma16/20-nm-C-250-nm-ZnO-Silica-reflin2"
+sim_dir     <- "/Users/jrminter/Desktop/test-plt"
+sim_nam     <- "20-nm-C-250-nm-ZnO-Silica-reflin-5e-1"
+res_fi      <- "./penepma-res.dat"
+int_fi      <- "./pe-intens-01.dat"
+spc_fi      <- "./pe-spect-01.dat"
+out_ti      <- sprintf("%s-%gkV", sim_nam, e0)
+msa_fi      <- sprintf("./%s-%gkV.msa", sim_nam, e0)
+```
+
+
+# Get the current simulation time
+
+```{r calcSimTime}
+if (moved_data==FALSE){
+  # When we have not moved the sim measure the simulation time.
+  # Note copying the files to another directory seems to change the time
+  # Test a reload.
+  delta_t <- penepma_measure_simulation_time(ori_sim_dir)
+  # print(delta_t)
+  save(delta_t, file="./delta_t.rda")
+  rm(delta_t)
+  load("./delta_t.rda")
+  msg <- "Analyzed from simulation directory."
+} else {
+  # When we have moved the simulation, reload the delta_t.rda
+  msg <- "Analyzed from data stored in delta_t.rda."
+  load("./delta_t.rda")	
+}
+print(msg)
+delta_t_time <- print(delta_t)
+```
+
+**Sort summary: this is very short and noisy...**
+
+# Retrieve the number of showers
+
+We want retrieve the number of showers (trajectories) that our `penepma16`
+simulation calculated.
+
+```{r calcNumShowers}
+options(scipen = -6) # force printing in exponential format
+num_showers <- penepma_get_number_of_showers(res_fi)
+cat(num_showers)
+options(scipen = 3) # reset to default
+```
+
+# Compute the total maximum intensity for each element
+
+## Retrieve the data
+
+First retrieve the intensity data as a `tibble` and print a preview.
+
+```{r LoadMaxIntensity}
+tib <- penepma_get_intensities(int_fi)
+print(tib)
+```
+
+What features did we measure?
+
+```{r listFeatures}
+print(names(tib))
+```
+
+How many transitions did we measure?
+
+```{r calcNumTrans}
+print(nrow(tib))
+```
+
+Measure our test transition ("Zn L3-M4")
+
+```{r measureZnTrans}
+val <- penepma_get_total_intensity_z_transition(tib, 30, "L3", "M4")
+print(val)
+```
+
+And see how close we are to the `REFLIN` criterion
+
+```{r calcRefCrit}
+cur_ref_crit <- val$Int.se/val$Int.mu
+
+rv <- c(cur_ref_crit, 100*reflin_crit/cur_ref_crit)
+names(rv) <-c("value", "target %")
+print(rv)
+```
+
+Let's estimate the remaining time
+
+```{r estimateTimeRemaining}
+pct <- rv[2]/100.
+names(pct) <- c()
+tr <- delta_t*(1.0-pct)
+print(tr)
+```
+
+Let's store a `.rda` file with `REFLIN` info
+
+```{r storeReflinInfo}
+
+tmp_v <- data.frame(as.character(sim_nam),
+                    as.numeric(reflin_crit), as.character.POSIXt(delta_t_time),
+                    as.numeric(num_showers), as.numeric(cur_ref_crit),
+                    as.numeric(100*reflin_crit/cur_ref_crit))
+names(tmp_v) <- c("name", "reflin", "time", "showers",
+                  "value", "target %")
+
+tmp_v <- as_tibble(tmp_v)
+tmp_v$name <- as.character(tmp_v$name)
+C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_5e_m1_ro <- tmp_v
+rm(tmp_v)
+
+save(C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_5e_m1_ro,
+     file="./C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_5e_m1_ro.rda")
+rm(C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_5e_m1_ro)
+load("./C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_5e_m1_ro.rda")
+pander(C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_5e_m1_ro)
+```
+
+
+## Compute the maximum total intensity for each element
+
+1. Compute the maximum total intensity for each element.
+2. Stack each row of data together into a tibble.
+3. Prepend the sample ID to the data.
+4. Print a well-formatted a table using `pander`.
+5. Save the final tibble so it can be r-loaded later
+
+```{r calcNaxTotIntensity}
+# 1
+C_t   <- penepma_get_max_total_intensity_z(tib, 6)
+O_t   <- penepma_get_max_total_intensity_z(tib, 8)
+Zn_t  <- penepma_get_max_total_intensity_z(tib, 30)
+Si_t  <- penepma_get_max_total_intensity_z(tib, 14)
+# 2
+tot_int <- dplyr::bind_rows(C_t, O_t, Zn_t, Si_t)
+#3 
+C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_5e_m1 <- prepend_sample_id_max_int_tib(tot_int, out_ti)
+# 4
+pander(C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_5e_m1)
+# 5
+save(C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_5e_m1,
+     file="C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_5e_m1.rda")
+# delete and reload be sure it worked...
+rm(C_20_nm_ZnO_250_nm_SiO2_15kV_refli2n)
+load("./C_20_nm_ZnO_250_nm_SiO2_15kV_reflin_5e_m1.rda")
+```
+
+# Process the spectra data
+
+## Load the raw data
+
+```{r loadSpectraData}
+tib <- penepma_read_raw_data(spc_fi,min_intensity_clip=5.0e-10)
+rownames(df) <- c()
+```
+
+Examine the start:
+
+```{r examineHead}
+pander(head(tib))
+```
+
+Examine the end:
+
+```{r examineTail}
+pander(tail(tib))
+```
+## Plot the spectrum.
+
+There is a very large dynamic
+range for both the **probability density** and the **uncertainty**.
+Penepma sets a lower limit for data at **1.0e-35**. Missing values are
+set to zero. We want to remove values from the dataframe that are
+below a useful limit. We do this below and plot a copy of the 
+dataframe that is limited to the useful values.
+
+
+```{r plotLogIntensSpectrum, fig.width=8, warning=FALSE}
+m_t <- max(pretty(tib$mu))
+
+plt <- ggplot(tib, aes(x = keV, y = mu)) +
+       geom_line() + 
+       scale_x_continuous(breaks = seq(from = 0, to = e0-5, by = 1),
+                          limits = c(0,e0-5)) +
+       scale_y_log10(limits = c(int_lo_lim, m_t)) +
+       xlab(label="X-ray energy [keV]") +
+       ylab(label="log(probability density)") +
+       # (1/(eV*sr*electron)") +
+       ggtitle(out_ti) +
+       theme(axis.text=element_text(size=12),
+             axis.title=element_text(size=12),
+             # center the title
+             plot.title = element_text(hjust = 0.5))
+       
+print(plt)
+```
+And on a linear intensity scale...
+
+```{r plotLinIntensSpectrum, fig.width=8, warning=FALSE}
+
+plt <- ggplot(tib, aes(x = keV, y = mu)) +
+       geom_line() + 
+       scale_x_continuous(breaks = seq(from = 0, to = e0-5, by = 1),
+                          limits = c(0,e0-5)) +
+       scale_y_continuous(limits = c(int_lo_lim, m_t)) +
+       xlab(label="X-ray energy [keV]") +
+       ylab(label="Probability density") +
+       # (1/(eV*sr*electron)") +
+       ggtitle(out_ti) +
+       theme(axis.text=element_text(size=12),
+             axis.title=element_text(size=12),
+             # center the title
+             plot.title = element_text(hjust = 0.5))
+       
+print(plt)
+```
+
+## Write a spectrum file in MSA format
+
+```{r writeMsa}
+penepma_to_msa(spc_fi, msa_fi,e0, out_ti)
+```
+
+
