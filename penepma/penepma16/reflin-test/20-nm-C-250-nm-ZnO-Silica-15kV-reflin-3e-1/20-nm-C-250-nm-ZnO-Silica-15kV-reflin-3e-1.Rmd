@@ -1,5 +1,5 @@
 ---
-title: "20-nm-C-250-nm-ZnO-Silica-15kV-reflin-4e-1"
+title: "20-nm-C-250-nm-ZnO-Silica-15kV-reflin-3e-1"
 author: "John Minter"
 date: 'Started 2018-08-07, Last modified: 2018-08-11'
 output:
@@ -12,7 +12,7 @@ output:
 abstract: |
   The objective was to measure the time required for this simulation using the
   `Zn L3-M4` transition to reach the `REFLIN` criterion of an uncertainty of
-  $4.0e^{-1}$.  This was a fairly weak transition (0.1140) compared to the
+  $3.0e^{-1}$.  This was a fairly weak transition (0.1140) compared to the
   stronger `Zn L3-M5` transition (1.0). Still, I want to see how the simulation
   scales with the value of the uncertainty criterion.
 ---
@@ -56,10 +56,10 @@ moved_data  <- TRUE  # set to TRUE when simu is done and .rda with data is moved
 e0          <- 15 # kV
 int_lo_lim  <- 1.0e-1
 int_hi_lim  <- 1.0e4
-reflin_crit <- 4e-1
+reflin_crit <- 3e-1
 ori_sim_dir <- "C:/Users/jrminter/Documents/work/penepma16/20-nm-C-250-nm-ZnO-Silica-reflin2"
 sim_dir     <- "/Users/jrminter/Desktop/test-plt"
-sim_nam     <- "20-nm-C-250-nm-ZnO-Silica-reflin-4e-1"
+sim_nam     <- "20-nm-C-250-nm-ZnO-Silica-reflin-3e-1"
 res_fi      <- "./penepma-res.dat"
 int_fi      <- "./pe-intens-01.dat"
 spc_fi      <- "./pe-spect-01.dat"
