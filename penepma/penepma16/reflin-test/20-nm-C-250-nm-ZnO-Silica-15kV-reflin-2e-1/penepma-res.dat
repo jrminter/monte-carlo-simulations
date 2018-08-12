@@ -1,0 +1,47 @@
+
+
+   ***********************************
+   **   Program PENEPMA. Results.   **
+   ***********************************
+
+   Simulation time .........................  3.449625E+04 sec
+   Simulation speed ........................  8.619604E+00 showers/sec
+
+   Simulated primary showers ...............  2.973440E+05
+
+   Upbound primary particles ...............  6.902000E+04
+   Downbound primary particles .............  0.000000E+00
+   Absorbed primary particles ..............  2.283240E+05
+
+   Upbound fraction ...................  2.420331E-01 +- 2.7E-03
+   Downbound fraction .................  0.000000E+00 +- 0.0E+00
+   Absorption fraction ................  7.678783E-01 +- 2.3E-03
+
+   Secondary-particle generation probabilities:
+                   ----------------------------------------------
+                   |  electrons   |   photons    |  positrons   |
+   --------------------------------------------------------------
+   |   upbound     | 9.911393E-03 | 1.624786E-03 | 0.000000E+00 |
+   |               |  +- 4.1E-04  |  +- 1.3E-04  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   downbound   | 0.000000E+00 | 0.000000E+00 | 0.000000E+00 |
+   |               |  +- 0.0E+00  |  +- 0.0E+00  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   absorbed    | 5.767650E+00 | 7.024393E-03 | 0.000000E+00 |
+   |               |  +- 1.6E-02  |  +- 3.6E-04  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+
+   Average deposited energies (bodies):
+      Body    1 ......  5.985747E+01 +- 6.1E-01 eV    (effic. = 2.48E+00)
+      Body    2 ......  4.075240E+03 +- 2.0E+01 eV    (effic. = 1.08E+01)
+      Body    3 ......  8.371743E+03 +- 3.2E+01 eV    (effic. = 1.79E+01)
+
+   Average photon energy at the detectors:
+      Detector # 1 ...  4.932851E-01 +- 8.6E-02 eV    (effic. = 8.68E-03)
+
+   Last random seeds = 1553692682 ,  655682088
+
+   Reference line: 30040800,  detector =  1,  tolerance = 2.000E-01
+                                   Relative uncertainty = 1.995E-01
+
+   ------------------------------------------------------------------------

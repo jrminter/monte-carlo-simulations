@@ -12,7 +12,7 @@ output:
 abstract: |
   The objective was to measure the time required for this simulation using the
   `Zn L3-M4` transition to reach the `REFLIN` criterion of an uncertainty of
-  $3.0e^{-1}$.  This was a fairly weak transition (0.1140) compared to the
+  $2.0e^{-1}$.  This was a fairly weak transition (0.1140) compared to the
   stronger `Zn L3-M5` transition (1.0). Still, I want to see how the simulation
   scales with the value of the uncertainty criterion.
 ---
