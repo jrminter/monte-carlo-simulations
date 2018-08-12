@@ -51,6 +51,7 @@ pander(tib)
 
 # Plot the data
 
+## Plot $tol = f(hrs)$
 ```{r plot_tol_vs_time}
 tol_vs_time_plt <- ggplot(tib, aes(x = tol, y = hrs)) +
                geom_point() 
@@ -58,9 +59,54 @@ tol_vs_time_plt <- ggplot(tib, aes(x = tol, y = hrs)) +
 print(tol_vs_time_plt)
 ```
 
+## Plot $\frac{1}{tol} = f(hrs)$
+
+```{r plot_inv_tol_vs_time}
+inv_tol_vs_time_plt <- ggplot(tib, aes(x = 1/tol, y = hrs)) +
+                       geom_point() +
+                       stat_smooth(method = 'lm',
+                                   formula = y ~ I(x^2) + 0,
+                                   aes(' ' = 'darkblue'),
+                                   se = FALSE) 
+
+print(inv_tol_vs_time_plt)
+```
+
+## Fit a second order polynomial to the system
+
+Model the system as a second order polynomial with a zero intercept.
+
+```{r polyModel}
+x <- 1.0 / tib$tol
+y <- tib$hrs
+
+poly_mod <- lm(y ~ I(x^2) + 0)
+pander(summary(poly_mod))
+
+```
+
+
 ```{r plot_tol_vs_showers}
 tol_vs_time_showers_plt <- ggplot(tib, aes(x = tol, y = showers)) +
                            geom_point() 
 
 print(tol_vs_time_showers_plt)
+```
+
+## Add a data transformation
+
+```{r minus_log_trans}
+
+mod_tib <- tib %>%
+              mutate(m_log_show = -log(showers)) %>%
+              mutate(m_log_hrs = log(hrs))
+mod_tib
+```
+
+```{r plot_tol_vs_log_time}
+tol_vs_m_log_hrs_plt <- ggplot(mod_tib, aes(x = tol, y = m_log_hrs)) +
+                        geom_point() +
+                        stat_smooth(method='loess', span = 1.5)
+
+print(tol_vs_m_log_hrs_plt)
 ```
