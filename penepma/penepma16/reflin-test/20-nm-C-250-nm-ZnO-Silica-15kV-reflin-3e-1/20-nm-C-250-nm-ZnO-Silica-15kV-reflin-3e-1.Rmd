@@ -3,11 +3,11 @@ title: "20-nm-C-250-nm-ZnO-Silica-15kV-reflin-3e-1"
 author: "John Minter"
 date: 'Started 2018-08-07, Last modified: 2018-08-11'
 output:
-  pdf_document:
-    toc: yes
   html_document:
-    css: ./jm.css
+    css: ../../../../inc/jm.css
     number_sections: yes
+    toc: yes
+  pdf_document:
     toc: yes
 abstract: |
   The objective was to measure the time required for this simulation using the

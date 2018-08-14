@@ -4,7 +4,7 @@ author: "John Minter"
 date: 'Started 2018-08-07, Last modified: 2018-08-11'
 output:
   html_document:
-    css: ./jm.css
+    css: ../../../../inc/jm.css
     number_sections: yes
     toc: yes
   pdf_document:
