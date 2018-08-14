@@ -1,0 +1,46 @@
+
+
+   ***********************************
+   **   Program PENEPMA. Results.   **
+   ***********************************
+
+   Simulation time .........................  4.345813E+03 sec
+   Simulation speed ........................  7.239151E-01 showers/sec
+
+   Simulated primary showers ...............  3.146000E+03
+
+   Upbound primary particles ...............  8.850000E+02
+   Downbound primary particles .............  0.000000E+00
+   Absorbed primary particles ..............  2.261000E+03
+
+   Upbound fraction ...................  2.889750E-01 +- 2.9E-02
+   Downbound fraction .................  0.000000E+00 +- 0.0E+00
+   Absorption fraction ................  7.186904E-01 +- 2.4E-02
+
+   Secondary-particle generation probabilities:
+                   ----------------------------------------------
+                   |  electrons   |   photons    |  positrons   |
+   --------------------------------------------------------------
+   |   upbound     | 7.665426E-03 | 1.889356E-03 | 0.000000E+00 |
+   |               |  +- 4.5E-03  |  +- 6.5E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   downbound   | 0.000000E+00 | 0.000000E+00 | 0.000000E+00 |
+   |               |  +- 0.0E+00  |  +- 0.0E+00  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   absorbed    | 1.636706E+00 | 3.463963E-03 | 0.000000E+00 |
+   |               |  +- 6.7E-02  |  +- 1.1E-04  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+
+   Average deposited energies (bodies):
+      Body    1 ......  5.316000E+02 +- 4.2E+01 eV    (effic. = 3.27E-01)
+      Body    2 ......  1.560781E+04 +- 3.6E+02 eV    (effic. = 3.84E+00)
+
+   Average photon energy at the detectors:
+      Detector # 1 ...  1.663790E+00 +- 1.4E-01 eV    (effic. = 2.77E-01)
+
+   Last random seeds = 2058009717 ,  514007055
+
+   Reference line: 13010400,  detector =  1,  tolerance = 5.000E-01
+                                   Relative uncertainty = 4.815E-01
+
+   ------------------------------------------------------------------------
