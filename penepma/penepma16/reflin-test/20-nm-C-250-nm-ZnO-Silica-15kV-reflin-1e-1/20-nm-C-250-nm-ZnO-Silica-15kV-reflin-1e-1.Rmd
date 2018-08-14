@@ -1,7 +1,7 @@
 ---
 title: "20-nm-C-250-nm-ZnO-Silica-15kV-reflin-1e-1"
 author: "John Minter"
-date: "Started 2018-08-07, Last modified: 2018-08-11"
+date: "Started 2018-08-07, Last modified: 2018-08-13"
 abstract: |
   The objective was to measure the time required for this simulation using the
   `Zn L3-M4` transition to reach the `REFLIN` criterion of an uncertainty of

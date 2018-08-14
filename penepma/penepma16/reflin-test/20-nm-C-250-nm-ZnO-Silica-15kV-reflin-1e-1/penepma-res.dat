@@ -4,42 +4,42 @@
    **   Program PENEPMA. Results.   **
    ***********************************
 
-   Simulation time .........................  1.447002E+05 sec
-   Simulation speed ........................  8.662802E+00 showers/sec
+   Simulation time .........................  1.454121E+05 sec
+   Simulation speed ........................  8.620405E+00 showers/sec
 
-   Simulated primary showers ...............  1.253509E+06
+   Simulated primary showers ...............  1.253511E+06
 
-   Upbound primary particles ...............  2.913230E+05
+   Upbound primary particles ...............  2.913240E+05
    Downbound primary particles .............  0.000000E+00
-   Absorbed primary particles ..............  9.621860E+05
+   Absorbed primary particles ..............  9.621870E+05
 
-   Upbound fraction ...................  2.423361E-01 +- 1.3E-03
+   Upbound fraction ...................  2.423365E-01 +- 1.3E-03
    Downbound fraction .................  0.000000E+00 +- 0.0E+00
-   Absorption fraction ................  7.675940E-01 +- 1.1E-03
+   Absorption fraction ................  7.675936E-01 +- 1.1E-03
 
    Secondary-particle generation probabilities:
                    ----------------------------------------------
                    |  electrons   |   photons    |  positrons   |
    --------------------------------------------------------------
-   |   upbound     | 9.930140E-03 | 1.642977E-03 | 0.000000E+00 |
+   |   upbound     | 9.930131E-03 | 1.642976E-03 | 0.000000E+00 |
    |               |  +- 2.0E-04  |  +- 6.3E-05  |  +- 0.0E+00  |
    --------------------------------------------------------------
    |   downbound   | 0.000000E+00 | 0.000000E+00 | 0.000000E+00 |
    |               |  +- 0.0E+00  |  +- 0.0E+00  |  +- 0.0E+00  |
    --------------------------------------------------------------
-   |   absorbed    | 5.764957E+00 | 7.068539E-03 | 0.000000E+00 |
+   |   absorbed    | 5.764956E+00 | 7.068528E-03 | 0.000000E+00 |
    |               |  +- 7.7E-03  |  +- 1.8E-04  |  +- 0.0E+00  |
    --------------------------------------------------------------
 
    Average deposited energies (bodies):
-      Body    1 ......  5.990142E+01 +- 3.0E-01 eV    (effic. = 2.50E+00)
-      Body    2 ......  4.077886E+03 +- 9.7E+00 eV    (effic. = 1.09E+01)
-      Body    3 ......  8.363693E+03 +- 1.6E+01 eV    (effic. = 1.80E+01)
+      Body    1 ......  5.990143E+01 +- 3.0E-01 eV    (effic. = 2.49E+00)
+      Body    2 ......  4.077883E+03 +- 9.7E+00 eV    (effic. = 1.08E+01)
+      Body    3 ......  8.363692E+03 +- 1.6E+01 eV    (effic. = 1.79E+01)
 
    Average photon energy at the detectors:
-      Detector # 1 ...  5.705105E-01 +- 7.1E-02 eV    (effic. = 4.07E-03)
+      Detector # 1 ...  5.705096E-01 +- 7.1E-02 eV    (effic. = 4.05E-03)
 
-   Last random seeds =   55873346 ,  984159543
+   Last random seeds = 1845252294 ,   95138167
 
    Reference line: 30040800,  detector =  1,  tolerance = 1.000E-01
                                    Relative uncertainty = 9.994E-02
