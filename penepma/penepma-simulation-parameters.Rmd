@@ -1,0 +1,62 @@
+---
+title: "PENEPMA simulation parameters"
+author: "John Minter"
+date: 'Started 2018-08-14, Last modified: 2018-08-14'
+output:
+  html_document:
+    css: ../inc/jm.css
+    number_sections: yes
+    toc: yes
+  pdf_document:
+    toc: yes
+abstract: |
+  PENEPMA has many simulation parameters. These may be "tuned" to 
+  provide a tailored simulation that produces the key results with
+  a minimum simulation time.
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction
+
+Selecting the correct parameters for an efficient PENEPMA simulation
+which produces results with sufficient precision with a minimum
+simulation is a daunting task. This document is designed as a 
+"Hithiker's Guide" to parameter selection. The table of contents is
+designed to make it fast to find the information on the parameter of
+interest. The most up-to-date source for this information is:
+[X Llovet and F Salvat (2018)](https://doi.org/10.1088/1757-899X/304/1/012009).
+
+The authors provide this brief summary of parameters
+
+- E~el~ Electron absorption energy (in eV)
+- E~ph~ Photon absorption energy (in eV)
+- C1 Average angular deflection in a step
+- C2 Maximum average fractional energy loss in a step
+- W~cc~ Cut-off energy loss for hard inelastic collisions (in eV)
+- W~cr~ Cut-off energy loss for hard bremsstrahlung collisions (in eV)
+- s~max~ Maximum step length of electrons in material body (in cm)
+- F~si~ Forcing factor for inner-shell ionization
+- F~b~ Forcing factor for bremsstrahlung emission
+- F~ph~ Forcing factor for photoelectric absorption
+- F~co~ Forcing factor for incoherent scattering
+- S~ch~ Splitting factor for characteristic X-rays
+- S~b~ Splitting factor for bremsstrahlung emission
+- $\Delta\theta$  Polar aperture (in deg)
+- $\Delta\phi$ Azimuthal aperture (in deg)
+
+
+# E~el~ and E~ph~: electron and photon energies
+
+From X Llovet and F Salvat (2018). Emphasis mine...
+
+> Electron trajectories and photon histories are simulated from the
+> initial energy down to the electron and photon absorption energies
+> E~el~ and E~ph~, respectively, to be selected by the user, at which
+> the particles are considered to be effectively absorbed in the medium.
+> 
+> The **default** absorption energies are set to **50 eV**. Note that,
+> in the case of samples consisting of several materials, the parameters
+> E~el~ and E~ph~ can be specified for **each material**. 
