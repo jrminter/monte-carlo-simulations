@@ -1,3 +1,5 @@
+<link rel="stylesheet" type="text/css" media="all" href="./inc/jm.css" />
+
 # monte-carlo-simulations
 
 **Users beware...** This is a work in progress...
