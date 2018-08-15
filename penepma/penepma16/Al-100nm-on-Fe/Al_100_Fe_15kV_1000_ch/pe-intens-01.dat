@@ -1,0 +1,20 @@
+ #  Results from PENEPMA. Output from photon detector #  1
+ #
+ #  Angular intervals : theta_1 = 5.000000E+01,  theta_2 = 6.000000E+01
+ #                        phi_1 = 0.000000E+00,    phi_2 = 3.600000E+02
+ #
+ #  Intensities of characteristic lines. All in 1/(sr*particle).
+ #    P = primary photons (from electron interactions);
+ #    C = flourescence from characteristic x rays;
+ #    B = flourescence from bremsstrahlung quanta;
+ #   TF = C+B, total fluorescence;
+ #  unc = statistical uncertainty (3 sigma).
+ #
+ # IZ S0 S1  E (eV)      P            unc       C            unc       B            unc       TF           unc       Intensity    unc
+   13  K L2  1.4863E+03  1.058723E-05 7.05E-06  0.000000E+00 0.00E+00  0.000000E+00 0.00E+00  0.000000E+00 0.00E+00  1.058723E-05 7.05E-06
+   13  K L3  1.4867E+03  1.828703E-05 8.85E-06  1.139483E-08 3.42E-08  1.146623E-07 1.99E-07  1.260571E-07 2.33E-07  1.841309E-05 8.87E-06
+   13  K M3  1.5576E+03  4.812377E-07 1.44E-06  0.000000E+00 0.00E+00  0.000000E+00 0.00E+00  0.000000E+00 0.00E+00  4.812377E-07 1.44E-06
+   26  K L2  6.3910E+03  4.461078E-05 2.34E-06  2.278967E-07 1.52E-07  1.687690E-06 8.31E-07  1.915587E-06 9.84E-07  4.652636E-05 2.52E-06
+   26  K L3  6.4040E+03  8.661214E-05 3.52E-06  5.697417E-07 2.45E-07  3.313567E-06 1.14E-06  3.883309E-06 1.39E-06  9.049545E-05 3.80E-06
+   26  K M2  7.0582E+03  5.264414E-06 7.49E-07  1.139483E-08 3.42E-08  1.528831E-07 2.29E-07  1.642779E-07 2.63E-07  5.428691E-06 7.81E-07
+   26  K M3  7.0582E+03  1.105299E-05 1.10E-06  2.278967E-08 4.83E-08  3.087545E-07 3.15E-07  3.315442E-07 3.64E-07  1.138453E-05 1.15E-06

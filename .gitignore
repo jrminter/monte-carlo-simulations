@@ -18,6 +18,14 @@ penepma/penepma16/20-nm-C-250-nm-ZnO-Silica-15kV/*.html
 penepma/penepma16/20-nm-C-250-nm-ZnO-Silica-15kV/*.msa
 penepma/penepma16/20-nm-C-250-nm-ZnO-Silica-15kV/*.rda
 
+penepma/penepma16/Al-100nm-on-Fe/Al_100_Fe_15kV_1000_ch/*.html
+penepma/penepma16/Al-100nm-on-Fe/Al_100_Fe_15kV_1000_ch/*.msa
+penepma/penepma16/Al-100nm-on-Fe/Al_100_Fe_15kV_1000_ch/*ch.rda
+
+penepma/penepma16/Al-100nm-on-Fe/Al_100_Fe_15kV_4096_ch/*.html
+penepma/penepma16/Al-100nm-on-Fe/Al_100_Fe_15kV_4096_ch/*.msa
+penepma/penepma16/Al-100nm-on-Fe/Al_100_Fe_15kV_4096_ch/*ch.rda
+
 penepma/penepma16/amC-bulk-15kV/*.html
 penepma/penepma16/amC-bulk-15kV/*.msa
 penepma/penepma16/amC-bulk-15kV/*.rda
@@ -48,6 +56,7 @@ penepma/penepma16/reflin-test/20-nm-C-250-nm-ZnO-Silica-15kV-reflin-5e-1/*.html
 penepma/penepma16/reflin-test/20-nm-C-250-nm-ZnO-Silica-15kV-reflin-5e-1/*.msa
 penepma/penepma16/reflin-test/20-nm-C-250-nm-ZnO-Silica-15kV-reflin-5e-1/*m1.rda
 penepma/penepma16/reflin-test/20-nm-C-250-nm-ZnO-Silica-15kV-reflin-5e-1/*ro.rda
+
 
 dtsa2/*.html
 
