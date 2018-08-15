@@ -1,9 +1,10 @@
 ---
 title: "Penepma material input parameters"
 author: "John Minter"
-date: "Started: 2018-08-22, Last Modified: 2018-08-02"
+date: "Started: 2018-08-22, Last Modified: 2018-08-15"
 output:
   html_document:
+    css: '../inc/jm.css'
     keep_md: true
 ---
 

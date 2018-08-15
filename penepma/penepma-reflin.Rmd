@@ -1,9 +1,10 @@
 ---
 title: "Running simulations to a desired precision: REFLIN"
 author: "John Minter"
-date: "Started: 2018-08-07, Last Modified: 2018-08-09"
+date: "Started: 2018-08-07, Last Modified: 2018-08-15"
 output:
   html_document:
+    css: '../inc/jm.css'
     keep_md: true
 ---
 

@@ -4,6 +4,7 @@ author: "John Minter"
 date: "Started: 2018-07-23, Last Modified: 2018-08-01"
 output:
   html_document:
+    css: '../inc/jm.css'
     keep_md: true
 ---
 
