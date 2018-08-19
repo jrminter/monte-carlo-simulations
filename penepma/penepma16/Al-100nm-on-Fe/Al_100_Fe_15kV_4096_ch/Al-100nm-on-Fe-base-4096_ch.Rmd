@@ -165,7 +165,7 @@ load("./Al_100_Fe_15kV_4096_ch.rda")
 ## Load the raw data
 
 ```{r loadSpectraData}
-tib <- penepma_read_raw_data(spc_fi,min_intensity_clip=5.0e-10)
+tib <- penepma_read_raw_data(spc_fi)
 rownames(tib) <- c()
 ```
 
@@ -191,11 +191,11 @@ Start with a log-intensity plot.
 ```{r plotLogIntensSpectrum, fig.width=8, warning=FALSE}
 m_t <- max(pretty(tib$mu))
 
-plt <- ggplot(tib, aes(x = keV, y = mu)) +
+plt <- ggplot(tib, aes(x = keV, y = pd.mu)) +
        geom_line() + 
        scale_x_continuous(breaks = seq(from = 0, to = e0-5, by = 1),
                           limits = c(0,e0-5)) +
-       scale_y_log10(limits = c(int_lo_lim, m_t)) +
+       scale_y_log10() +
        xlab(label="X-ray energy [keV]") +
        ylab(label="log(probability density)") +
        # (1/(eV*sr*electron)") +
@@ -211,11 +211,11 @@ And then on a linear intensity scale...
 
 ```{r plotLinIntensSpectrum, fig.width=8, warning=FALSE}
 
-plt <- ggplot(tib, aes(x = keV, y = mu)) +
+plt <- ggplot(tib, aes(x = keV, y = pd.mu)) +
        geom_line() + 
        scale_x_continuous(breaks = seq(from = 0, to = e0-5, by = 1),
                           limits = c(0,e0-5)) +
-       scale_y_continuous(limits = c(int_lo_lim, m_t)) +
+       scale_y_continuous() +
        xlab(label="X-ray energy [keV]") +
        ylab(label="Probability density") +
        # (1/(eV*sr*electron)") +
