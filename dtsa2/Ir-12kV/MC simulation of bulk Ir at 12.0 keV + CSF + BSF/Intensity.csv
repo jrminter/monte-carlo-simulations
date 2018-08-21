@@ -1,0 +1,22 @@
+MC simulation of bulk Ir at 12.0 keV + CSF + BSF
+Characteristic
+Type:	Characteristic
+# of electrons	10000
+# of scattering events	2333075
+Transition	Generated (1/mSr)	Transmitted (1/mSr)
+Ir L3-M5	1560.2592833141068	1538.846628029045
+Ir M5-N7	754201.4465272735	482513.0057847101
+Bremsstrahlung Fluorescence
+Type:	Continuum Fluorescence
+# of electrons	10000
+# of scattering events	231884
+Transition	Generated (1/mSr)	Transmitted (1/mSr)
+Ir L3-M5	181.38430435586093	84.41511522110699
+Ir M5-N7	5359.316542447662	1903.888899098012
+Characteristic Fluorescence
+Type:	Characteristic Fluorescence
+# of electrons	10000
+# of scattering events	233632
+Transition	Generated (1/mSr)	Transmitted (1/mSr)
+Ir L3-M5	0.0	0.0
+Ir M5-N7	4423.967226209476	2212.6064188907044
