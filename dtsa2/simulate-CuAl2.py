@@ -1,7 +1,8 @@
 """
 simulate-CuAl2.py
 
-J. R. Minter 2018-08-11
+J. R. Minter 2018-08-11. Mod 2008-08-21 to 20 kV to work well with 
+simulation alien.
 
 Simulate Bulk CuAl2, Cu, and Al using dtsa2.jmcSimulate3 that returns
 both the emitted and detected spectra. For comparison with PENEPMA
@@ -22,7 +23,7 @@ rptDir = wrkDir + '/simulate-CuAl2 Results/'
 
 DataManager.clearSpectrumList()
 
-e0    = 15.0
+e0    = 20.0
 nTraj = 10000
 det = findDetector("Probe")
 
