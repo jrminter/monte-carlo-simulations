@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<penepma2011Options>
+	<maximumStepLengths/>
+	<jobDescription title="Cu"/>
+	<dump dumpFilename="dump.dat" dumpInterval_s="60" resumeFilename="dump.dat"/>
+	<geometry class="Substrate" filename="substrate.geo" substrateMaterialId="1" title="Substrate">
+		<rotation omega_deg="0.0" phi_deg="0.0" theta_deg="0.0"/>
+		<shift x_cm="0.0" y_cm="0.0" z_cm="0.0"/>
+	</geometry>
+	<polarAngularDistribution bins="45"/>
+	<azimuthalAngularDistribution bins="30"/>
+	<interactionForcings>
+		<interactionForcing collision="4" forcer="-40" moduleId="1" particle="1" weightHigh="1.0" weightLow="0.1"/>
+		<interactionForcing collision="5" forcer="-40" moduleId="1" particle="1" weightHigh="1.0" weightLow="0.1"/>
+	</interactionForcings>
+	<simulation showers="2000000000" time_s="14400">
+		<!--no random number seeds-->
+		<uncertaintyLimit characteristic="0.01" detector="0" fluorescence="0.0">
+			<photonTransition dest="4" src="9" z="29"/>
+		</uncertaintyLimit>
+	</simulation>
+	<source aperture_deg="0.0" azimuthalAngle_deg="0.0" beamDiameter_cm="1e-06" beamEnergy_eV="20000.0" polarAngle_deg="180.0" takeOffAngle_deg="40.0">
+		<position x_cm="0.0" y_cm="0.0" z_cm="10.0"/>
+	</source>
+	<photonDetectors>
+		<photonDetector azimuthalAngleHigh_deg="360.0" azimuthalAngleLow_deg="0.0" channels="1000" emissionMapFilename="none" energyHigh_eV="20000.0" energyLow_eV="200.0" phaseStateFlag="0" polarAngleHigh_deg="60.0" polarAngleLow_deg="40.0"/>
+	</photonDetectors>
+	<materials>
+		<material filename="Cu.mat" id="1" name="Cu">
+			<elements userDensity_g_cm3="8.92">
+				<element fraction="1.0" symbol="Cu"/>
+			</elements>
+			<simulationParameters absorptionEnergyElectron_eV="200.0" absorptionEnergyPhoton_eV="50.0" absorptionEnergyPositron_eV="200.0" cutoffEnergyLossBremsstrahlungEmission_eV="50.0" cutoffEnergyLossInelasticCollisions_eV="200.0" elasticScatteringParameter_C1="0.2" elasticScatteringParameter_C2="0.2"/>
+		</material>
+	</materials>
+	<!--no spatial-->
+	<phiRhoZs>
+		<phiRhoZ detector="1">
+			<photonTransition dest="1" src="4" z="29"/>
+		</phiRhoZ>
+		<phiRhoZ detector="1">
+			<photonTransition dest="4" src="9" z="29"/>
+		</phiRhoZ>
+	</phiRhoZs>
+	<energyDistribution bins="1000" energyHigh_eV="20000.0" energyLow_eV="200.0"/>
+</penepma2011Options>

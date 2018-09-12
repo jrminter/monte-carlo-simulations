@@ -1,0 +1,10 @@
+Welcome to DTSA-II's scripting interface.  Type 'help()' for more information.
+<Ctrl-Return> executes a command.  <Return> to create multi-line commands.
+Elapse: 0:00:00.3
+
+Running C:/Users/jrminter/Documents/git/monte-carlo-simulations/dtsa2/simulate-CuAl2.py
+MC simulation of bulk CuAl2 at 20.0 keV + CSF + BSF
+MC simulation of bulk Cu at 20.0 keV + CSF + BSF
+MC simulation of bulk Al at 20.0 keV + CSF + BSF
+This script required 17.649 min
+Elapse: 0:17:39.3
