@@ -1,5 +1,5 @@
 ---
-title: "Analyze pypenelope sims of C on Fe with different Fe density"
+title: "Analyze pypenelope simulations of C on Fe with different Fe density values"
 author: "John Minter"
 date: 'Started 2018-09-17, Last modified: 2018-09-20'
 output:
