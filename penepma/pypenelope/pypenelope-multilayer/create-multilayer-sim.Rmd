@@ -101,12 +101,10 @@ after setting the substrate to Fe it should look like this
 
 ![](./png/02h-Fe-substrate.png)
 
-Then press `+` and add a material for the thin film.
-Choose C with a density of 2.26 g/cm3
-
-![](./png/02i-C-matl-set.png)
-
 ## Add the C layer
+
+Press `+` and add a material for the thin film.
+Choose C with a density of 2.26 g/cm3
 
 The window should look like this
 
