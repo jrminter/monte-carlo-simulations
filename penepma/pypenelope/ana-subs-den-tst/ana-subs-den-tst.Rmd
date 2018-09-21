@@ -1,7 +1,7 @@
 ---
 title: "Analyze pypenelope simulations of C on Fe with different Fe density values"
 author: "John Minter"
-date: 'Started 2018-09-17, Last modified: 2018-09-20'
+date: 'Started 2018-09-17, Last modified: 2018-09-21'
 output:
   html_document:
     css: ./jm-gray-vignette.css
@@ -22,7 +22,7 @@ abstract: |
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo=FALSE,
+knitr::opts_chunk$set(echo=TRUE,
   comment = NA,
   fig.align = "centre",
   fig.height = 4,
@@ -64,123 +64,101 @@ c20nm_fe_p1   <- sprintf("%s/c-20-nm-on-fe-den-p1-pe-inten-01.dat", sim_dir)
 c20nm_fe_10   <- sprintf("%s/c-20-nm-on-fe-den-10-pe-inten-01.dat", sim_dir)
 c200nm_fe_p1   <- sprintf("%s/c-200-nm-on-fe-den-p1-pe-inten-01.dat", sim_dir)
 c200nm_fe_10   <- sprintf("%s/c-200-nm-on-fe-den-10-pe-inten-01.dat", sim_dir)
+print(c_std)
 ```
 
-# Compute total maximum intensity for each element in each sample
+# Compute the intensities need to compute K-ratios
 
-Next, we retrieve the intensity for the C and Fe transitions of interest
+Next, in the code chunk `createIntensTibbles`, we retrieve the intensity
+for the C and Fe transitions of interest
 (C Ka1, FeLa1, and Fe Ka1) for each specimen using the function
-`penepma_get_intensity_z_s0_s1()` from the `rpenepma` package. This function
-returns the intensity data for the transition as a `tibble` (an updated
-dataframe in R that may be processded using the pipe operator.)
+`penepma_get_intensity_z_s0_s1()` from the
+[`rpenepma`](https://github.com/jrminter/rpemepma) package on github.
+This function returns the intensity data for the transitions as a
+`tibble`. A tibble is an updated dataframe in R that may be processed
+using the pipe operator (`%>%`) that is best read as "and then...".
 
-```{r LoadMaxIntensity}
-int_tib <- penepma_get_intensities(fe_std_p1)
-# print(int_tib)
-fe_std_p1_fe_k_l3 <- penepma_get_intensity_z_s0_s1(int_tib, 26, 1, 4)
-fe_std_p1_fe_l3_m5 <- penepma_get_intensity_z_s0_s1(int_tib, 26, 4, 9)
-int_tib <- penepma_get_intensities(fe_std_10)
-fe_std_10_fe_k_l3 <- penepma_get_intensity_z_s0_s1(int_tib, 26, 1, 4)
-fe_std_10_fe_l3_m5 <- penepma_get_intensity_z_s0_s1(int_tib, 26, 4, 9)
-# print(fe_std_10_fe_k_l3)
-# print(fe_std_10_fe_l3_m5)
 
-int_tib <- penepma_get_intensities(c20nm_fe_p1)
-c20nm_fe_p1_c_k_l3 <- penepma_get_intensity_z_s0_s1(int_tib, 6, 1, 4)
-c20nm_fe_p1_fe_k_l3 <- penepma_get_intensity_z_s0_s1(int_tib, 26, 1, 4)
-c20nm_fe_p1_fe_l3_m5 <- penepma_get_intensity_z_s0_s1(int_tib, 26, 4, 9)
-# print(c20nm_fe_p1_c_k_l3)
-# print(c20nm_fe_p1_fe_k_l3)
-# print(c20nm_fe_p1_fe_l3_m5)
-
-int_tib <- penepma_get_intensities(c200nm_fe_p1)
-c200nm_fe_p1_c_k_l3 <- penepma_get_intensity_z_s0_s1(int_tib, 6, 1, 4)
-c200nm_fe_p1_fe_k_l3 <- penepma_get_intensity_z_s0_s1(int_tib, 26, 1, 4)
-c200nm_fe_p1_fe_l3_m5 <- penepma_get_intensity_z_s0_s1(int_tib, 26, 4, 9)
-
-int_tib <- penepma_get_intensities(c20nm_fe_10)
-c20nm_fe_10_c_k_l3 <- penepma_get_intensity_z_s0_s1(int_tib, 6, 1, 4)
-c20nm_fe_10_fe_k_l3 <- penepma_get_intensity_z_s0_s1(int_tib, 26, 1, 4)
-c20nm_fe_10_fe_l3_m5 <- penepma_get_intensity_z_s0_s1(int_tib, 26, 4, 9)
-# print(c20nm_fe_10_c_k_l3)
-# print(c20nm_fe_10_fe_k_l3)
-# print(c20nm_fe_10_fe_l3_m5)
-
-int_tib <- penepma_get_intensities(c200nm_fe_10)
-c200nm_fe_10_c_k_l3 <- penepma_get_intensity_z_s0_s1(int_tib, 6, 1, 4)
-c200nm_fe_10_fe_k_l3 <- penepma_get_intensity_z_s0_s1(int_tib, 26, 1, 4)
-c200nm_fe_10_fe_l3_m5 <- penepma_get_intensity_z_s0_s1(int_tib, 26, 4, 9)
-# print(c200nm_fe_10_c_k_l3)
-# print(c200nm_fe_10_fe_k_l3)
-# print(c200nm_fe_10_fe_l3_m5)
-
-# interim at the moment. will replace when sim is finished
-int_tib <- penepma_get_intensities(c_std)
-c_std_c_k_l3 <- penepma_get_intensity_z_s0_s1(int_tib, 6, 1, 4)
-# print(c_std_c_k_l3)
+```{r createIntensTibbles}
+int_tib_c_std <- penepma_get_intensities(c_std)
+int_tib_fe_std_10 <- penepma_get_intensities(fe_std_10)
+int_tib_fe_std_p1 <- penepma_get_intensities(fe_std_p1)
+int_tib_c200nm_fe_10 <- penepma_get_intensities(c200nm_fe_10)
+int_tib_c200nm_fe_p1 <- penepma_get_intensities(c200nm_fe_p1)
+int_tib_c20nm_fe_10 <- penepma_get_intensities(c20nm_fe_10)
+int_tib_c20nm_fe_p1 <- penepma_get_intensities(c20nm_fe_p1)
 ```
 
 
 # Calculate the K-ratios 
 
-Now that we have the intensities, we can compute the k-ratios. This was done
-explicitly for each sample. **To Do: ** Move this computation into a function
-in the [`rpenepma`](https://github.com/jrminter/rpemepma) package on github.
-The k-ratios are printed as a nice table by the `pander()` function from the
-Rpackage by the same name.
+Now that we have the intensities, we can compute the k-ratios.
+These were computed in the code chunk named `calculateKRs`. The desired
+K-ratio was computed by the function `penepma_calc_k_ratio` exported by
+the `rpenepma` package. This function computes the desired K-ratio for
+the specified transition by extracting the required intensities. The
+function also computes the uncertainty for the k-ratio, both as a
+value and as a percentage of the k-ratio. To aid in preparing a
+summary table, the function returns the sample ID and label for the
+transition supplied by the user. See the output below.
 
 ```{r calculateKRs}
-nRnd <- 5
+ret_200_FeK_10 <- penepma_calc_k_ratio("200 nm C on Fe rho=10",
+                                  "FeKa",
+                                  int_tib_c200nm_fe_10,
+                                  int_tib_fe_std_10,
+                                  26, 1, 4, n_rnd=4)
+ret_200_C_K_10 <- penepma_calc_k_ratio("200 nm C on Fe rho=10", "C Ka",
+                                  int_tib_c200nm_fe_10, int_tib_c_std,
+                                  6, 1, 4, n_rnd=4)
+ret_200_FeL_10 <- penepma_calc_k_ratio("200 nm C on Fe rho=10", "FeLa",
+                                  int_tib_c200nm_fe_10, int_tib_fe_std_10,
+                                  26, 4, 9, n_rnd=4)
 
-c20_fe_p1_k_c <- round(c20nm_fe_p1_c_k_l3$Int.mu / c_std_c_k_l3$Int.mu, nRnd)
-c20_fe_p1_k_fe_k <- round(c20nm_fe_p1_fe_k_l3$Int.mu / fe_std_p1_fe_k_l3$Int.mu, nRnd)
-c20_fe_p1_k_fe_l <- round(c20nm_fe_p1_fe_l3_m5$Int.mu / fe_std_p1_fe_l3_m5$Int.mu, nRnd)
-
-c20_fe_p1 <- data.frame(specimen="20 nm C on Fe rho=0.1",
-                        kCkA=as.numeric(c20_fe_p1_k_c),
-                        kFeKa = as.numeric(c20_fe_p1_k_fe_k),
-                        kFeLa = c20_fe_p1_k_fe_l)
-
-c200_fe_p1_k_c <- round(c200nm_fe_p1_c_k_l3$Int.mu / c_std_c_k_l3$Int.mu, nRnd)
-c200_fe_p1_k_fe_k <- round(c200nm_fe_p1_fe_k_l3$Int.mu / fe_std_p1_fe_k_l3$Int.mu, nRnd)
-c200_fe_p1_k_fe_l <- round(c200nm_fe_p1_fe_l3_m5$Int.mu / fe_std_p1_fe_l3_m5$Int.mu, nRnd)
-
-c200_fe_p1 <- data.frame(specimen="200 nm C on Fe rho=0.1",
-                        kCkA=as.numeric(c200_fe_p1_k_c),
-                        kFeKa = as.numeric(c200_fe_p1_k_fe_k),
-                        kFeLa = c200_fe_p1_k_fe_l)
+ret_200_FeK_p1 <- penepma_calc_k_ratio("200 nm C on Fe rho=0.1", "FeKa",
+                                  int_tib_c200nm_fe_p1, int_tib_fe_std_p1,
+                                  26, 1, 4, n_rnd=4)
+ret_200_C_K_p1 <- penepma_calc_k_ratio("200 nm C on Fe rho=0.1", "C Ka",
+                                  int_tib_c200nm_fe_p1, int_tib_c_std,
+                                  6, 1, 4, n_rnd=4)
+ret_200_FeL_p1 <- penepma_calc_k_ratio("200 nm C on Fe rho=0.1", "FeLa",
+                                  int_tib_c200nm_fe_p1, int_tib_fe_std_p1,
+                                  26, 4, 9, n_rnd=4)
 
 
+ret_20_FeK_10 <- penepma_calc_k_ratio("20 nm C on Fe rho=10",
+                                  "FeKa",
+                                  int_tib_c20nm_fe_10,
+                                  int_tib_fe_std_10,
+                                  26, 1, 4, n_rnd=4)
+ret_20_C_K_10 <- penepma_calc_k_ratio("20 nm C on Fe rho=10", "C Ka",
+                                  int_tib_c20nm_fe_10, int_tib_c_std,
+                                  6, 1, 4, n_rnd=4)
+ret_20_FeL_10 <- penepma_calc_k_ratio("20 nm C on Fe rho=10", "FeLa",
+                                  int_tib_c20nm_fe_10, int_tib_fe_std_10,
+                                  26, 4, 9, n_rnd=4)
 
-c20_fe_10_k_c <- round(c20nm_fe_10_c_k_l3$Int.mu / c_std_c_k_l3$Int.mu, nRnd)
-c20_fe_10_k_fe_k <- round(c20nm_fe_10_fe_k_l3$Int.mu / fe_std_10_fe_k_l3$Int.mu, nRnd)
-c20_fe_10_k_fe_l <- round(c20nm_fe_10_fe_l3_m5$Int.mu / fe_std_10_fe_l3_m5$Int.mu, nRnd)
+ret_20_FeK_p1 <- penepma_calc_k_ratio("20 nm C on Fe rho=0.1", "FeKa",
+                                  int_tib_c20nm_fe_p1, int_tib_fe_std_p1,
+                                  26, 1, 4, n_rnd=4)
+ret_20_C_K_p1 <- penepma_calc_k_ratio("20 nm C on Fe rho=0.1", "C Ka",
+                                  int_tib_c20nm_fe_p1, int_tib_c_std,
+                                  6, 1, 4, n_rnd=4)
+ret_20_FeL_p1 <- penepma_calc_k_ratio("20 nm C on Fe rho=0.1", "FeLa",
+                                  int_tib_c20nm_fe_p1, int_tib_fe_std_p1,
+                                  26, 4, 9, n_rnd=4)
 
-c20_fe_10 <- data.frame(specimen="20 nm C on Fe rho=10",
-                        kCkA =  as.numeric(c20_fe_10_k_c),
-                        kFeKa = as.numeric(c20_fe_10_k_fe_k),
-                        kFeLa = as.numeric(c20_fe_10_k_fe_l))
 
-c200_fe_10_k_c <- round(c200nm_fe_10_c_k_l3$Int.mu / c_std_c_k_l3$Int.mu, nRnd)
-c200_fe_10_k_fe_k <- round(c200nm_fe_10_fe_k_l3$Int.mu / fe_std_10_fe_k_l3$Int.mu, nRnd)
-c200_fe_10_k_fe_l <- round(c200nm_fe_10_fe_l3_m5$Int.mu / fe_std_10_fe_l3_m5$Int.mu, nRnd)
-
-c200_fe_10 <- data.frame(specimen="200 nm C on Fe rho=10",
-                        kCkA =  as.numeric(c200_fe_10_k_c),
-                        kFeKa = as.numeric(c200_fe_10_k_fe_k),
-                        kFeLa = as.numeric(c200_fe_10_k_fe_l))
-
-k_ratios <- rbind(c20_fe_p1, c20_fe_10, c200_fe_p1, c200_fe_10)
-
-pander(k_ratios)
+pander(rbind(ret_20_C_K_10, ret_20_FeL_10, ret_20_FeK_10,
+             ret_20_C_K_p1, ret_20_FeL_p1, ret_20_FeK_p1,
+             ret_200_C_K_10, ret_200_FeL_10, ret_200_FeK_10,
+             ret_200_C_K_p1, ret_200_FeL_p1, ret_200_FeK_p1))
 ```
 # Summary
 
-The 20 nm C sample is sufficiently thin that even with an 8 hour simulation
-time the FeKa K-ratio for the specimen is greater than 1. If one suspends
-judgement on that simulation, where the FeKa value for the Fe density = 0.1 
-is greater than the value for Fe density = 10.0, the K-ratios for all the
-other transitions with the Fe density = 0.1 were lower than the value gor the
-Fe demsity = 10. I really need to write that K-ratio generation function and
-propagate the uncertainties. The differences are small, but I am concerned that
-they may be systematic.
+The 20 nm C sample is sufficiently thin that even with an 8 hour
+simulation time the FeKa K-ratio for the specimen is greater than 1.
+The difficultly is that the relative uncertainties are between 4.9
+and 13.6 percent. Perhaps there are changes in simulation parameters
+that could permit more trajectories in a shorter time. I am not sure
+what biases these changes could introduce.
