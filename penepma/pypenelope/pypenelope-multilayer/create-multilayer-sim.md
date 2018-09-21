@@ -79,7 +79,7 @@ When you are done press `OK`
 
 Now we want to set the substrate to `Fe`.
 
-![](./png/02e-Start-set sub-Fe.png)
+![](./png/02e-Start-set-sub-Fe.png)
 
 You will get an `Edit layer` box that looks like this
 
