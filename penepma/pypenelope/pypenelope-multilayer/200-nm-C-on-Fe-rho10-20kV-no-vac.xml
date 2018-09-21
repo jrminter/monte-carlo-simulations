@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<penepma2011Options>
+	<maximumStepLengths>
+		<maximumStepLength length_cm="2e-06" moduleId="1"/>
+	</maximumStepLengths>
+	<jobDescription title="200-nm-C-on-Fe-rho10-20kV-no-vac"/>
+	<dump dumpFilename="dump.dat" dumpInterval_s="60" resumeFilename="dump.dat"/>
+	<geometry class="MultiLayers" filename="multilayers.geo" title="Multi-Layers">
+		<rotation omega_deg="0.0" phi_deg="0.0" theta_deg="0.0"/>
+		<shift x_cm="0.0" y_cm="0.0" z_cm="0.0"/>
+		<layers>
+			<layer index="0" materialId="1" thickness_cm="2e-05"/>
+			<layer index="1" materialId="2" thickness_cm="-1.0"/>
+		</layers>
+	</geometry>
+	<polarAngularDistribution bins="45"/>
+	<azimuthalAngularDistribution bins="30"/>
+	<interactionForcings>
+		<interactionForcing collision="4" forcer="-40" moduleId="1" particle="1" weightHigh="1.0" weightLow="0.1"/>
+		<interactionForcing collision="5" forcer="-40" moduleId="1" particle="1" weightHigh="1.0" weightLow="0.1"/>
+		<interactionForcing collision="4" forcer="-40" moduleId="2" particle="1" weightHigh="1.0" weightLow="0.1"/>
+		<interactionForcing collision="5" forcer="-40" moduleId="2" particle="1" weightHigh="1.0" weightLow="0.1"/>
+	</interactionForcings>
+	<simulation showers="2000000000" time_s="300">
+		<!--no random number seeds-->
+		<!--no uncertainty limit-->
+	</simulation>
+	<source aperture_deg="0.0" azimuthalAngle_deg="0.0" beamDiameter_cm="1e-06" beamEnergy_eV="20000.0" polarAngle_deg="180.0" takeOffAngle_deg="40.0">
+		<position x_cm="0.0" y_cm="0.0" z_cm="10.0"/>
+	</source>
+	<photonDetectors>
+		<photonDetector azimuthalAngleHigh_deg="360.0" azimuthalAngleLow_deg="0.0" channels="1000" emissionMapFilename="none" energyHigh_eV="6600.0" energyLow_eV="200.0" phaseStateFlag="0" polarAngleHigh_deg="60.0" polarAngleLow_deg="40.0"/>
+	</photonDetectors>
+	<materials>
+		<material filename="Fe.mat" id="2" name="Fe">
+			<elements userDensity_g_cm3="10.0">
+				<element fraction="1.0" symbol="Fe"/>
+			</elements>
+			<simulationParameters absorptionEnergyElectron_eV="200.0" absorptionEnergyPhoton_eV="50.0" absorptionEnergyPositron_eV="200.0" cutoffEnergyLossBremsstrahlungEmission_eV="50.0" cutoffEnergyLossInelasticCollisions_eV="200.0" elasticScatteringParameter_C1="0.2" elasticScatteringParameter_C2="0.2"/>
+		</material>
+		<material filename="C.mat" id="1" name="C">
+			<elements>
+				<element fraction="1.0" symbol="C"/>
+			</elements>
+			<simulationParameters absorptionEnergyElectron_eV="200.0" absorptionEnergyPhoton_eV="50.0" absorptionEnergyPositron_eV="200.0" cutoffEnergyLossBremsstrahlungEmission_eV="50.0" cutoffEnergyLossInelasticCollisions_eV="200.0" elasticScatteringParameter_C1="0.2" elasticScatteringParameter_C2="0.2"/>
+		</material>
+	</materials>
+	<!--no spatial-->
+	<phiRhoZs>
+		<phiRhoZ detector="1">
+			<photonTransition dest="1" src="4" z="6"/>
+		</phiRhoZ>
+		<phiRhoZ detector="1">
+			<photonTransition dest="1" src="4" z="26"/>
+		</phiRhoZ>
+		<phiRhoZ detector="1">
+			<photonTransition dest="4" src="9" z="26"/>
+		</phiRhoZ>
+	</phiRhoZs>
+	<energyDistribution bins="1000" energyHigh_eV="6500.0" energyLow_eV="200.0"/>
+</penepma2011Options>
