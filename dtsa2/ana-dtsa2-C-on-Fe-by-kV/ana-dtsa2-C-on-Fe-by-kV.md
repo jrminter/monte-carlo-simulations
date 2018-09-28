@@ -22,22 +22,15 @@ abstract: |
   More to come...
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo=TRUE,
-  comment = NA,
-  fig.align = "centre",
-  fig.height = 4,
-  message = FALSE,
-  warning = FALSE,
-  error = FALSE)
-```
+
 
 # Set up for the analysis
 
 
 First load the libraries we need...
 
-```{r loadPackages}
+
+```r
 library(here)
 library(rpenepma)
 library(dplyr)
@@ -49,23 +42,43 @@ library(ggplot2)
 
 Next, set the paths and constants that we need...
 
-```{r setPaths}
+
+```r
 sim_dir <- here()
 
 fi_4kV  <- sprintf("%s/dtsa2-C-on-Fe-4-kV-kratios-50000-traj.csv", sim_dir)
 fi_4kV
+```
+
+```
+[1] "C:/Users/jrminter/Documents/git/monte-carlo-simulations/dtsa2/ana-dtsa2-C-on-Fe-by-kV/dtsa2-C-on-Fe-4-kV-kratios-50000-traj.csv"
+```
+
+```r
 fi_15kV <- sprintf("%s/dtsa2-C-on-Fe-15-kV-kratios-50000-traj.csv", sim_dir)
 df_4kV <- read_csv(fi_4kV)
 df_15kV <- read_csv(fi_15kV)
 print(head(df_15kV))
 ```
 
+```
+# A tibble: 6 x 7
+   t_nm k_c_k_mu k_c_k_un k_fe_l_mu k_fe_l_un k_fe_k_mu k_fe_k_un
+  <dbl>    <dbl>    <dbl>     <dbl>     <dbl>     <dbl>     <dbl>
+1   0.1  0.00193  0.00001     0.997   0.00027     1.00   0.000300
+2   1    0.00245  0.00001     0.991   0.00027     0.999  0.000300
+3   5    0.00489  0.00002     0.985   0.00027     0.996  0.000300
+4  10    0.00788  0.00002     0.980   0.00027     0.994  0.000300
+5  15    0.0109   0.00002     0.975   0.00027     0.993  0.000300
+6  20    0.0140   0.00002     0.969   0.00027     0.989  0.00029 
+```
+
 
 
 Plot CKa
 
-```{r plotCkA}
 
+```r
 c_ka_plt <- ggplot() +
             geom_point(data=df_4kV, aes(x=t_nm, y=k_c_k_mu),  colour="darkblue") +
             geom_point(data=df_15kV, aes(x=t_nm, y=k_c_k_mu),  colour="darkred") +
@@ -82,13 +95,14 @@ c_ka_plt <- ggplot() +
             NULL
 
 print(c_ka_plt)
-
 ```
+
+<img src="ana-dtsa2-C-on-Fe-by-kV_files/figure-html/plotCkA-1.png"  />
 
 Plot FeLa
 
-```{r plotFeLa}
 
+```r
 fe_la_plt <- ggplot() +
              geom_point(data=df_4kV, aes(x=t_nm, y=k_fe_l_mu),
                         colour="darkblue") +
@@ -107,15 +121,16 @@ fe_la_plt <- ggplot() +
              NULL
 
 print(fe_la_plt)
-
 ```
+
+<img src="ana-dtsa2-C-on-Fe-by-kV_files/figure-html/plotFeLa-1.png"  />
 
 
 Plot FeKa
 
 
-```{r plotFeKa}
 
+```r
 fe_ka_plt <- ggplot() +
              geom_point(data=df_15kV, aes(x=t_nm, y=k_fe_k_mu),
                         colour="darkred") +
@@ -130,5 +145,6 @@ fe_ka_plt <- ggplot() +
              NULL
 
 print(fe_ka_plt)
-
 ```
+
+<img src="ana-dtsa2-C-on-Fe-by-kV_files/figure-html/plotFeKa-1.png"  />
