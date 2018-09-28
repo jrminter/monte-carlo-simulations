@@ -63,6 +63,11 @@ penepma/pypenelope/pypenelope-multilayer/*.html
 
 
 dtsa2/*.html
+.Rproj.user
+
+dtsa2/ana-dtsa2-C-on-Fe-by-kV/*.html
+dtsa2/ana-dtsa2-C-on-Fe-by-kV/.Rproj.user
+
 
 C-ctd-ZnO-on-EagleXG-glass/dtsa2/spc/*.ps
 C-ctd-ZnO-on-EagleXG-glass/*.html

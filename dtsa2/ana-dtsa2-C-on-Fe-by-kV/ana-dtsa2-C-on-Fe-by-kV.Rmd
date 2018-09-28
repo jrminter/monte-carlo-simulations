@@ -1,0 +1,133 @@
+---
+title: "Analyze DTSA-II simulations of C on Fe at 4 and 15 kV"
+author: "John Minter"
+date: 'Started 2018-09-17, Last modified: 2018-09-28'
+output:
+  html_document:
+    css: ./jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+  pdf_document:
+    number_sections: yes
+    toc: yes
+abstract: |
+  The objective was to test an idea suggested by Aurien Moi. Aurien reported
+  that he had run penepma simulations on Fe with densities set to 0.1 and 10.0
+  g/cm3 and that the reported intensities were within experimental error. This
+  was in the context of my question of whether the GMRFILM program not using the
+  substrate density was a problem. I wanted to test this using DTSA-II on a
+  thin film case with a low Z coating, so I simulated C on Fe at 4 and 15 kV.
+  
+  More to come...
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=TRUE,
+  comment = NA,
+  fig.align = "centre",
+  fig.height = 4,
+  message = FALSE,
+  warning = FALSE,
+  error = FALSE)
+```
+
+# Set up for the analysis
+
+
+First load the libraries we need...
+
+```{r loadPackages}
+library(here)
+library(rpenepma)
+library(dplyr)
+library(readr)
+library(pander)
+panderOptions('table.split.table', Inf)
+library(ggplot2)
+```
+
+Next, set the paths and constants that we need...
+
+```{r setPaths}
+sim_dir <- here()
+fi_4kV  <- sprintf("%s/dtsa2-C-on-Fe-4-kV-kratios-50000-traj.csv", sim_dir)
+fi_4kV
+fi_15kV <- sprintf("%s/dtsa2-C-on-Fe-15-kV-kratios-50000-traj.csv", sim_dir)
+
+df_4kV <- read_csv(fi_4kV)
+df_15kV <- read_csv(fi_15kV)
+print(head(df_15kV))
+```
+
+
+
+Plot CKa
+
+```{r plotCkA}
+
+c_ka_plt <- ggplot() +
+            geom_point(data=df_4kV, aes(x=t_nm, y=k_c_k_mu),  colour="darkblue") +
+            geom_point(data=df_15kV, aes(x=t_nm, y=k_c_k_mu),  colour="darkred") +
+            xlab("C thickness [nm]") +
+            ylab("C Ka K-ratio") +
+            ggtitle("C on Fe at 4 and 15 kV") +
+            annotate("text", label = ' 4kV', x = 75, y = 0.5, size = 5,
+                     color = "darkblue") +
+            annotate("text", label = '15 kV', x = 75, y = 0.15, size = 5,
+                     color = "darkred") +
+            theme(axis.text=element_text(size=12),
+                  axis.title=element_text(size=12),
+                  plot.title=element_text(hjust = 0.5)) +  # center the title
+            NULL
+
+print(c_ka_plt)
+
+```
+
+Plot FeLa
+
+```{r plotFeLa}
+
+fe_la_plt <- ggplot() +
+             geom_point(data=df_4kV, aes(x=t_nm, y=k_fe_l_mu),
+                        colour="darkblue") +
+             geom_point(data=df_15kV, aes(x=t_nm, y=k_fe_l_mu),
+                        colour="darkred") +
+             xlab("C thickness [nm]") +
+             ylab("Fe La K-ratio") +
+             ggtitle("C on Fe at 4 and 15 kV") +
+             annotate("text", label = ' 4kV', x = 75, y = 0.55, size = 5,
+                      color = "darkblue") +
+             annotate("text", label = '15 kV', x = 75, y = 0.97, size = 5,
+                      color = "darkred") +
+             theme(axis.text=element_text(size=12),
+                   axis.title=element_text(size=12),
+                   plot.title=element_text(hjust = 0.5)) + 
+             NULL
+
+print(fe_la_plt)
+
+```
+
+
+Plot FeKa
+
+
+```{r plotFeKa}
+
+fe_ka_plt <- ggplot() +
+             geom_point(data=df_15kV, aes(x=t_nm, y=k_fe_k_mu),
+                        colour="darkred") +
+             xlab("C thickness [nm]") +
+             ylab("Fe Ka K-ratio") +
+             ggtitle("C on Fe 15 kV") +
+             annotate("text", label = '15 kV', x = 75, y = 0.98, size = 5,
+                      color = "darkred") +
+             theme(axis.text=element_text(size=12),
+                   axis.title=element_text(size=12),
+                   plot.title=element_text(hjust = 0.5)) + 
+             NULL
+
+print(fe_ka_plt)
+
+```
