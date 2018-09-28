@@ -51,7 +51,7 @@ fi_4kV
 ```
 
 ```
-[1] "C:/Users/jrminter/Documents/git/monte-carlo-simulations/dtsa2/ana-dtsa2-C-on-Fe-by-kV/dtsa2-C-on-Fe-4-kV-kratios-50000-traj.csv"
+[1] "/Users/jrminter/Documents/git/monte-carlo-simulations/dtsa2/ana-dtsa2-C-on-Fe-by-kV/dtsa2-C-on-Fe-4-kV-kratios-50000-traj.csv"
 ```
 
 ```r
