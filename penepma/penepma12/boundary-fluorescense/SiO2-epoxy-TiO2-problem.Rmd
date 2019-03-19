@@ -4,7 +4,7 @@ author: "J. R. Minter"
 date: "Started: 2019-03-19, Last modified: 2019-03-19"
 output:
   html_document:
-    # css: ../theme/jm-gray-vignette.css
+    css: ../../../inc/jm.css
     number_sections: yes
     toc: yes
     toc_depth: 3
