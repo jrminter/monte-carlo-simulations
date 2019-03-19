@@ -48,4 +48,5 @@ John Donovan noted:
 
 
 [Phillipe Pinard](https://probesoftware.com/smf/index.php?topic=58.msg8172#msg8172)
-supplied the [.geo](./inc/sio2-epoxy-tio2.geo) file.
+supplied the [.geo](./inc/sio2-epoxy-tio2.geo) file. Note: I renamed the file to
+make it more descriptive.
