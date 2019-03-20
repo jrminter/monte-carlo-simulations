@@ -97,7 +97,7 @@ in the `inc` folder...)
 Phillipe noted:
 
 > The 40um is from the center of each half-sphere. This distance is defined by
-> the x-shift of the TiO2 inclusion.
+> the x-shift of the TiO~2~ inclusion.
 >
 > If it helps, I attached the Python script I used to create this geometry.
 > You need Python3 and the 
