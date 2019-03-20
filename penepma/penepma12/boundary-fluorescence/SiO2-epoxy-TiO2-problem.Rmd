@@ -1,7 +1,7 @@
 ---
 title: "SiO~2~-epoxy-TiO~2~ problem"
 author: "J. R. Minter"
-date: 'Started: 2019-03-19, Last modified: 2019-03-19'
+date: 'Started: 2019-03-19, Last modified: 2019-03-20'
 output:
   html_document:
     css: ../../../inc/jm.css
@@ -28,7 +28,7 @@ This introduction comes from the Probe Software Forum [here](https://probesoftwa
 > Anyways:  There are essentially two solutions to this problem as Ben mentioned
 > 
 > 1. Acquire the data normally and run it through PENEPMA, modeling the influence
-> of secondary fluorescence.  Then removing the influence of secondar
+> of secondary fluorescence.  Then removing the influence of secondary
 > fluorescence on each data point during the transect towards the grain boundary.
 > A bit time consuming right now, but I wonder if PfEPMA wouldn't be able to do
 > that quite easily now that is has the modeling built in...
@@ -79,7 +79,7 @@ clarified further:
 library(here)
 library(readr)
 library(knitr)
-fi <- here('penepma/penepma12/boundary-fluorescense/inc/jd.csv')
+fi <- here('penepma/penepma12/boundary-fluorescence/inc/jd.csv')
 # print(fi)
 tib <- read_tsv(fi)
 kable(tib)
@@ -89,3 +89,22 @@ kable(tib)
 > particle 40 (37.5) um away from our beam spot in SiO~2~.  I have to admit,
 > it surprises me a bit that at 7.5 um from a 5 um particle and we're only
 > getting 30 PPM of SF effect.   Can anyone confirm these calculations? 
+
+[Phillipe Pinard](https://probesoftware.com/smf/index.php?topic=58.msg8180#msg8180)
+supplied the python code (He named it epoxy.py, I saveed it as sio2-epoxy-tio2.py
+in the `inc` folder...)
+
+Phillipe noted:
+
+> The 40um is from the center of each half-sphere. This distance is defined by
+> the x-shift of the TiO2 inclusion.
+>
+> If it helps, I attached the Python script I used to create this geometry.
+> You need Python3 and the 
+> [pypenelopetools](https://github.com/pymontecarlo/pypenelopetools)
+> library, which you should be able to install using:
+>
+> ```
+> pip install pypenelopetools
+> ```
+
