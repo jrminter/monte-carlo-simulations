@@ -45,8 +45,44 @@ John Donovan noted:
 > expert:
 
 ![The simulation geometry](./inc/diagram.png)
+He added:
 
+> The materials are arbitrary, we just need help with creating the .geo file.
+> The beam position could be varied but normally we'd put it in the center of
+> the 20 um inclusion.
+
+Does anyone have a file of this (or similar) geometry that they can share with us?
 
 [Phillipe Pinard](https://probesoftware.com/smf/index.php?topic=58.msg8172#msg8172)
 supplied the [.geo](./inc/sio2-epoxy-tio2.geo) file. Note: I renamed the file to
 make it more descriptive.
+
+[Marisa Acosta](https://probesoftware.com/smf/index.php?topic=58.msg8176#msg8176)
+asked:
+
+> Thank you for your help! It is much appreciated. Just a  quick clarifying
+> question - is the TiO~2~ inclusion shifted 40 micron with respect to the edge
+> of the sphere or the center of it (i.e. is the center or the edge of the
+> TiO~2~ inclusion 40 microns from the center of the SiO~2~ phase?)
+
+[John Donovan](https://probesoftware.com/smf/index.php?topic=58.msg8177#msg8177)
+clarified further:
+
+> So converting the k-ratios to % k-ratio and applying a matrix correction
+> of ~1.2 (TiO~2~ std k-factor = 0.5546) for Ti Ka in SiO~2~ we get the
+> following results:
+
+```{r makeTbale, echo=FALSE, message=FALSE, warning=FALSE}
+library(here)
+library(readr)
+library(knitr)
+fi <- here('penepma/penepma12/boundary-fluorescense/inc/jd.csv')
+# print(fi)
+tib <- read_tsv(fi)
+kable(tib)
+```
+
+> Therefore we're seeing only about 1-2 PPM SF effect from a 5 um TiO~2~
+> particle 40 (37.5) um away from our beam spot in SiO~2~.  I have to admit,
+> it surprises me a bit that at 7.5 um from a 5 um particle and we're only
+> getting 30 PPM of SF effect.   Can anyone confirm these calculations? 
