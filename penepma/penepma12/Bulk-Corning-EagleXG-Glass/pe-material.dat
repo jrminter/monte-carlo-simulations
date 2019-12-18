@@ -1,0 +1,41 @@
+
+ **********************************
+ **   PENELOPE  (version 2012)   **
+ **********************************
+
+ EMIN = 1.0000E+02 eV,  EMAX = 1.5000E+04 eV
+
+
+ **********************
+ **   1st material   **
+ **********************
+
+ Material data file: Corning Eagle XG.mat
+
+ *** Simulation parameters:
+     Electron absorption energy = 1.0000E+02 eV
+       Photon absorption energy = 1.0000E+02 eV
+     Positron absorption energy = 1.0000E+02 eV
+      C1 = 2.0000E-01,       C2 = 2.0000E-01
+     WCC = 1.0000E+02 eV,   WCR = 1.0000E+02 eV
+
+ PENELOPE (v. 2012)  Material data file ...............
+ Material: Corning Eagle XG glass                                        
+ Mass density = 2.38000000E+00 g/cm**3
+ Number of elements in the molecule = 14
+    Element: O  (Z= 8), atoms/molecule = 1.00000000E+00
+    Element: Si (Z=14), atoms/molecule = 3.30942477E-01
+    Element: Al (Z=13), atoms/molecule = 1.02960629E-01
+    Element: Ca (Z=20), atoms/molecule = 2.98279540E-02
+    Element: B  (Z= 5), atoms/molecule = 9.31528069E-02
+    Element: Mg (Z=12), atoms/molecule = 9.80581314E-03
+    Element: Sr (Z=38), atoms/molecule = 2.45148927E-03
+    Element: Sn (Z=50), atoms/molecule = 3.11230133E-04
+    Element: Ba (Z=56), atoms/molecule = 2.45227597E-04
+    Element: Sb (Z=51), atoms/molecule = 9.80288979E-05
+    Element: Fe (Z=26), atoms/molecule = 1.96038165E-04
+    Element: As (Z=33), atoms/molecule = 9.79669799E-05
+    Element: Zr (Z=40), atoms/molecule = 7.36986457E-05
+    Element: Ti (Z=22), atoms/molecule = 9.79042560E-05
+ Mean excitation energy = 1.24154548E+02 eV
+ PENELOPE (v. 2012)  End of material data file ........
