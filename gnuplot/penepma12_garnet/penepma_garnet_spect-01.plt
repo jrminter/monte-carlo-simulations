@@ -25,7 +25,7 @@ set xzeroaxis
 set xrange [*:*]
 set yrange [1e-11:*]
 
-set title 'EPMA spectrum. Detector #1' font titlFont
+set title 'PENEPMA12 Simulation of Garnet at 15 kV' font titlFont
 set xlabel "energy [keV]" font titlFont
 set ylabel "PDF [1/(eV*sr*electron)]" font titlFont
 set logscale y
