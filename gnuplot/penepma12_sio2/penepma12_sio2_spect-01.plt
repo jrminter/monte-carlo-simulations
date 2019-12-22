@@ -22,7 +22,7 @@ set style line 2 lt 2 lc rgb "#a6a6a6" lw 1
 
 set zero 1.0e-60
 set xzeroaxis
-set xrange [*:*]
+set xrange [0:15]
 set yrange [1e-11:*]
 
 set title 'PENEPMA12 Simulation of SiO2 at 15 kV' font titlFont
