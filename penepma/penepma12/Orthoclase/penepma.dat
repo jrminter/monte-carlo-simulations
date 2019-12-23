@@ -1,0 +1,1460 @@
+
+
+   *************************************************************
+   **   Program PENEPMA.  Input data and run-time messages.   **
+   *************************************************************
+
+   Date and time: 23th Dec 2019. 21:01:57
+
+   Characteristic X-ray Production Model                                                                                   
+
+
+   ------------------------------------------------------------------------
+   >>>>>>  Electron beam.
+   Primary particles: electrons
+   Initial energy =  1.500000E+04 eV
+   Coordinates of source:     SX0 =  0.000000E+00 cm
+                              SY0 =  0.000000E+00 cm
+                              SZ0 =  1.000000E+00 cm
+   Beam direction angles:   THETA =  1.800000E+02 deg
+                              PHI =  0.000000E+00 deg
+   Beam aperture:           ALPHA =  0.000000E+00 deg
+
+
+   ------------------------------------------------------------------------
+   >>>>>>  Material data and simulation parameters.
+
+   ****  1st material
+   Material data file: Orthoclase.MAT      
+   Electron absorption energy =  1.000000E+02 eV
+     Photon absorption energy =  1.000000E+02 eV
+   Positron absorption energy =  1.000000E+02 eV
+   Electron-positron simulation parameters:
+    C1 = 2.000000E-01,      C2 = 2.000000E-01
+   Wcc = 1.000000E+02 eV,  Wcr = 1.000000E+02 eV
+
+   PENGEOM's geometry definition file: bulk.geo            
+
+
+   ------------------------------------------------------------------------
+   >>>>>>  Maximum allowed step lengths of electrons and positrons.
+   * Body =   1,   DSMAX =  1.500000E-02 cm
+
+
+   ------------------------------------------------------------------------
+   >>>>>>  Interaction forcing: FORCE(IBODY,KPAR,ICOL)
+   FORCE(   1,1,4) = 6.155920E+03,  weight window = ( 9.00E-01, 1.00E+00)
+   FORCE(   1,1,5) = 1.774627E+01,  weight window = ( 9.00E-01, 1.00E+00)
+
+
+   ------------------------------------------------------------------------
+   >>>>>>  Energy and angular distributions of emerging particles.
+   E:       NBE = ***,  EMIN = 0.000000E+00 eV,  EMAX = 1.500000E+04 eV
+   Theta:  NBTH =  90
+   Phi:    NBPH =  60
+
+
+   ------------------------------------------------------------------------
+   >>>>>>  Photon detector # 1
+   Angular intervals : theta_1 = 5.0000E+01 deg,  theta_2 = 6.0000E+01 deg
+                         phi_1 = 0.0000E+00 deg,    phi_2 = 3.6000E+02 deg
+   Energy window = ( 0.00000E+00, 2.00000E+04) eV, no. of channels =  4096
+   Channel width = 4.882813E+00 eV
+
+
+   ------------------------------------------------------------------------
+   >>>>>>  Job characteristics.
+   Resume simulation from previous dump file: dump1.dat           
+   Write final counter values on the dump file: dump1.dat           
+   Dumping period: DUMPP = 1.200000E+02
+
+   Number of showers to be simulated = 2.000000E+09
+   Random-number generator seeds =          1,          1
+   Computation time available =  3.600000E+03 sec
+
+
+   ------------------------------------------------------------------------
+   WARNING: Could not resume from dump file...
+
+
+
+
+
+   ***********************************
+   **   Program PENEPMA. Results.   **
+   ***********************************
+
+   Simulation time .........................  1.200000E+02 sec
+   Simulation speed ........................  5.957500E+02 showers/sec
+
+
+   Simulated primary showers ...............  7.149000E+04
+
+   Upbound primary particles ...............  9.857000E+03
+   Downbound primary particles .............  0.000000E+00
+   Absorbed primary particles ..............  6.163300E+04
+
+   Upbound fraction ...................  1.459091E-01 +- 4.8E-03
+   Downbound fraction .................  0.000000E+00 +- 0.0E+00
+   Absorption fraction ................  8.621206E-01 +- 3.9E-03
+
+   Secondary-particle generation probabilities:
+                   ----------------------------------------------
+                   |  electrons   |   photons    |  positrons   |
+   --------------------------------------------------------------
+   |   upbound     | 8.029695E-03 | 1.602436E-03 | 0.000000E+00 |
+   |               |  +- 9.7E-04  |  +- 9.4E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   downbound   | 0.000000E+00 | 8.407434E-08 | 0.000000E+00 |
+   |               |  +- 0.0E+00  |  +- 4.1E-08  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   absorbed    | 1.838000E+01 | 7.993232E-03 | 0.000000E+00 |
+   |               |  +- 6.2E-02  |  +- 2.1E-04  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+
+   Average deposited energies (bodies):
+      Body    1 ......  1.371294E+04 +- 3.8E+01 eV    (effic. = 9.59E+03)
+
+   Average photon energy at the detectors:
+      Detector # 1 ...  5.255721E-01 +- 7.1E-02 eV    (effic. = 4.10E+00)
+
+   Last random seeds =  545350888 , 1554150538
+
+   ------------------------------------------------------------------------
+
+
+
+
+
+   ***********************************
+   **   Program PENEPMA. Results.   **
+   ***********************************
+
+   Simulation time .........................  2.392656E+02 sec
+   Simulation speed ........................  5.944398E+02 showers/sec
+
+
+   Simulated primary showers ...............  1.422290E+05
+
+   Upbound primary particles ...............  1.972700E+04
+   Downbound primary particles .............  0.000000E+00
+   Absorbed primary particles ..............  1.225020E+05
+
+   Upbound fraction ...................  1.466029E-01 +- 3.4E-03
+   Downbound fraction .................  0.000000E+00 +- 0.0E+00
+   Absorption fraction ................  8.613011E-01 +- 2.7E-03
+
+   Secondary-particle generation probabilities:
+                   ----------------------------------------------
+                   |  electrons   |   photons    |  positrons   |
+   --------------------------------------------------------------
+   |   upbound     | 7.904066E-03 | 1.587101E-03 | 0.000000E+00 |
+   |               |  +- 6.9E-04  |  +- 6.6E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   downbound   | 0.000000E+00 | 8.680255E-08 | 0.000000E+00 |
+   |               |  +- 0.0E+00  |  +- 3.0E-08  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   absorbed    | 1.836018E+01 | 7.964282E-03 | 0.000000E+00 |
+   |               |  +- 4.4E-02  |  +- 1.5E-04  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+
+   Average deposited energies (bodies):
+      Body    1 ......  1.370998E+04 +- 2.7E+01 eV    (effic. = 9.58E+03)
+
+   Average photon energy at the detectors:
+      Detector # 1 ...  4.975886E-01 +- 4.8E-02 eV    (effic. = 4.10E+00)
+
+   Last random seeds = 1680082327 , 1820710098
+
+   ------------------------------------------------------------------------
+
+
+
+
+
+   ***********************************
+   **   Program PENEPMA. Results.   **
+   ***********************************
+
+   Simulation time .........................  3.584844E+02 sec
+   Simulation speed ........................  5.946396E+02 showers/sec
+
+
+   Simulated primary showers ...............  2.131690E+05
+
+   Upbound primary particles ...............  2.944800E+04
+   Downbound primary particles .............  0.000000E+00
+   Absorbed primary particles ..............  1.837210E+05
+
+   Upbound fraction ...................  1.459586E-01 +- 2.8E-03
+   Downbound fraction .................  7.620492E-10 +- 2.3E-09
+   Absorption fraction ................  8.618561E-01 +- 2.2E-03
+
+   Secondary-particle generation probabilities:
+                   ----------------------------------------------
+                   |  electrons   |   photons    |  positrons   |
+   --------------------------------------------------------------
+   |   upbound     | 7.814712E-03 | 1.597970E-03 | 0.000000E+00 |
+   |               |  +- 5.6E-04  |  +- 5.4E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   downbound   | 7.620492E-10 | 7.696697E-08 | 0.000000E+00 |
+   |               |  +- 2.3E-09  |  +- 2.3E-08  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   absorbed    | 1.837520E+01 | 7.968470E-03 | 0.000000E+00 |
+   |               |  +- 3.6E-02  |  +- 1.2E-04  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+
+   Average deposited energies (bodies):
+      Body    1 ......  1.371337E+04 +- 2.2E+01 eV    (effic. = 9.60E+03)
+
+   Average photon energy at the detectors:
+      Detector # 1 ...  4.908879E-01 +- 3.8E-02 eV    (effic. = 4.11E+00)
+
+   Last random seeds =  533253113 ,  666784430
+
+   ------------------------------------------------------------------------
+
+
+
+
+
+   ***********************************
+   **   Program PENEPMA. Results.   **
+   ***********************************
+
+   Simulation time .........................  4.778125E+02 sec
+   Simulation speed ........................  5.950577E+02 showers/sec
+
+
+   Simulated primary showers ...............  2.843260E+05
+
+   Upbound primary particles ...............  3.905100E+04
+   Downbound primary particles .............  0.000000E+00
+   Absorbed primary particles ..............  2.452750E+05
+
+   Upbound fraction ...................  1.451893E-01 +- 2.4E-03
+   Downbound fraction .................  5.713345E-10 +- 1.7E-09
+   Absorption fraction ................  8.626541E-01 +- 1.9E-03
+
+   Secondary-particle generation probabilities:
+                   ----------------------------------------------
+                   |  electrons   |   photons    |  positrons   |
+   --------------------------------------------------------------
+   |   upbound     | 7.843404E-03 | 1.606076E-03 | 0.000000E+00 |
+   |               |  +- 4.8E-04  |  +- 4.7E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   downbound   | 5.713345E-10 | 7.484482E-08 | 0.000000E+00 |
+   |               |  +- 1.7E-09  |  +- 2.0E-08  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   absorbed    | 1.839003E+01 | 7.975142E-03 | 0.000000E+00 |
+   |               |  +- 3.1E-02  |  +- 1.0E-04  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+
+   Average deposited energies (bodies):
+      Body    1 ......  1.372237E+04 +- 1.9E+01 eV    (effic. = 9.69E+03)
+
+   Average photon energy at the detectors:
+      Detector # 1 ...  4.902065E-01 +- 3.3E-02 eV    (effic. = 4.14E+00)
+
+   Last random seeds = 2063029932 ,   59030980
+
+   ------------------------------------------------------------------------
+
+
+
+
+
+   ***********************************
+   **   Program PENEPMA. Results.   **
+   ***********************************
+
+   Simulation time .........................  5.970938E+02 sec
+   Simulation speed ........................  5.961744E+02 showers/sec
+
+
+   Simulated primary showers ...............  3.559720E+05
+
+   Upbound primary particles ...............  4.905600E+04
+   Downbound primary particles .............  0.000000E+00
+   Absorbed primary particles ..............  3.069160E+05
+
+   Upbound fraction ...................  1.456434E-01 +- 2.2E-03
+   Downbound fraction .................  4.563428E-10 +- 1.4E-09
+   Absorption fraction ................  8.621914E-01 +- 1.7E-03
+
+   Secondary-particle generation probabilities:
+                   ----------------------------------------------
+                   |  electrons   |   photons    |  positrons   |
+   --------------------------------------------------------------
+   |   upbound     | 7.834771E-03 | 1.595002E-03 | 0.000000E+00 |
+   |               |  +- 4.3E-04  |  +- 4.2E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   downbound   | 4.563428E-10 | 6.936411E-08 | 0.000000E+00 |
+   |               |  +- 1.4E-09  |  +- 1.7E-08  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   absorbed    | 1.838706E+01 | 7.963479E-03 | 0.000000E+00 |
+   |               |  +- 2.7E-02  |  +- 9.3E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+
+   Average deposited energies (bodies):
+      Body    1 ......  1.371742E+04 +- 1.7E+01 eV    (effic. = 9.66E+03)
+
+   Average photon energy at the detectors:
+      Detector # 1 ...  4.960738E-01 +- 3.0E-02 eV    (effic. = 4.09E+00)
+
+   Last random seeds = 1661521443 , 2068301648
+
+   ------------------------------------------------------------------------
+
+
+
+
+
+   ***********************************
+   **   Program PENEPMA. Results.   **
+   ***********************************
+
+   Simulation time .........................  7.163750E+02 sec
+   Simulation speed ........................  5.958695E+02 showers/sec
+
+
+   Simulated primary showers ...............  4.268660E+05
+
+   Upbound primary particles ...............  5.881300E+04
+   Downbound primary particles .............  0.000000E+00
+   Absorbed primary particles ..............  3.680530E+05
+
+   Upbound fraction ...................  1.455494E-01 +- 2.0E-03
+   Downbound fraction .................  3.805533E-10 +- 1.1E-09
+   Absorption fraction ................  8.622214E-01 +- 1.6E-03
+
+   Secondary-particle generation probabilities:
+                   ----------------------------------------------
+                   |  electrons   |   photons    |  positrons   |
+   --------------------------------------------------------------
+   |   upbound     | 7.770763E-03 | 1.592486E-03 | 0.000000E+00 |
+   |               |  +- 3.9E-04  |  +- 3.8E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   downbound   | 3.805533E-10 | 6.888014E-08 | 0.000000E+00 |
+   |               |  +- 1.1E-09  |  +- 1.5E-08  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   absorbed    | 1.838873E+01 | 7.970328E-03 | 0.000000E+00 |
+   |               |  +- 2.5E-02  |  +- 8.5E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+
+   Average deposited energies (bodies):
+      Body    1 ......  1.371753E+04 +- 1.6E+01 eV    (effic. = 9.66E+03)
+
+   Average photon energy at the detectors:
+      Detector # 1 ...  4.990774E-01 +- 2.8E-02 eV    (effic. = 4.08E+00)
+
+   Last random seeds = 2090541594 ,  744461384
+
+   ------------------------------------------------------------------------
+
+
+
+
+
+   ***********************************
+   **   Program PENEPMA. Results.   **
+   ***********************************
+
+   Simulation time .........................  8.356094E+02 sec
+   Simulation speed ........................  5.964174E+02 showers/sec
+
+
+   Simulated primary showers ...............  4.983720E+05
+
+   Upbound primary particles ...............  6.879800E+04
+   Downbound primary particles .............  0.000000E+00
+   Absorbed primary particles ..............  4.295740E+05
+
+   Upbound fraction ...................  1.458768E-01 +- 1.8E-03
+   Downbound fraction .................  3.259518E-10 +- 9.8E-10
+   Absorption fraction ................  8.619545E-01 +- 1.5E-03
+
+   Secondary-particle generation probabilities:
+                   ----------------------------------------------
+                   |  electrons   |   photons    |  positrons   |
+   --------------------------------------------------------------
+   |   upbound     | 7.831366E-03 | 1.595585E-03 | 0.000000E+00 |
+   |               |  +- 3.6E-04  |  +- 3.6E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   downbound   | 3.259518E-10 | 6.747203E-08 | 0.000000E+00 |
+   |               |  +- 9.8E-10  |  +- 1.4E-08  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   absorbed    | 1.838706E+01 | 7.968700E-03 | 0.000000E+00 |
+   |               |  +- 2.3E-02  |  +- 7.8E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+
+   Average deposited energies (bodies):
+      Body    1 ......  1.371366E+04 +- 1.5E+01 eV    (effic. = 9.63E+03)
+
+   Average photon energy at the detectors:
+      Detector # 1 ...  4.972274E-01 +- 2.5E-02 eV    (effic. = 4.11E+00)
+
+   Last random seeds =  676097991 ,  777486155
+
+   ------------------------------------------------------------------------
+
+
+
+
+
+   ***********************************
+   **   Program PENEPMA. Results.   **
+   ***********************************
+
+   Simulation time .........................  9.549219E+02 sec
+   Simulation speed ........................  5.960728E+02 showers/sec
+
+
+   Simulated primary showers ...............  5.692030E+05
+
+   Upbound primary particles ...............  7.862600E+04
+   Downbound primary particles .............  0.000000E+00
+   Absorbed primary particles ..............  4.905770E+05
+
+   Upbound fraction ...................  1.460225E-01 +- 1.7E-03
+   Downbound fraction .................  2.853907E-10 +- 8.6E-10
+   Absorption fraction ................  8.618665E-01 +- 1.4E-03
+
+   Secondary-particle generation probabilities:
+                   ----------------------------------------------
+                   |  electrons   |   photons    |  positrons   |
+   --------------------------------------------------------------
+   |   upbound     | 7.888968E-03 | 1.589303E-03 | 0.000000E+00 |
+   |               |  +- 3.4E-04  |  +- 3.3E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   downbound   | 2.853907E-10 | 6.421291E-08 | 0.000000E+00 |
+   |               |  +- 8.6E-10  |  +- 1.3E-08  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   absorbed    | 1.838668E+01 | 7.961162E-03 | 0.000000E+00 |
+   |               |  +- 2.2E-02  |  +- 7.3E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+
+   Average deposited energies (bodies):
+      Body    1 ......  1.371302E+04 +- 1.4E+01 eV    (effic. = 9.62E+03)
+
+   Average photon energy at the detectors:
+      Detector # 1 ...  4.932749E-01 +- 2.4E-02 eV    (effic. = 4.11E+00)
+
+   Last random seeds =  596312411 ,  967768543
+
+   ------------------------------------------------------------------------
+
+
+
+
+
+   ***********************************
+   **   Program PENEPMA. Results.   **
+   ***********************************
+
+   Simulation time .........................  1.074234E+03 sec
+   Simulation speed ........................  5.962442E+02 showers/sec
+
+
+   Simulated primary showers ...............  6.405060E+05
+
+   Upbound primary particles ...............  8.846300E+04
+   Downbound primary particles .............  0.000000E+00
+   Absorbed primary particles ..............  5.520430E+05
+
+   Upbound fraction ...................  1.460031E-01 +- 1.6E-03
+   Downbound fraction .................  2.536202E-10 +- 7.6E-10
+   Absorption fraction ................  8.618858E-01 +- 1.3E-03
+
+   Secondary-particle generation probabilities:
+                   ----------------------------------------------
+                   |  electrons   |   photons    |  positrons   |
+   --------------------------------------------------------------
+   |   upbound     | 7.888871E-03 | 1.589180E-03 | 0.000000E+00 |
+   |               |  +- 3.2E-04  |  +- 3.1E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   downbound   | 2.536202E-10 | 6.695573E-08 | 0.000000E+00 |
+   |               |  +- 7.6E-10  |  +- 1.2E-08  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   absorbed    | 1.838467E+01 | 7.959489E-03 | 0.000000E+00 |
+   |               |  +- 2.1E-02  |  +- 6.9E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+
+   Average deposited energies (bodies):
+      Body    1 ......  1.371292E+04 +- 1.3E+01 eV    (effic. = 9.62E+03)
+
+   Average photon energy at the detectors:
+      Detector # 1 ...  4.943881E-01 +- 2.2E-02 eV    (effic. = 4.11E+00)
+
+   Last random seeds =  336209955 ,  524873895
+
+   ------------------------------------------------------------------------
+
+
+
+
+
+   ***********************************
+   **   Program PENEPMA. Results.   **
+   ***********************************
+
+   Simulation time .........................  1.193484E+03 sec
+   Simulation speed ........................  5.964896E+02 showers/sec
+
+
+   Simulated primary showers ...............  7.119010E+05
+
+   Upbound primary particles ...............  9.836900E+04
+   Downbound primary particles .............  0.000000E+00
+   Absorbed primary particles ..............  6.135320E+05
+
+   Upbound fraction ...................  1.460551E-01 +- 1.5E-03
+   Downbound fraction .................  2.281852E-10 +- 6.8E-10
+   Absorption fraction ................  8.618221E-01 +- 1.2E-03
+
+   Secondary-particle generation probabilities:
+                   ----------------------------------------------
+                   |  electrons   |   photons    |  positrons   |
+   --------------------------------------------------------------
+   |   upbound     | 7.877171E-03 | 1.588970E-03 | 0.000000E+00 |
+   |               |  +- 3.1E-04  |  +- 3.0E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   downbound   | 2.281852E-10 | 6.914011E-08 | 0.000000E+00 |
+   |               |  +- 6.8E-10  |  +- 1.2E-08  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   absorbed    | 1.838643E+01 | 7.954941E-03 | 0.000000E+00 |
+   |               |  +- 1.9E-02  |  +- 6.5E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+
+   Average deposited energies (bodies):
+      Body    1 ......  1.371307E+04 +- 1.2E+01 eV    (effic. = 9.63E+03)
+
+   Average photon energy at the detectors:
+      Detector # 1 ...  4.947497E-01 +- 2.1E-02 eV    (effic. = 4.11E+00)
+
+   Last random seeds = 1445405641 , 1688624962
+
+   ------------------------------------------------------------------------
+
+
+
+
+
+   ***********************************
+   **   Program PENEPMA. Results.   **
+   ***********************************
+
+   Simulation time .........................  1.312797E+03 sec
+   Simulation speed ........................  5.960160E+02 showers/sec
+
+
+   Simulated primary showers ...............  7.824480E+05
+
+   Upbound primary particles ...............  1.080310E+05
+   Downbound primary particles .............  0.000000E+00
+   Absorbed primary particles ..............  6.744170E+05
+
+   Upbound fraction ...................  1.459485E-01 +- 1.5E-03
+   Downbound fraction .................  2.076116E-10 +- 6.2E-10
+   Absorption fraction ................  8.619320E-01 +- 1.2E-03
+
+   Secondary-particle generation probabilities:
+                   ----------------------------------------------
+                   |  electrons   |   photons    |  positrons   |
+   --------------------------------------------------------------
+   |   upbound     | 7.880545E-03 | 1.588466E-03 | 0.000000E+00 |
+   |               |  +- 2.9E-04  |  +- 2.8E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   downbound   | 2.076116E-10 | 6.788898E-08 | 0.000000E+00 |
+   |               |  +- 6.2E-10  |  +- 1.1E-08  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   absorbed    | 1.838946E+01 | 7.953517E-03 | 0.000000E+00 |
+   |               |  +- 1.9E-02  |  +- 6.2E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+
+   Average deposited energies (bodies):
+      Body    1 ......  1.371439E+04 +- 1.2E+01 eV    (effic. = 9.64E+03)
+
+   Average photon energy at the detectors:
+      Detector # 1 ...  4.956523E-01 +- 2.0E-02 eV    (effic. = 4.10E+00)
+
+   Last random seeds = 1825721377 , 2013807483
+
+   ------------------------------------------------------------------------
+
+
+
+
+
+   ***********************************
+   **   Program PENEPMA. Results.   **
+   ***********************************
+
+   Simulation time .........................  1.432094E+03 sec
+   Simulation speed ........................  5.960329E+02 showers/sec
+
+
+   Simulated primary showers ...............  8.535750E+05
+
+   Upbound primary particles ...............  1.176850E+05
+   Downbound primary particles .............  0.000000E+00
+   Absorbed primary particles ..............  7.358900E+05
+
+   Upbound fraction ...................  1.457236E-01 +- 1.4E-03
+   Downbound fraction .................  1.903116E-10 +- 5.7E-10
+   Absorption fraction ................  8.621269E-01 +- 1.1E-03
+
+   Secondary-particle generation probabilities:
+                   ----------------------------------------------
+                   |  electrons   |   photons    |  positrons   |
+   --------------------------------------------------------------
+   |   upbound     | 7.850490E-03 | 1.586228E-03 | 0.000000E+00 |
+   |               |  +- 2.8E-04  |  +- 2.7E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   downbound   | 1.903116E-10 | 6.698970E-08 | 0.000000E+00 |
+   |               |  +- 5.7E-10  |  +- 1.1E-08  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   absorbed    | 1.839128E+01 | 7.951279E-03 | 0.000000E+00 |
+   |               |  +- 1.8E-02  |  +- 6.0E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+
+   Average deposited energies (bodies):
+      Body    1 ......  1.371594E+04 +- 1.1E+01 eV    (effic. = 9.65E+03)
+
+   Average photon energy at the detectors:
+      Detector # 1 ...  4.958507E-01 +- 1.9E-02 eV    (effic. = 4.11E+00)
+
+   Last random seeds =  573178000 ,  876786932
+
+   ------------------------------------------------------------------------
+
+
+
+
+
+   ***********************************
+   **   Program PENEPMA. Results.   **
+   ***********************************
+
+   Simulation time .........................  1.551313E+03 sec
+   Simulation speed ........................  5.955763E+02 showers/sec
+
+
+   Simulated primary showers ...............  9.239250E+05
+
+   Upbound primary particles ...............  1.274400E+05
+   Downbound primary particles .............  0.000000E+00
+   Absorbed primary particles ..............  7.964850E+05
+
+   Upbound fraction ...................  1.457729E-01 +- 1.3E-03
+   Downbound fraction .................  1.758208E-10 +- 5.3E-10
+   Absorption fraction ................  8.620667E-01 +- 1.1E-03
+
+   Secondary-particle generation probabilities:
+                   ----------------------------------------------
+                   |  electrons   |   photons    |  positrons   |
+   --------------------------------------------------------------
+   |   upbound     | 7.839579E-03 | 1.587176E-03 | 0.000000E+00 |
+   |               |  +- 2.7E-04  |  +- 2.6E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   downbound   | 1.758208E-10 | 6.733938E-08 | 0.000000E+00 |
+   |               |  +- 5.3E-10  |  +- 1.0E-08  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   absorbed    | 1.839175E+01 | 7.945842E-03 | 0.000000E+00 |
+   |               |  +- 1.7E-02  |  +- 5.7E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+
+   Average deposited energies (bodies):
+      Body    1 ......  1.371571E+04 +- 1.1E+01 eV    (effic. = 9.64E+03)
+
+   Average photon energy at the detectors:
+      Detector # 1 ...  4.968284E-01 +- 1.9E-02 eV    (effic. = 4.10E+00)
+
+   Last random seeds =  110335329 ,  595241283
+
+   ------------------------------------------------------------------------
+
+
+
+
+
+   ***********************************
+   **   Program PENEPMA. Results.   **
+   ***********************************
+
+   Simulation time .........................  1.670578E+03 sec
+   Simulation speed ........................  5.956764E+02 showers/sec
+
+
+   Simulated primary showers ...............  9.951240E+05
+
+   Upbound primary particles ...............  1.373930E+05
+   Downbound primary particles .............  0.000000E+00
+   Absorbed primary particles ..............  8.577310E+05
+
+   Upbound fraction ...................  1.458956E-01 +- 1.3E-03
+   Downbound fraction .................  1.632412E-10 +- 4.9E-10
+   Absorption fraction ................  8.619338E-01 +- 1.0E-03
+
+   Secondary-particle generation probabilities:
+                   ----------------------------------------------
+                   |  electrons   |   photons    |  positrons   |
+   --------------------------------------------------------------
+   |   upbound     | 7.829376E-03 | 1.589083E-03 | 0.000000E+00 |
+   |               |  +- 2.6E-04  |  +- 2.5E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   downbound   | 1.632412E-10 | 6.954076E-08 | 0.000000E+00 |
+   |               |  +- 4.9E-10  |  +- 1.0E-08  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   absorbed    | 1.839027E+01 | 7.955531E-03 | 0.000000E+00 |
+   |               |  +- 1.6E-02  |  +- 5.5E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+
+   Average deposited energies (bodies):
+      Body    1 ......  1.371487E+04 +- 1.0E+01 eV    (effic. = 9.64E+03)
+
+   Average photon energy at the detectors:
+      Detector # 1 ...  4.973186E-01 +- 1.8E-02 eV    (effic. = 4.11E+00)
+
+   Last random seeds =  971372764 , 1240510006
+
+   ------------------------------------------------------------------------
+
+
+
+
+
+   ***********************************
+   **   Program PENEPMA. Results.   **
+   ***********************************
+
+   Simulation time .........................  1.789875E+03 sec
+   Simulation speed ........................  5.955343E+02 showers/sec
+
+
+   Simulated primary showers ...............  1.065932E+06
+
+   Upbound primary particles ...............  1.470970E+05
+   Downbound primary particles .............  0.000000E+00
+   Absorbed primary particles ..............  9.188350E+05
+
+   Upbound fraction ...................  1.458132E-01 +- 1.3E-03
+   Downbound fraction .................  1.523974E-10 +- 4.6E-10
+   Absorption fraction ................  8.620015E-01 +- 1.0E-03
+
+   Secondary-particle generation probabilities:
+                   ----------------------------------------------
+                   |  electrons   |   photons    |  positrons   |
+   --------------------------------------------------------------
+   |   upbound     | 7.814676E-03 | 1.590900E-03 | 0.000000E+00 |
+   |               |  +- 2.5E-04  |  +- 2.4E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   downbound   | 1.523974E-10 | 7.116958E-08 | 0.000000E+00 |
+   |               |  +- 4.6E-10  |  +- 9.9E-09  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   absorbed    | 1.839154E+01 | 7.947660E-03 | 0.000000E+00 |
+   |               |  +- 1.6E-02  |  +- 5.3E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+
+   Average deposited energies (bodies):
+      Body    1 ......  1.371499E+04 +- 9.9E+00 eV    (effic. = 9.63E+03)
+
+   Average photon energy at the detectors:
+      Detector # 1 ...  4.922610E-01 +- 1.7E-02 eV    (effic. = 4.11E+00)
+
+   Last random seeds = 1582129896 ,  977798745
+
+   ------------------------------------------------------------------------
+
+
+
+
+
+   ***********************************
+   **   Program PENEPMA. Results.   **
+   ***********************************
+
+   Simulation time .........................  1.909172E+03 sec
+   Simulation speed ........................  5.955844E+02 showers/sec
+
+
+   Simulated primary showers ...............  1.137073E+06
+
+   Upbound primary particles ...............  1.568470E+05
+   Downbound primary particles .............  0.000000E+00
+   Absorbed primary particles ..............  9.802260E+05
+
+   Upbound fraction ...................  1.457412E-01 +- 1.2E-03
+   Downbound fraction .................  1.428626E-10 +- 4.3E-10
+   Absorption fraction ................  8.620607E-01 +- 9.7E-04
+
+   Secondary-particle generation probabilities:
+                   ----------------------------------------------
+                   |  electrons   |   photons    |  positrons   |
+   --------------------------------------------------------------
+   |   upbound     | 7.801976E-03 | 1.591216E-03 | 0.000000E+00 |
+   |               |  +- 2.4E-04  |  +- 2.4E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   downbound   | 1.428626E-10 | 6.957411E-08 | 0.000000E+00 |
+   |               |  +- 4.3E-10  |  +- 9.5E-09  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   absorbed    | 1.839214E+01 | 7.943840E-03 | 0.000000E+00 |
+   |               |  +- 1.5E-02  |  +- 5.2E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+
+   Average deposited energies (bodies):
+      Body    1 ......  1.371543E+04 +- 9.6E+00 eV    (effic. = 9.63E+03)
+
+   Average photon energy at the detectors:
+      Detector # 1 ...  4.946217E-01 +- 1.7E-02 eV    (effic. = 4.11E+00)
+
+   Last random seeds = 1677421847 ,  100065448
+
+   ------------------------------------------------------------------------
+
+
+
+
+
+   ***********************************
+   **   Program PENEPMA. Results.   **
+   ***********************************
+
+   Simulation time .........................  2.028297E+03 sec
+   Simulation speed ........................  5.948212E+02 showers/sec
+
+
+   Simulated primary showers ...............  1.206474E+06
+
+   Upbound primary particles ...............  1.664650E+05
+   Downbound primary particles .............  0.000000E+00
+   Absorbed primary particles ..............  1.040009E+06
+
+   Upbound fraction ...................  1.457838E-01 +- 1.2E-03
+   Downbound fraction .................  1.346446E-10 +- 4.0E-10
+   Absorption fraction ................  8.620235E-01 +- 9.4E-04
+
+   Secondary-particle generation probabilities:
+                   ----------------------------------------------
+                   |  electrons   |   photons    |  positrons   |
+   --------------------------------------------------------------
+   |   upbound     | 7.807355E-03 | 1.592798E-03 | 0.000000E+00 |
+   |               |  +- 2.3E-04  |  +- 2.3E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   downbound   | 1.346446E-10 | 6.920735E-08 | 0.000000E+00 |
+   |               |  +- 4.0E-10  |  +- 9.2E-09  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   absorbed    | 1.839249E+01 | 7.942336E-03 | 0.000000E+00 |
+   |               |  +- 1.5E-02  |  +- 5.0E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+
+   Average deposited energies (bodies):
+      Body    1 ......  1.371540E+04 +- 9.3E+00 eV    (effic. = 9.62E+03)
+
+   Average photon energy at the detectors:
+      Detector # 1 ...  4.967046E-01 +- 1.6E-02 eV    (effic. = 4.12E+00)
+
+   Last random seeds = 1742461287 , 1470341855
+
+   ------------------------------------------------------------------------
+
+
+
+
+
+   ***********************************
+   **   Program PENEPMA. Results.   **
+   ***********************************
+
+   Simulation time .........................  2.147563E+03 sec
+   Simulation speed ........................  5.949974E+02 showers/sec
+
+
+   Simulated primary showers ...............  1.277794E+06
+
+   Upbound primary particles ...............  1.764260E+05
+   Downbound primary particles .............  0.000000E+00
+   Absorbed primary particles ..............  1.101368E+06
+
+   Upbound fraction ...................  1.458929E-01 +- 1.1E-03
+   Downbound fraction .................  1.271295E-10 +- 3.8E-10
+   Absorption fraction ................  8.619292E-01 +- 9.2E-04
+
+   Secondary-particle generation probabilities:
+                   ----------------------------------------------
+                   |  electrons   |   photons    |  positrons   |
+   --------------------------------------------------------------
+   |   upbound     | 7.822132E-03 | 1.596592E-03 | 0.000000E+00 |
+   |               |  +- 2.3E-04  |  +- 2.2E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   downbound   | 1.271295E-10 | 6.966694E-08 | 0.000000E+00 |
+   |               |  +- 3.8E-10  |  +- 8.9E-09  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   absorbed    | 1.839203E+01 | 7.947754E-03 | 0.000000E+00 |
+   |               |  +- 1.5E-02  |  +- 4.9E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+
+   Average deposited energies (bodies):
+      Body    1 ......  1.371483E+04 +- 9.1E+00 eV    (effic. = 9.62E+03)
+
+   Average photon energy at the detectors:
+      Detector # 1 ...  4.970789E-01 +- 1.6E-02 eV    (effic. = 4.13E+00)
+
+   Last random seeds = 1925162963 ,   56468062
+
+   ------------------------------------------------------------------------
+
+
+
+
+
+   ***********************************
+   **   Program PENEPMA. Results.   **
+   ***********************************
+
+   Simulation time .........................  2.266875E+03 sec
+   Simulation speed ........................  5.951665E+02 showers/sec
+
+
+   Simulated primary showers ...............  1.349168E+06
+
+   Upbound primary particles ...............  1.862590E+05
+   Downbound primary particles .............  0.000000E+00
+   Absorbed primary particles ..............  1.162909E+06
+
+   Upbound fraction ...................  1.458950E-01 +- 1.1E-03
+   Downbound fraction .................  1.204040E-10 +- 3.6E-10
+   Absorption fraction ................  8.619453E-01 +- 8.9E-04
+
+   Secondary-particle generation probabilities:
+                   ----------------------------------------------
+                   |  electrons   |   photons    |  positrons   |
+   --------------------------------------------------------------
+   |   upbound     | 7.840280E-03 | 1.594208E-03 | 0.000000E+00 |
+   |               |  +- 2.2E-04  |  +- 2.2E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   downbound   | 1.204040E-10 | 6.899151E-08 | 0.000000E+00 |
+   |               |  +- 3.6E-10  |  +- 8.6E-09  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   absorbed    | 1.839328E+01 | 7.950841E-03 | 0.000000E+00 |
+   |               |  +- 1.4E-02  |  +- 4.8E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+
+   Average deposited energies (bodies):
+      Body    1 ......  1.371464E+04 +- 8.8E+00 eV    (effic. = 9.62E+03)
+
+   Average photon energy at the detectors:
+      Detector # 1 ...  4.953868E-01 +- 1.5E-02 eV    (effic. = 4.12E+00)
+
+   Last random seeds =  501081266 ,  515898753
+
+   ------------------------------------------------------------------------
+
+
+
+
+
+   ***********************************
+   **   Program PENEPMA. Results.   **
+   ***********************************
+
+   Simulation time .........................  2.386203E+03 sec
+   Simulation speed ........................  5.954665E+02 showers/sec
+
+
+   Simulated primary showers ...............  1.420904E+06
+
+   Upbound primary particles ...............  1.962600E+05
+   Downbound primary particles .............  0.000000E+00
+   Absorbed primary particles ..............  1.224644E+06
+
+   Upbound fraction ...................  1.459698E-01 +- 1.1E-03
+   Downbound fraction .................  1.143253E-10 +- 3.4E-10
+   Absorption fraction ................  8.618767E-01 +- 8.7E-04
+
+   Secondary-particle generation probabilities:
+                   ----------------------------------------------
+                   |  electrons   |   photons    |  positrons   |
+   --------------------------------------------------------------
+   |   upbound     | 7.846508E-03 | 1.596348E-03 | 0.000000E+00 |
+   |               |  +- 2.2E-04  |  +- 2.1E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   downbound   | 1.143253E-10 | 6.973843E-08 | 0.000000E+00 |
+   |               |  +- 3.4E-10  |  +- 8.5E-09  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   absorbed    | 1.839160E+01 | 7.945950E-03 | 0.000000E+00 |
+   |               |  +- 1.4E-02  |  +- 4.6E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+
+   Average deposited energies (bodies):
+      Body    1 ......  1.371357E+04 +- 8.6E+00 eV    (effic. = 9.61E+03)
+
+   Average photon energy at the detectors:
+      Detector # 1 ...  4.953629E-01 +- 1.5E-02 eV    (effic. = 4.13E+00)
+
+   Last random seeds = 1175365978 , 1491555252
+
+   ------------------------------------------------------------------------
+
+
+
+
+
+   ***********************************
+   **   Program PENEPMA. Results.   **
+   ***********************************
+
+   Simulation time .........................  2.505516E+03 sec
+   Simulation speed ........................  5.955608E+02 showers/sec
+
+
+   Simulated primary showers ...............  1.492187E+06
+
+   Upbound primary particles ...............  2.060850E+05
+   Downbound primary particles .............  0.000000E+00
+   Absorbed primary particles ..............  1.286102E+06
+
+   Upbound fraction ...................  1.459392E-01 +- 1.1E-03
+   Downbound fraction .................  1.088639E-10 +- 3.3E-10
+   Absorption fraction ................  8.618906E-01 +- 8.5E-04
+
+   Secondary-particle generation probabilities:
+                   ----------------------------------------------
+                   |  electrons   |   photons    |  positrons   |
+   --------------------------------------------------------------
+   |   upbound     | 7.829864E-03 | 1.597529E-03 | 0.000000E+00 |
+   |               |  +- 2.1E-04  |  +- 2.1E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   downbound   | 1.088639E-10 | 7.054379E-08 | 0.000000E+00 |
+   |               |  +- 3.3E-10  |  +- 8.3E-09  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   absorbed    | 1.839212E+01 | 7.944098E-03 | 0.000000E+00 |
+   |               |  +- 1.3E-02  |  +- 4.5E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+
+   Average deposited energies (bodies):
+      Body    1 ......  1.371361E+04 +- 8.4E+00 eV    (effic. = 9.62E+03)
+
+   Average photon energy at the detectors:
+      Detector # 1 ...  4.946404E-01 +- 1.5E-02 eV    (effic. = 4.13E+00)
+
+   Last random seeds =  216720545 ,  243933988
+
+   ------------------------------------------------------------------------
+
+
+
+
+
+   ***********************************
+   **   Program PENEPMA. Results.   **
+   ***********************************
+
+   Simulation time .........................  2.624813E+03 sec
+   Simulation speed ........................  5.957469E+02 showers/sec
+
+
+   Simulated primary showers ...............  1.563724E+06
+
+   Upbound primary particles ...............  2.159750E+05
+   Downbound primary particles .............  0.000000E+00
+   Absorbed primary particles ..............  1.347749E+06
+
+   Upbound fraction ...................  1.459423E-01 +- 1.0E-03
+   Downbound fraction .................  1.038836E-10 +- 3.1E-10
+   Absorption fraction ................  8.618842E-01 +- 8.3E-04
+
+   Secondary-particle generation probabilities:
+                   ----------------------------------------------
+                   |  electrons   |   photons    |  positrons   |
+   --------------------------------------------------------------
+   |   upbound     | 7.826522E-03 | 1.595265E-03 | 0.000000E+00 |
+   |               |  +- 2.1E-04  |  +- 2.0E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   downbound   | 1.038836E-10 | 7.001754E-08 | 0.000000E+00 |
+   |               |  +- 3.1E-10  |  +- 8.1E-09  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   absorbed    | 1.839207E+01 | 7.945733E-03 | 0.000000E+00 |
+   |               |  +- 1.3E-02  |  +- 4.4E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+
+   Average deposited energies (bodies):
+      Body    1 ......  1.371369E+04 +- 8.2E+00 eV    (effic. = 9.62E+03)
+
+   Average photon energy at the detectors:
+      Detector # 1 ...  4.944373E-01 +- 1.4E-02 eV    (effic. = 4.12E+00)
+
+   Last random seeds = 1261900966 ,  449737770
+
+   ------------------------------------------------------------------------
+
+
+
+
+
+   ***********************************
+   **   Program PENEPMA. Results.   **
+   ***********************************
+
+   Simulation time .........................  2.744078E+03 sec
+   Simulation speed ........................  5.958817E+02 showers/sec
+
+
+   Simulated primary showers ...............  1.635146E+06
+
+   Upbound primary particles ...............  2.258130E+05
+   Downbound primary particles .............  0.000000E+00
+   Absorbed primary particles ..............  1.409333E+06
+
+   Upbound fraction ...................  1.458894E-01 +- 1.0E-03
+   Downbound fraction .................  9.934603E-11 +- 3.0E-10
+   Absorption fraction ................  8.619004E-01 +- 8.1E-04
+
+   Secondary-particle generation probabilities:
+                   ----------------------------------------------
+                   |  electrons   |   photons    |  positrons   |
+   --------------------------------------------------------------
+   |   upbound     | 7.789799E-03 | 1.594228E-03 | 0.000000E+00 |
+   |               |  +- 2.0E-04  |  +- 2.0E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   downbound   | 9.934603E-11 | 6.954222E-08 | 0.000000E+00 |
+   |               |  +- 3.0E-10  |  +- 7.9E-09  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   absorbed    | 1.839280E+01 | 7.944662E-03 | 0.000000E+00 |
+   |               |  +- 1.3E-02  |  +- 4.3E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+
+   Average deposited energies (bodies):
+      Body    1 ......  1.371423E+04 +- 8.0E+00 eV    (effic. = 9.63E+03)
+
+   Average photon energy at the detectors:
+      Detector # 1 ...  4.943381E-01 +- 1.4E-02 eV    (effic. = 4.12E+00)
+
+   Last random seeds = 1501781713 , 2099399989
+
+   ------------------------------------------------------------------------
+
+
+
+
+
+   ***********************************
+   **   Program PENEPMA. Results.   **
+   ***********************************
+
+   Simulation time .........................  2.863297E+03 sec
+   Simulation speed ........................  5.958561E+02 showers/sec
+
+
+   Simulated primary showers ...............  1.706113E+06
+
+   Upbound primary particles ...............  2.356860E+05
+   Downbound primary particles .............  0.000000E+00
+   Absorbed primary particles ..............  1.470427E+06
+
+   Upbound fraction ...................  1.459301E-01 +- 9.9E-04
+   Downbound fraction .................  9.521366E-11 +- 2.9E-10
+   Absorption fraction ................  8.618579E-01 +- 7.9E-04
+
+   Secondary-particle generation probabilities:
+                   ----------------------------------------------
+                   |  electrons   |   photons    |  positrons   |
+   --------------------------------------------------------------
+   |   upbound     | 7.788012E-03 | 1.594045E-03 | 0.000000E+00 |
+   |               |  +- 2.0E-04  |  +- 1.9E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   downbound   | 9.521366E-11 | 6.941076E-08 | 0.000000E+00 |
+   |               |  +- 2.9E-10  |  +- 7.7E-09  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   absorbed    | 1.839274E+01 | 7.943919E-03 | 0.000000E+00 |
+   |               |  +- 1.3E-02  |  +- 4.2E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+
+   Average deposited energies (bodies):
+      Body    1 ......  1.371376E+04 +- 7.8E+00 eV    (effic. = 9.62E+03)
+
+   Average photon energy at the detectors:
+      Detector # 1 ...  4.952792E-01 +- 1.4E-02 eV    (effic. = 4.12E+00)
+
+   Last random seeds =  454915781 ,  490847198
+
+   ------------------------------------------------------------------------
+
+
+
+
+
+   ***********************************
+   **   Program PENEPMA. Results.   **
+   ***********************************
+
+   Simulation time .........................  2.982609E+03 sec
+   Simulation speed ........................  5.959315E+02 showers/sec
+
+
+   Simulated primary showers ...............  1.777431E+06
+
+   Upbound primary particles ...............  2.453180E+05
+   Downbound primary particles .............  0.000000E+00
+   Absorbed primary particles ..............  1.532113E+06
+
+   Upbound fraction ...................  1.458040E-01 +- 9.7E-04
+   Downbound fraction .................  9.139329E-11 +- 2.7E-10
+   Absorption fraction ................  8.619817E-01 +- 7.8E-04
+
+   Secondary-particle generation probabilities:
+                   ----------------------------------------------
+                   |  electrons   |   photons    |  positrons   |
+   --------------------------------------------------------------
+   |   upbound     | 7.785668E-03 | 1.594243E-03 | 0.000000E+00 |
+   |               |  +- 1.9E-04  |  +- 1.9E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   downbound   | 9.139329E-11 | 6.900193E-08 | 0.000000E+00 |
+   |               |  +- 2.7E-10  |  +- 7.5E-09  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   absorbed    | 1.839398E+01 | 7.947459E-03 | 0.000000E+00 |
+   |               |  +- 1.2E-02  |  +- 4.1E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+
+   Average deposited energies (bodies):
+      Body    1 ......  1.371503E+04 +- 7.7E+00 eV    (effic. = 9.64E+03)
+
+   Average photon energy at the detectors:
+      Detector # 1 ...  4.949227E-01 +- 1.3E-02 eV    (effic. = 4.11E+00)
+
+   Last random seeds = 1814422422 , 1871478843
+
+   ------------------------------------------------------------------------
+
+
+
+
+
+   ***********************************
+   **   Program PENEPMA. Results.   **
+   ***********************************
+
+   Simulation time .........................  3.101906E+03 sec
+   Simulation speed ........................  5.960783E+02 showers/sec
+
+
+   Simulated primary showers ...............  1.848979E+06
+
+   Upbound primary particles ...............  2.552490E+05
+   Downbound primary particles .............  0.000000E+00
+   Absorbed primary particles ..............  1.593730E+06
+
+   Upbound fraction ...................  1.458347E-01 +- 9.5E-04
+   Downbound fraction .................  8.785674E-11 +- 2.6E-10
+   Absorption fraction ................  8.619514E-01 +- 7.6E-04
+
+   Secondary-particle generation probabilities:
+                   ----------------------------------------------
+                   |  electrons   |   photons    |  positrons   |
+   --------------------------------------------------------------
+   |   upbound     | 7.786120E-03 | 1.595439E-03 | 0.000000E+00 |
+   |               |  +- 1.9E-04  |  +- 1.9E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   downbound   | 8.785674E-11 | 6.967039E-08 | 0.000000E+00 |
+   |               |  +- 2.6E-10  |  +- 7.4E-09  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   absorbed    | 1.839367E+01 | 7.949600E-03 | 0.000000E+00 |
+   |               |  +- 1.2E-02  |  +- 4.1E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+
+   Average deposited energies (bodies):
+      Body    1 ......  1.371488E+04 +- 7.5E+00 eV    (effic. = 9.64E+03)
+
+   Average photon energy at the detectors:
+      Detector # 1 ...  4.947074E-01 +- 1.3E-02 eV    (effic. = 4.12E+00)
+
+   Last random seeds =  177087516 ,  676496282
+
+   ------------------------------------------------------------------------
+
+
+
+
+
+   ***********************************
+   **   Program PENEPMA. Results.   **
+   ***********************************
+
+   Simulation time .........................  3.221063E+03 sec
+   Simulation speed ........................  5.960611E+02 showers/sec
+
+
+   Simulated primary showers ...............  1.919950E+06
+
+   Upbound primary particles ...............  2.652260E+05
+   Downbound primary particles .............  0.000000E+00
+   Absorbed primary particles ..............  1.654724E+06
+
+   Upbound fraction ...................  1.459450E-01 +- 9.3E-04
+   Downbound fraction .................  8.460911E-11 +- 2.5E-10
+   Absorption fraction ................  8.618579E-01 +- 7.5E-04
+
+   Secondary-particle generation probabilities:
+                   ----------------------------------------------
+                   |  electrons   |   photons    |  positrons   |
+   --------------------------------------------------------------
+   |   upbound     | 7.802889E-03 | 1.596454E-03 | 0.000000E+00 |
+   |               |  +- 1.9E-04  |  +- 1.8E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   downbound   | 8.460911E-11 | 6.946408E-08 | 0.000000E+00 |
+   |               |  +- 2.5E-10  |  +- 7.3E-09  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   absorbed    | 1.839171E+01 | 7.952864E-03 | 0.000000E+00 |
+   |               |  +- 1.2E-02  |  +- 4.0E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+
+   Average deposited energies (bodies):
+      Body    1 ......  1.371350E+04 +- 7.4E+00 eV    (effic. = 9.62E+03)
+
+   Average photon energy at the detectors:
+      Detector # 1 ...  4.941986E-01 +- 1.3E-02 eV    (effic. = 4.12E+00)
+
+   Last random seeds = 1866051623 , 2101801427
+
+   ------------------------------------------------------------------------
+
+
+
+
+
+   ***********************************
+   **   Program PENEPMA. Results.   **
+   ***********************************
+
+   Simulation time .........................  3.340391E+03 sec
+   Simulation speed ........................  5.960016E+02 showers/sec
+
+
+   Simulated primary showers ...............  1.990878E+06
+
+   Upbound primary particles ...............  2.750060E+05
+   Downbound primary particles .............  0.000000E+00
+   Absorbed primary particles ..............  1.715872E+06
+
+   Upbound fraction ...................  1.459111E-01 +- 9.2E-04
+   Downbound fraction .................  8.159478E-11 +- 2.4E-10
+   Absorption fraction ................  8.618670E-01 +- 7.3E-04
+
+   Secondary-particle generation probabilities:
+                   ----------------------------------------------
+                   |  electrons   |   photons    |  positrons   |
+   --------------------------------------------------------------
+   |   upbound     | 7.778077E-03 | 1.596132E-03 | 0.000000E+00 |
+   |               |  +- 1.8E-04  |  +- 1.8E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   downbound   | 8.159478E-11 | 6.992673E-08 | 0.000000E+00 |
+   |               |  +- 2.4E-10  |  +- 7.2E-09  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   absorbed    | 1.839168E+01 | 7.951303E-03 | 0.000000E+00 |
+   |               |  +- 1.2E-02  |  +- 3.9E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+
+   Average deposited energies (bodies):
+      Body    1 ......  1.371339E+04 +- 7.3E+00 eV    (effic. = 9.62E+03)
+
+   Average photon energy at the detectors:
+      Detector # 1 ...  4.948888E-01 +- 1.3E-02 eV    (effic. = 4.12E+00)
+
+   Last random seeds =  599958151 , 1256664329
+
+   ------------------------------------------------------------------------
+
+
+
+
+
+   ***********************************
+   **   Program PENEPMA. Results.   **
+   ***********************************
+
+   Simulation time .........................  3.459641E+03 sec
+   Simulation speed ........................  5.959584E+02 showers/sec
+
+
+   Simulated primary showers ...............  2.061802E+06
+
+   Upbound primary particles ...............  2.847390E+05
+   Downbound primary particles .............  0.000000E+00
+   Absorbed primary particles ..............  1.777063E+06
+
+   Upbound fraction ...................  1.458581E-01 +- 9.0E-04
+   Downbound fraction .................  7.878800E-11 +- 2.4E-10
+   Absorption fraction ................  8.618980E-01 +- 7.2E-04
+
+   Secondary-particle generation probabilities:
+                   ----------------------------------------------
+                   |  electrons   |   photons    |  positrons   |
+   --------------------------------------------------------------
+   |   upbound     | 7.756065E-03 | 1.596728E-03 | 0.000000E+00 |
+   |               |  +- 1.8E-04  |  +- 1.8E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   downbound   | 7.878800E-11 | 7.020011E-08 | 0.000000E+00 |
+   |               |  +- 2.4E-10  |  +- 7.1E-09  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   absorbed    | 1.839206E+01 | 7.950877E-03 | 0.000000E+00 |
+   |               |  +- 1.1E-02  |  +- 3.8E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+
+   Average deposited energies (bodies):
+      Body    1 ......  1.371382E+04 +- 7.1E+00 eV    (effic. = 9.62E+03)
+
+   Average photon energy at the detectors:
+      Detector # 1 ...  4.952357E-01 +- 1.2E-02 eV    (effic. = 4.12E+00)
+
+   Last random seeds =  626487457 , 1298795759
+
+   ------------------------------------------------------------------------
+
+
+
+
+
+   ***********************************
+   **   Program PENEPMA. Results.   **
+   ***********************************
+
+   Simulation time .........................  3.578688E+03 sec
+   Simulation speed ........................  5.959333E+02 showers/sec
+
+
+   Simulated primary showers ...............  2.132659E+06
+
+   Upbound primary particles ...............  2.945260E+05
+   Downbound primary particles .............  0.000000E+00
+   Absorbed primary particles ..............  1.838133E+06
+
+   Upbound fraction ...................  1.458546E-01 +- 8.8E-04
+   Downbound fraction .................  7.617029E-11 +- 2.3E-10
+   Absorption fraction ................  8.618973E-01 +- 7.1E-04
+
+   Secondary-particle generation probabilities:
+                   ----------------------------------------------
+                   |  electrons   |   photons    |  positrons   |
+   --------------------------------------------------------------
+   |   upbound     | 7.751882E-03 | 1.597369E-03 | 0.000000E+00 |
+   |               |  +- 1.8E-04  |  +- 1.7E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   downbound   | 7.617029E-11 | 7.022901E-08 | 0.000000E+00 |
+   |               |  +- 2.3E-10  |  +- 6.9E-09  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+   |   absorbed    | 1.839223E+01 | 7.947833E-03 | 0.000000E+00 |
+   |               |  +- 1.1E-02  |  +- 3.8E-05  |  +- 0.0E+00  |
+   --------------------------------------------------------------
+
+   Average deposited energies (bodies):
+      Body    1 ......  1.371390E+04 +- 7.0E+00 eV    (effic. = 9.62E+03)
+
+   Average photon energy at the detectors:
+      Detector # 1 ...  4.953147E-01 +- 1.2E-02 eV    (effic. = 4.12E+00)
+
+   Last random seeds = 1102994706 , 1308509143
+
+   ------------------------------------------------------------------------
+
+
+   ***  END  ***
