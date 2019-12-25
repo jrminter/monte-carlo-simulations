@@ -1,0 +1,40 @@
+
+ **********************************
+ **   PENELOPE  (version 2012)   **
+ **********************************
+
+ EMIN = 1.0000E+02 eV,  EMAX = 1.5000E+04 eV
+
+
+ **********************
+ **   1st material   **
+ **********************
+
+ Material data file: SRM1155.MAT         
+
+ *** Simulation parameters:
+     Electron absorption energy = 1.0000E+02 eV
+       Photon absorption energy = 1.0000E+02 eV
+     Positron absorption energy = 1.0000E+02 eV
+      C1 = 2.0000E-01,       C2 = 2.0000E-01
+     WCC = 1.0000E+02 eV,   WCR = 1.0000E+02 eV
+
+ PENELOPE (v. 2012)  Material data file ...............
+ Material: SRM 1155, Cr-Ni-Mo (AISI 316)                                 
+ Mass density = 7.97000000E+00 g/cm**3
+ Number of elements in the molecule = 13
+    Element: C  (Z= 6), atoms/molecule = 3.31829630E-03
+    Element: Mn (Z=25), atoms/molecule = 2.57069917E-02
+    Element: P  (Z=15), atoms/molecule = 5.59460204E-04
+    Element: S  (Z=16), atoms/molecule = 4.86367128E-04
+    Element: Si (Z=14), atoms/molecule = 1.54863947E-02
+    Element: Cu (Z=29), atoms/molecule = 2.30427859E-03
+    Element: Ni (Z=28), atoms/molecule = 1.79812416E-01
+    Element: Cr (Z=24), atoms/molecule = 3.07441814E-01
+    Element: V  (Z=23), atoms/molecule = 7.99389362E-04
+    Element: Mo (Z=42), atoms/molecule = 2.14938266E-02
+    Element: Co (Z=27), atoms/molecule = 1.48490723E-03
+    Element: Pb (Z=82), atoms/molecule = 4.18164102E-06
+    Element: Fe (Z=26), atoms/molecule = 1.00000000E+00
+ Mean excitation energy = 2.84735384E+02 eV
+ PENELOPE (v. 2012)  End of material data file ........

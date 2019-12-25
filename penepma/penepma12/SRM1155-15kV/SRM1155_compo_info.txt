@@ -1,0 +1,38 @@
+Key Information
+
+
+C:\Users\jrminter\Documents\work\penepma12-sims
+
+
+Welcome to Standard, Probe for EPMA (Xtreme Edition) v. 12.6.1
+Copyright (c) 1995-2019 by John J. Donovan
+
+This software is registered to :
+jrminter
+Demo
+Standalone
+
+Press the F1 key in any window for context sensitive help. To get help on a menu item simply highlight with the mouse and hit the F1 key.
+
+
+St 4591 SRM 1155, Cr-Ni-Mo (AISI 316)
+TakeOff = 35.0  KiloVolt = 15.0  Density =  7.970
+Elemental Composition
+
+Average Total Oxygen:         .000     Average Total Weight%:  100.000
+Average Calculated Oxygen:    .000     Average Atomic Number:   26.171
+Average Excess Oxygen:        .000     Average Atomic Weight:   55.582
+
+ELEM:        C      Mn       P       S      Si      Cu      Ni      Cr
+XRAY:      ka      ka      ka      ka      ka      ka      ka      ka 
+ELWT:     .046   1.630    .020    .018    .502    .169  12.180  18.450
+KFAC:    .0001   .0163   .0002   .0002   .0033   .0016   .1166   .2128
+ZCOR:   4.3792   .9981  1.3232  1.1449  1.5146  1.0843  1.0446   .8669
+AT% :     .213   1.649    .036    .031    .993    .148  11.531  19.723
+
+ELEM:        V      Mo      Co      Pb      Fe
+XRAY:      ka      la      ka      ma      ka 
+ELWT:     .047   2.380    .101    .001  64.456
+KFAC:    .0005   .0198   .0010   .0000   .6423
+ZCOR:    .9338  1.2032  1.0353  1.1862  1.0036
+AT% :     .051   1.379    .095    .000  64.150
