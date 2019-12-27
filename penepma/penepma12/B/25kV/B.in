@@ -20,7 +20,7 @@ IFORCE 1 1 5 -100    0.9 1.0           [KB,KPAR,ICOL,FORCER,WLOW,WHIG]
        .
        >>>>>>>> Photon detectors (up to 10 different detectors).
 PDANGL 50.0 60.0 0.0 360.0 0           [Angular window, in deg, IPSF]
-PDENER .0 20e+03 1000                [Energy window, no. of channels]
+PDENER .0 25e+03 4096                [Energy window, no. of channels]
        .
        >>>>>>>> Job properties
 RESUME dump1.dat               [Resume from this dump file, 20 chars]
