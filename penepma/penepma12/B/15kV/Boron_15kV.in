@@ -1,7 +1,7 @@
 TITLE  Characteristic X-ray Production Model
        .
        >>>>>>>> Electron beam definition.
-SENERG 5.00E+03                  [Energy of the electron beam, in eV]
+SENERG 1.50E+04                  [Energy of the electron beam, in eV]
 SPOSIT 0 0 1                     [Coordinates of the electron source]
 SDIREC 180 0              [Direction angles of the beam axis, in deg]
 SAPERT 0                                      [Beam aperture, in deg]
@@ -20,7 +20,7 @@ IFORCE 1 1 5 -100    0.9 1.0           [KB,KPAR,ICOL,FORCER,WLOW,WHIG]
        .
        >>>>>>>> Photon detectors (up to 10 different detectors).
 PDANGL 50.0 60.0 0.0 360.0 0           [Angular window, in deg, IPSF]
-PDENER .0 5e+02 4096                [Energy window, no. of channels]
+PDENER .0 1.5e+04 4096               [Energy window, no. of channels]
        .
        >>>>>>>> Job properties
 RESUME dump1.dat               [Resume from this dump file, 20 chars]
