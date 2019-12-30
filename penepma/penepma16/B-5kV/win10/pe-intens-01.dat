@@ -1,0 +1,14 @@
+ #  Results from PENEPMA. Output from photon detector #  1
+ #
+ #  Angular intervals : theta_1 = 5.000000E+01,  theta_2 = 6.000000E+01
+ #                        phi_1 = 0.000000E+00,    phi_2 = 3.600000E+02
+ #
+ #  Intensities of characteristic lines. All in 1/(sr*particle).
+ #    P = primary photons (from electron interactions);
+ #    C = flourescence from characteristic x rays;
+ #    B = flourescence from bremsstrahlung quanta;
+ #   TF = C+B, total fluorescence;
+ #  unc = statistical uncertainty (3 sigma).
+ #
+ # IZ S0 S1  E (eV)      P            unc       C            unc       B            unc       TF           unc       Intensity    unc
+    5  K L2  1.8330E+02  9.047055E-05 4.17E-06  2.136759E-08 6.41E-08  4.420392E-09 8.71E-10  2.578799E-08 6.50E-08  9.049634E-05 4.17E-06

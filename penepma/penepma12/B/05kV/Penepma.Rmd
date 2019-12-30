@@ -1,0 +1,42 @@
+---
+title: "Plot Penepma"
+author: "John Minter"
+date: "2019-12-28"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+See where we are...
+
+```{r setupDir}
+library(here)
+library(ggplot2)
+
+my_wd <- here::here()
+my_path <- paste0(my_wd, "/pe-spect-01.csv")
+
+#"/pe-spect-01.csv"
+df <- read.csv(my_path)
+print(head(df))
+max_intensity = max(df$y_mean)
+print("max intensity:")
+print(max_intensity)
+print(formatC(max_intensity,format="e"))
+# max_index = which(df$y_mean == max(df$y_mean))
+# max_val = (max_index)
+#sprintf("%f", max(df$y_mean)
+```
+
+```{r plot}
+plt <- ggplot(df, aes(x, y_mean) ) +
+       geom_line() +
+       scale_x_continuous(breaks = seq(from = 0, to = 5000, by = 500),
+                           limits = c(0,5000)) +
+       NULL
+
+print(plt)
+
+```
