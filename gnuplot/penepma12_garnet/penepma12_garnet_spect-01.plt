@@ -14,7 +14,7 @@ set zero 1.0e-60
 #set format cb "%.1te%+-3T"
 
 # overide line style definitions
-set style line 1 lt 2 lc rgb "blue" lw 1
+set style line 1 lt 2 lc rgb "#0000a0" lw 1
 # light gray...
 set style line 2 lt 2 lc rgb "#a6a6a6" lw 1
 
@@ -29,5 +29,6 @@ set title 'PENEPMA12 Simulation of Garnet at 15 kV' font titlFont
 set xlabel "energy [keV]" font titlFont
 set ylabel "PDF [1/(eV*sr*electron)]" font titlFont
 set logscale y
-plot 'pe-spect-01.dat' u ($1/1000.):2:3 notitle w errorbars ls 2 pt 1, \
-     'pe-spect-01.dat' u ($1/1000.):2 notitle w histeps ls 1
+# plot 'pe-spect-01.dat' u ($1/1000.):2:3 notitle w errorbars ls 2 pt 1, \
+#     'pe-spect-01.dat' u ($1/1000.):2 notitle w histeps ls 1
+plot 'pe-spect-01.dat' u ($1/1000.):2 title "spectrum" w lines lw 2 lc rgb "#0000A0" 
