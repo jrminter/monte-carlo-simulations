@@ -3,9 +3,12 @@
 # Edited by jrminter 2018-07-31
 
 # set terminal postscript enhanced color "Arial" 12
-# set output "20-nm-C-250nm-ZnO-Silica-15kV-spec.ps"
+# set output "B-5kV.ps"
 # proc-gnuplot.sh 20-nm-C-250nm-ZnO-Silica-15kV-spec
-# set terminal png
+
+set terminal png size 1012,768
+set output 'B-5kV.png'
+
 # set terminal window
 # set terminal aqua
 
@@ -21,7 +24,7 @@ set zero 1.0e-60
 #set format cb "%.1te%+-3T"
 
 # overide line style definitions
-set style line 1 lt 2 lc rgb "blue" lw 2
+set style line 1 lt 2 lc rgb '483D8B' lw 2
 
 # unset mouse
 
@@ -37,4 +40,7 @@ set ylabel "PDF [1/(eV*sr*electron)]" font titlFont
 
 # set logscale y
 plot 'pe-spect-01.dat' u ($1/1000.):2:3 notitle w lines lw 2
+
+# pause 20
+
 
