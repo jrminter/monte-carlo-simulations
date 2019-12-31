@@ -8,7 +8,7 @@
  #    C = flourescence from characteristic x rays;
  #    B = flourescence from bremsstrahlung quanta;
  #   TF = C+B, total fluorescence;
- #  unc = statistical uncertainty (3 sigma).
+ #  unc = statistical uncertainty (3 sigma).    100*4.88E-06/8.986766E-05 = 5.430207% uncertainty
  #
  # IZ S0 S1  E (eV)      P            unc       C            unc       B            unc       TF           unc       Intensity    unc
     5  K L2  1.8330E+02  8.983423E-05 4.88E-06  2.938636E-08 8.82E-08  4.035373E-09 9.75E-10  3.342173E-08 8.91E-08  8.986766E-05 4.88E-06
