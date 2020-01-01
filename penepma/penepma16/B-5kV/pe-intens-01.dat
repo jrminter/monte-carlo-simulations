@@ -10,5 +10,7 @@
  #   TF = C+B, total fluorescence;
  #  unc = statistical uncertainty (3 sigma).
  #
+ # unc = 100*4.14E-06/9.047226E-05 = 4.58%
+ #
  # IZ S0 S1  E (eV)      P            unc       C            unc       B            unc       TF           unc       Intensity    unc
-    5  K L2  1.8330E+02  8.983423E-05 4.88E-06  2.938636E-08 8.82E-08  4.035373E-09 9.75E-10  3.342173E-08 8.91E-08  8.986766E-05 4.88E-06
+    5  K L2  1.8330E+02  9.044678E-05 4.14E-06  2.105368E-08 6.32E-08  4.430546E-09 8.65E-10  2.548423E-08 6.40E-08  9.047226E-05 4.14E-06

@@ -38,5 +38,4 @@ set ylabel "PDF [1/(eV*sr*electron)]" font titlFont
 # set logscale y
 plot 'pe-spect-01.dat' u ($1/1000.):2:3 notitle w lines lw 2
 
-pause 60
 

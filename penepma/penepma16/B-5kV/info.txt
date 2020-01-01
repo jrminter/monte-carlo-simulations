@@ -1,0 +1,6 @@
+From DTSA2
+1> listTransitions("B")
+IUPAC	Siegbahn	Weight	Energy	Wavelength
+     	        	     	(keV) 	  (Å)
+B K-L2	B Kα2		0.5000	0.1833	67.64
+B K-L3	B Kα1		1.0000	0.18505	67.0004
