@@ -64,6 +64,9 @@ penepma/pypenelope/ana-subs-den-tst/*.html
 
 penepma/pypenelope/pypenelope-multilayer/*.html
 
+gnuplot/penepma16-EagleXG-15kV/*.emf
+gnuplot/penepma16-EagleXG-15kV/*.png
+
 
 dtsa2/*.html
 .Rproj.user
