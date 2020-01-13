@@ -1,0 +1,73 @@
+---
+title: "Penepma Simulation Notes"
+author: "J. R. Minter"
+date: "Started: 2020-01-12, Last modified: 2020-01-12"
+output:
+  html_document:
+    css: ../inc/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
+---
+
+
+
+# Penepma Simulation Notes
+
+**2020-01-12 10:30 p.m.** - I have been doing some 12 hr Penepma-12
+simulations because I was getting some "no detector defined"
+errors from Penepma-16 simulations. I couldn't figure out
+what was wrong. Trying to keep more detailed records on Penepma-12
+simulations.
+
+We had some issues this morning when we lost Internet. These simulations
+should be done around 2:30 AM on 1/13/2020.
+
+# Penepma simulation paths
+
+1. This has ZnO-5kV.plt and .dat files
+
+```
+C:/Users/johnr/OneDrive/Desktop/penepma12/ZnO
+```
+
+2. This is a penepma16 simulation of B at 5 kV
+   
+```
+C:/Users/johnr/Documents/git/monte-carlo-simulations/penepma/penepma16/B-5kV/win10
+```
+
+# Temporary desktop folder
+
+```
+C:/Users/johnr/Documents/work/penepma12/ZnO_5kV
+```
+This is the parent directory for the sim
+
+The penepma.dat file has a time stamp of 2020-01-12 10:13 p.m. (start)
+
+```
+C:/Users/johnr/Documents/work/penepma12/Si_5kV
+```
+
+This is the parent directory for the sim
+The penepma.dat file has a time stamp of 2020-01-12 10:16 p.m. (start)
+
+
+# Desktop folders for plotting at different stages during sim
+
+```
+C:/Users/johnr/OneDrive/Desktop/penepma12/ZnO
+```
+
+This is a P12 sim of ZnO 5kV for plotting
+
+```
+C:/Users/johnr/OneDrive/Desktop/penepma12/Si
+```
+
+This is a P12 sim of Si 5kV for plotting
+
+
+
+
