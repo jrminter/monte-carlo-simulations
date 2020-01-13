@@ -25,49 +25,41 @@ should be done around 2:30 AM on 1/13/2020.
 
 # Penepma simulation paths
 
+## Working directories for plotting results with gnuplot
+
 1. This has ZnO-5kV.plt and .dat files
 
 ```
 C:/Users/johnr/OneDrive/Desktop/penepma12/ZnO
 ```
 
-2. This is a penepma16 simulation of B at 5 kV
-   
-```
-C:/Users/johnr/Documents/git/monte-carlo-simulations/penepma/penepma16/B-5kV/win10
-```
-
-# Temporary desktop folder
-
-```
-C:/Users/johnr/Documents/work/penepma12/ZnO_5kV
-```
-This is the parent directory for the sim
-
-The penepma.dat file has a time stamp of 2020-01-12 10:13 p.m. (start)
-
-```
-C:/Users/johnr/Documents/work/penepma12/Si_5kV
-```
-
-This is the parent directory for the sim
-The penepma.dat file has a time stamp of 2020-01-12 10:16 p.m. (start)
-
-
-# Desktop folders for plotting at different stages during sim
-
-```
-C:/Users/johnr/OneDrive/Desktop/penepma12/ZnO
-```
-
-This is a P12 sim of ZnO 5kV for plotting
+2. This has Si-5kV.plt and .dat files
 
 ```
 C:/Users/johnr/OneDrive/Desktop/penepma12/Si
 ```
 
-This is a P12 sim of Si 5kV for plotting
+## Working directories for running penepma12 simulations
 
 
+1. This is the main penepma12 sim of Si at 5 kV
+
+```
+C:/Users/johnr/Documents/work/penepma12/Si_5kV
+```
+
+2.  This is the main penepma12 sim of ZnO at 5 kV
+
+```
+C:/Users/johnr/Documents/work/penepma12/ZnO_5kV
+```
+
+## Working directories for running penepma16 simulations
+
+1. This is a penepma16 simulation of B at 5 kV
+   
+```
+C:/Users/johnr/Documents/git/monte-carlo-simulations/penepma/penepma16/B-5kV/win10
+```
 
 
