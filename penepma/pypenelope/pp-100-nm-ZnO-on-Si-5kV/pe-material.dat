@@ -1,0 +1,51 @@
+
+ **********************************
+ **   PENELOPE  (version 2011)   **
+ **********************************
+
+ EMIN = 5.0000E+01 eV,  EMAX = 5.0000E+03 eV
+
+
+ **********************
+ **   1st material   **
+ **********************
+
+ Material data file: Si.mat              
+
+ *** Simulation parameters:
+     Electron absorption energy = 5.0000E+01 eV
+       Photon absorption energy = 5.0000E+01 eV
+     Positron absorption energy = 5.0000E+01 eV
+      C1 = 2.0000E-01,       C2 = 2.0000E-01
+     WCC = 5.0000E+01 eV,   WCR = 5.0000E+01 eV
+
+ PENELOPE (v. 2011)  Material data file ...............
+ Material: Si                                                            
+ Mass density = 2.10000000E+00 g/cm**3
+ Number of elements in the molecule =  1
+    Element: Si (Z=14), atoms/molecule = 1.00000000E+00
+ Mean excitation energy = 1.73000000E+02 eV
+ PENELOPE (v. 2011)  End of material data file ........
+
+
+ **********************
+ **   2nd material   **
+ **********************
+
+ Material data file: ZnO.mat             
+
+ *** Simulation parameters:
+     Electron absorption energy = 5.0000E+01 eV
+       Photon absorption energy = 5.0000E+01 eV
+     Positron absorption energy = 5.0000E+01 eV
+      C1 = 2.0000E-01,       C2 = 2.0000E-01
+     WCC = 5.0000E+01 eV,   WCR = 5.0000E+01 eV
+
+ PENELOPE (v. 2011)  Material data file ...............
+ Material: ZnO                                                           
+ Mass density = 5.21000000E+00 g/cm**3
+ Number of elements in the molecule =  2
+    Element: Zn (Z=30), atoms/molecule = 9.99838406E-01
+    Element: O  (Z= 8), atoms/molecule = 1.00000000E+00
+ Mean excitation energy = 2.53891883E+02 eV
+ PENELOPE (v. 2011)  End of material data file ........

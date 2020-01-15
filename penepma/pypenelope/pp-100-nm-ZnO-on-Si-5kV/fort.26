@@ -1,0 +1,125 @@
+*** WARNING, STEP: Inconsistencies caused by round-off errors.
+    IBODY0 =    3,  IBODY =    4,  IERR =  1,  NERR =   2
+Surface,FL0,FL,C,S =    1    1  1 -1.0000000E+00  1.6768742E+00
+Surface,FL0,FL,C,S =    2    1  2 -6.2730529E-13  0.0000000E+00 *
+Surface,FL0,FL,C,S =    4    2  2  3.0002000E+00  0.0000000E+00
+*** WARNING, STEP: Inconsistencies caused by round-off errors.
+    IBODY0 =    3,  IBODY =    4,  IERR =  1,  NERR =   2
+Surface,FL0,FL,C,S =    1    1  1 -1.0000000E+00  2.2988004E+00
+Surface,FL0,FL,C,S =    2    1  2 -4.7343861E-13  0.0000000E+00 *
+Surface,FL0,FL,C,S =    4    2  2  3.0002000E+00  0.0000000E+00
+*** WARNING, STEP: Inconsistencies caused by round-off errors.
+    IBODY0 =    3,  IBODY =    4,  IERR =  1,  NERR =   2
+Surface,FL0,FL,C,S =    1    1  1 -1.0000000E+00  2.5067141E+00
+Surface,FL0,FL,C,S =    2    1  2 -1.8837975E-13  0.0000000E+00 *
+Surface,FL0,FL,C,S =    4    2  2  3.0002000E+00  0.0000000E+00
+*** WARNING, STEP: Inconsistencies caused by round-off errors.
+    IBODY0 =    3,  IBODY =    4,  IERR =  1,  NERR =   2
+Surface,FL0,FL,C,S =    1    1  1 -1.0000000E+00  1.6297882E+00
+Surface,FL0,FL,C,S =    2    1  2 -7.7910724E-13  0.0000000E+00 *
+Surface,FL0,FL,C,S =    4    2  2  3.0002000E+00  0.0000000E+00
+*** WARNING, STEP: Inconsistencies caused by round-off errors.
+    IBODY0 =    3,  IBODY =    4,  IERR =  1,  NERR =   2
+Surface,FL0,FL,C,S =    1    1  1 -1.0000000E+00  1.6778840E+00
+Surface,FL0,FL,C,S =    2    1  2 -6.0861556E-13  0.0000000E+00 *
+Surface,FL0,FL,C,S =    4    2  2  3.0002000E+00  0.0000000E+00
+*** WARNING, STEP: Inconsistencies caused by round-off errors.
+    IBODY0 =    3,  IBODY =    4,  IERR =  1,  NERR =   2
+Surface,FL0,FL,C,S =    1    1  1 -1.0000000E+00  1.5605214E+00
+Surface,FL0,FL,C,S =    2    1  2 -4.3203422E-13  0.0000000E+00 *
+Surface,FL0,FL,C,S =    4    2  2  3.0002000E+00  0.0000000E+00
+*** WARNING, STEP: Inconsistencies caused by round-off errors.
+    IBODY0 =    3,  IBODY =    4,  IERR =  1,  NERR =   2
+Surface,FL0,FL,C,S =    1    1  1 -1.0000000E+00  2.1291914E+00
+Surface,FL0,FL,C,S =    2    1  2 -3.1307299E-13  0.0000000E+00 *
+Surface,FL0,FL,C,S =    4    2  2  3.0002000E+00  0.0000000E+00
+*** WARNING, STEP: Inconsistencies caused by round-off errors.
+    IBODY0 =    3,  IBODY =    4,  IERR =  1,  NERR =   2
+Surface,FL0,FL,C,S =    1    1  1 -1.0000000E+00  4.0046753E+00
+Surface,FL0,FL,C,S =    2    1  2 -9.6150202E-13  0.0000000E+00 *
+Surface,FL0,FL,C,S =    4    2  2  3.0002000E+00  0.0000000E+00
+*** WARNING, STEP: Inconsistencies caused by round-off errors.
+    IBODY0 =    3,  IBODY =    4,  IERR =  1,  NERR =   2
+Surface,FL0,FL,C,S =    1    1  1 -1.0000000E+00  2.4527848E+00
+Surface,FL0,FL,C,S =    2    1  2 -1.5155273E-13  0.0000000E+00 *
+Surface,FL0,FL,C,S =    4    2  2  3.0002000E+00  0.0000000E+00
+*** WARNING, STEP: Inconsistencies caused by round-off errors.
+    IBODY0 =    3,  IBODY =    4,  IERR =  1,  NERR =   2
+Surface,FL0,FL,C,S =    1    1  1 -1.0000000E+00  1.8206311E+00
+Surface,FL0,FL,C,S =    2    1  2 -3.7078186E-13  0.0000000E+00 *
+Surface,FL0,FL,C,S =    4    2  2  3.0002000E+00  0.0000000E+00
+*** WARNING, STEP: Inconsistencies caused by round-off errors.
+    IBODY0 =    3,  IBODY =    4,  IERR =  1,  NERR =   2
+Surface,FL0,FL,C,S =    1    1  1 -1.0000000E+00  1.5736824E+00
+Surface,FL0,FL,C,S =    2    1  2 -7.6589795E-14  0.0000000E+00 *
+Surface,FL0,FL,C,S =    4    2  2  3.0002000E+00  0.0000000E+00
+*** WARNING, STEP: Inconsistencies caused by round-off errors.
+    IBODY0 =    3,  IBODY =    4,  IERR =  1,  NERR =   2
+Surface,FL0,FL,C,S =    1    1  1 -1.0000000E+00  2.8677740E+00
+Surface,FL0,FL,C,S =    2    1  2 -7.9259452E-13  0.0000000E+00 *
+Surface,FL0,FL,C,S =    4    2  2  3.0002000E+00  0.0000000E+00
+*** WARNING, STEP: Inconsistencies caused by round-off errors.
+    IBODY0 =    3,  IBODY =    4,  IERR =  1,  NERR =   2
+Surface,FL0,FL,C,S =    1    1  1 -1.0000000E+00  1.5041388E+00
+Surface,FL0,FL,C,S =    2    1  2 -7.9259452E-13  0.0000000E+00 *
+Surface,FL0,FL,C,S =    4    2  2  3.0002000E+00  0.0000000E+00
+*** WARNING, STEP: Inconsistencies caused by round-off errors.
+    IBODY0 =    3,  IBODY =    4,  IERR =  1,  NERR =   2
+Surface,FL0,FL,C,S =    1    1  1 -1.0000000E+00  3.1474807E+00
+Surface,FL0,FL,C,S =    2    1  2 -7.6929437E-13  0.0000000E+00 *
+Surface,FL0,FL,C,S =    4    2  2  3.0002000E+00  0.0000000E+00
+*** WARNING, STEP: Inconsistencies caused by round-off errors.
+    IBODY0 =    3,  IBODY =    4,  IERR =  1,  NERR =   2
+Surface,FL0,FL,C,S =    1    1  1 -1.0000000E+00  2.1471275E+00
+Surface,FL0,FL,C,S =    2    1  2 -5.7618616E-13  0.0000000E+00 *
+Surface,FL0,FL,C,S =    4    2  2  3.0002000E+00  0.0000000E+00
+*** WARNING, STEP: Inconsistencies caused by round-off errors.
+    IBODY0 =    3,  IBODY =    4,  IERR =  1,  NERR =   2
+Surface,FL0,FL,C,S =    1    1  1 -1.0000000E+00  1.5523266E+00
+Surface,FL0,FL,C,S =    2    1  2 -5.6364411E-13  0.0000000E+00 *
+Surface,FL0,FL,C,S =    4    2  2  3.0002000E+00  0.0000000E+00
+*** WARNING, STEP: Inconsistencies caused by round-off errors.
+    IBODY0 =    3,  IBODY =    4,  IERR =  1,  NERR =   2
+Surface,FL0,FL,C,S =    1    1  1 -1.0000000E+00  1.5710936E+00
+Surface,FL0,FL,C,S =    2    1  2 -7.8971261E-14  0.0000000E+00 *
+Surface,FL0,FL,C,S =    4    2  2  3.0002000E+00  0.0000000E+00
+*** WARNING, STEP: Inconsistencies caused by round-off errors.
+    IBODY0 =    3,  IBODY =    4,  IERR =  1,  NERR =   2
+Surface,FL0,FL,C,S =    1    1  1 -1.0000000E+00  3.8225082E+00
+Surface,FL0,FL,C,S =    2    1  2 -6.6630502E-13  0.0000000E+00 *
+Surface,FL0,FL,C,S =    4    2  2  3.0002000E+00  0.0000000E+00
+*** WARNING, STEP: Inconsistencies caused by round-off errors.
+    IBODY0 =    3,  IBODY =    4,  IERR =  1,  NERR =   2
+Surface,FL0,FL,C,S =    1    1  1 -1.0000000E+00  2.6750593E+00
+Surface,FL0,FL,C,S =    2    1  2 -7.8285568E-13  0.0000000E+00 *
+Surface,FL0,FL,C,S =    4    2  2  3.0002000E+00  0.0000000E+00
+*** WARNING, STEP: Inconsistencies caused by round-off errors.
+    IBODY0 =    3,  IBODY =    4,  IERR =  1,  NERR =   2
+Surface,FL0,FL,C,S =    1    1  1 -1.0000000E+00  1.8449820E+00
+Surface,FL0,FL,C,S =    2    1  2 -3.2924802E-13  0.0000000E+00 *
+Surface,FL0,FL,C,S =    4    2  2  3.0002000E+00  0.0000000E+00
+*** WARNING, STEP: Inconsistencies caused by round-off errors.
+    IBODY0 =    3,  IBODY =    4,  IERR =  1,  NERR =   2
+Surface,FL0,FL,C,S =    1    1  1 -1.0000000E+00  1.5068570E+00
+Surface,FL0,FL,C,S =    2    1  2 -8.0611773E-13  0.0000000E+00 *
+Surface,FL0,FL,C,S =    4    2  2  3.0002000E+00  0.0000000E+00
+*** WARNING, STEP: Inconsistencies caused by round-off errors.
+    IBODY0 =    3,  IBODY =    4,  IERR =  1,  NERR =   2
+Surface,FL0,FL,C,S =    1    1  1 -1.0000000E+00  1.6524443E+00
+Surface,FL0,FL,C,S =    2    1  2 -2.2727477E-13  0.0000000E+00 *
+Surface,FL0,FL,C,S =    4    2  2  3.0002000E+00  0.0000000E+00
+*** WARNING, STEP: Inconsistencies caused by round-off errors.
+    IBODY0 =    3,  IBODY =    4,  IERR =  1,  NERR =   2
+Surface,FL0,FL,C,S =    1    1  1 -1.0000000E+00  2.1233670E+00
+Surface,FL0,FL,C,S =    2    1  2 -6.5457497E-13  0.0000000E+00 *
+Surface,FL0,FL,C,S =    4    2  2  3.0002000E+00  0.0000000E+00
+*** WARNING, STEP: Inconsistencies caused by round-off errors.
+    IBODY0 =    3,  IBODY =    4,  IERR =  1,  NERR =   2
+Surface,FL0,FL,C,S =    1    1  1 -1.0000000E+00  3.2413857E+00
+Surface,FL0,FL,C,S =    2    1  2 -3.0852880E-13  0.0000000E+00 *
+Surface,FL0,FL,C,S =    4    2  2  3.0002000E+00  0.0000000E+00
+*** WARNING, STEP: Inconsistencies caused by round-off errors.
+    IBODY0 =    3,  IBODY =    4,  IERR =  1,  NERR =   2
+Surface,FL0,FL,C,S =    1    1  1 -1.0000000E+00  1.5406586E+00
+Surface,FL0,FL,C,S =    2    1  2 -5.8292365E-13  0.0000000E+00 *
+Surface,FL0,FL,C,S =    4    2  2  3.0002000E+00  0.0000000E+00
